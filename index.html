@@ -1,463 +1,445 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2870
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red22\green79\blue199;\red255\green255\blue255;\red46\green49\blue51;
-\red77\green80\blue85;\red133\green85\blue4;\red17\green93\blue62;\red102\green36\blue165;\red136\green143\blue149;
-}
-{\*\expandedcolortbl;;\cssrgb\c9804\c40392\c82353;\cssrgb\c100000\c100000\c100000;\cssrgb\c23529\c25098\c26275;
-\cssrgb\c37255\c38824\c40784;\cssrgb\c59608\c40784\c392;\cssrgb\c4314\c43137\c30980;\cssrgb\c48235\c23922\c70588;\cssrgb\c60392\c62745\c65098;
-}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philippine Plastic & Microplastic Crisis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            ocean: {
+              900: '#07161b',
+              800: '#0d2830',
+              700: '#143843',
+              600: '#1a4b59',
+              500: '#226071',
+              400: '#2c7a90',
+              100: '#e0f2f7',
+            },
+            accent: {
+              coral: '#f0625d',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #07161b;
+      color: #e2e8f0;
+      scroll-behavior: smooth;
+    }
+    .editable-active [contenteditable="true"] {
+      outline: 2px dashed #10b981;
+      outline-offset: 4px;
+      border-radius: 4px;
+      background-color: rgba(16, 185, 129, 0.08);
+      cursor: text;
+    }
+    .editable-active .img-edit-btn {
+      display: flex !important;
+    }
+    .glass-card {
+      background: rgba(13, 40, 48, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover {
+      transition: all 0.3s ease;
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(16, 185, 129, 0.4);
+      box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.15);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
 
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3 \strokec5 <\cf2 \strokec2 html\cf4 \strokec4  \cf6 \strokec6 lang\cf5 \strokec5 =\cf7 \strokec7 "en"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5 <\cf2 \strokec2 head\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3   \cf5 \strokec5 <\cf2 \strokec2 meta\cf4 \strokec4  \cf6 \strokec6 charset\cf5 \strokec5 =\cf7 \strokec7 "UTF-8"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 meta\cf4 \strokec4  \cf6 \strokec6 name\cf5 \strokec5 =\cf7 \strokec7 "viewport"\cf4 \strokec4  \cf6 \strokec6 content\cf5 \strokec5 =\cf7 \strokec7 "width=device-width, initial-scale=1.0"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 title\cf5 \strokec5 >\cf4 \strokec4 Philippine Plastic & Microplastic Crisis\cf5 \strokec5 </\cf2 \strokec2 title\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 script\cf4 \strokec4  \cf6 \strokec6 src\cf5 \strokec5 =\cf7 \strokec7 "https://cdn.tailwindcss.com"\cf5 \strokec5 ></\cf2 \strokec2 script\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 link\cf4 \strokec4  \cf6 \strokec6 rel\cf5 \strokec5 =\cf7 \strokec7 "stylesheet"\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 link\cf4 \strokec4  \cf6 \strokec6 rel\cf5 \strokec5 =\cf7 \strokec7 "stylesheet"\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 script\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     tailwind\cf5 \strokec5 .\cf4 \strokec4 config \cf5 \strokec5 =\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       theme\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3         extend\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3           fontFamily\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3             sans\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 [\cf7 \strokec7 'Plus Jakarta Sans'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'sans-serif'\cf5 \strokec5 ],\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
-\cb3           colors\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3             ocean\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3               \cf6 \strokec6 900\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#07161b'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               \cf6 \strokec6 800\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#0d2830'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               \cf6 \strokec6 700\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#143843'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               \cf6 \strokec6 600\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#1a4b59'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               \cf6 \strokec6 500\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#226071'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               \cf6 \strokec6 400\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#2c7a90'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               \cf6 \strokec6 100\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#e0f2f7'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
-\cb3             accent\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3               coral\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#f0625d'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               emerald\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#10b981'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3               amber\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 '#f59e0b'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 script\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 style\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf2 \strokec2 body\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 font-family:\cf4 \strokec4  \cf7 \strokec7 'Plus Jakarta Sans'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 sans-serif\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 background-color:\cf4 \strokec4  \cf7 \strokec7 #07161b\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 color:\cf4 \strokec4  \cf7 \strokec7 #e2e8f0\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 scroll-behavior:\cf4 \strokec4  \cf7 \strokec7 smooth\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf2 \strokec2 .editable-active\cf4 \strokec4  \cf5 \strokec5 [\cf7 \strokec7 contenteditable\cf5 \strokec5 =\cf7 \strokec7 "true"\cf5 \strokec5 ]\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 outline:\cf4 \strokec4  \cf7 \strokec7 2px\cf4 \strokec4  \cf7 \strokec7 dashed\cf4 \strokec4  \cf7 \strokec7 #10b981\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 outline-offset:\cf4 \strokec4  \cf7 \strokec7 4px\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 border-radius:\cf4 \strokec4  \cf7 \strokec7 4px\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 background-color:\cf4 \strokec4  \cf7 \strokec7 rgba(16\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 185\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 129\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 0.08)\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 cursor:\cf4 \strokec4  \cf7 \strokec7 text\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf2 \strokec2 .editable-active\cf4 \strokec4  \cf2 \strokec2 .img-edit-btn\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 display:\cf4 \strokec4  \cf7 \strokec7 flex\cf4 \strokec4  \cf8 \strokec8 !important\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf2 \strokec2 .glass-card\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 background:\cf4 \strokec4  \cf7 \strokec7 rgba(13\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 40\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 48\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 0.7)\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 backdrop-filter:\cf4 \strokec4  \cf7 \strokec7 blur(12px)\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 border:\cf4 \strokec4  \cf7 \strokec7 1px\cf4 \strokec4  \cf7 \strokec7 solid\cf4 \strokec4  \cf7 \strokec7 rgba(255\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 255\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 255\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 0.08)\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf2 \strokec2 .glass-card-hover\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 transition:\cf4 \strokec4  \cf7 \strokec7 all\cf4 \strokec4  \cf7 \strokec7 0.3s\cf4 \strokec4  \cf7 \strokec7 ease\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf2 \strokec2 .glass-card-hover:hover\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 transform:\cf4 \strokec4  \cf7 \strokec7 translateY(-4px)\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 border-color:\cf4 \strokec4  \cf7 \strokec7 rgba(16\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 185\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 129\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 0.4)\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf6 \strokec6 box-shadow:\cf4 \strokec4  \cf7 \strokec7 0\cf4 \strokec4  \cf7 \strokec7 12px\cf4 \strokec4  \cf7 \strokec7 30px\cf4 \strokec4  \cf7 \strokec7 -10px\cf4 \strokec4  \cf7 \strokec7 rgba(16\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 185\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 129\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 0.15)\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 style\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3 \strokec5 </\cf2 \strokec2 head\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5 <\cf2 \strokec2 body\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "min-h-screen flex flex-col"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3   \cf9 \strokec9 <!-- Header / Navigation -->\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 header\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "sticky top-0 z-50 glass-card border-b border-slate-800/80"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "w-10 h-10 rounded-xl bg-gradient-to-tr from-accent-emerald to-ocean-400 flex items-center justify-center text-slate-900 font-extrabold text-xl shadow-lg"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           PH\cb1 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-lg font-bold text-white tracking-tight block"\cf5 \strokec5 >\cf4 \strokec4 Plastic Crisis PH\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-emerald-400 font-medium"\cf5 \strokec5 >\cf4 \strokec4 Ecosystem & People Focus\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf9 \strokec9 <!-- Navigation Links -->\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 nav\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "hidden md:flex items-center space-x-8 text-sm font-medium"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 a\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "#definition"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 hover:text-emerald-400 transition-colors"\cf5 \strokec5 >\cf4 \strokec4 1. Definition\cf5 \strokec5 </\cf2 \strokec2 a\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 a\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "#status"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 hover:text-emerald-400 transition-colors"\cf5 \strokec5 >\cf4 \strokec4 2. Status\cf5 \strokec5 </\cf2 \strokec2 a\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 a\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "#causes"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 hover:text-emerald-400 transition-colors"\cf5 \strokec5 >\cf4 \strokec4 3. Causes\cf5 \strokec5 </\cf2 \strokec2 a\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 a\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "#effects"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 hover:text-emerald-400 transition-colors"\cf5 \strokec5 >\cf4 \strokec4 4. Effects\cf5 \strokec5 </\cf2 \strokec2 a\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 a\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "#solutions"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 hover:text-emerald-400 transition-colors"\cf5 \strokec5 >\cf4 \strokec4 Solutions\cf5 \strokec5 </\cf2 \strokec2 a\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 nav\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf9 \strokec9 <!-- Admin / Edit Toggle Controls -->\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 button\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "toggleEditBtn"\cf4 \strokec4  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf7 \strokec7 "toggleEditMode()"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-4 py-2 text-xs font-bold rounded-lg border border-emerald-500/40 bg-emerald-950/40 text-emerald-300 hover:bg-emerald-500 hover:text-slate-950 transition-all flex items-center space-x-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-pen-to-square"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "editBtnText"\cf5 \strokec5 >\cf4 \strokec4 Enable Edit Mode\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 button\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 button\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "copyContentBtn"\cf4 \strokec4  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf7 \strokec7 "copyModifiedHTML()"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "hidden px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all flex items-center space-x-1"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-regular fa-copy"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \strokec4 Copy Page HTML\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 button\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 header\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3   \cf9 \strokec9 <!-- Edit Mode Banner Bar -->\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "editModeBanner"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "hidden bg-emerald-500 text-slate-950 px-4 py-2 text-xs font-semibold text-center flex items-center justify-center space-x-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-circle-info"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 span\cf5 \strokec5 ><\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 Edit Mode Active:\cf5 \strokec5 </\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4  Click on any text, heading, or image button on the page to customize content live!\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3   \cf9 \strokec9 <!-- Hero Section -->\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 section\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "relative py-20 overflow-hidden bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-900 border-b border-slate-800/60"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-3xl"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-6"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-location-dot"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \strokec4 Philippine Environmental Spotlight\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 h1\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "hero-title"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           The Plastic & Microplastic Crisis in the Philippines\cb1 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 h1\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-lg text-slate-300 mb-8 leading-relaxed"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "hero-description"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           An in-depth study on how the single-use "sachet economy", river pathways like the Pasig River, and plastic fragmentation impact Philippine marine biodiversity and human health.\cb1 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex flex-wrap gap-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 a\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "#definition"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             Explore 4 Key Pillars\cb1 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 a\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 a\cf4 \strokec4  \cf6 \strokec6 href\cf5 \strokec5 =\cf7 \strokec7 "#solutions"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-6 py-3 rounded-xl glass-card hover:bg-ocean-700 text-white font-semibold text-sm transition-all border border-slate-700"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             PH Policy & Action (EPR Act)\cb1 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 a\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 section\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 main\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex-grow space-y-24 py-16"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 <!-- SECTION 1: DEFINITION -->\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 section\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "definition"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3 mb-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"\cf5 \strokec5 >\cf4 \strokec4 Pillar 01\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400 uppercase tracking-widest font-semibold"\cf5 \strokec5 >\cf4 \strokec4 Core Concepts\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 h2\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white mb-8"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "def-heading"\cf5 \strokec5 >\cf4 \strokec4 1. Definition: Microplastics & Polymers\cf5 \strokec5 </\cf2 \strokec2 h2\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "grid md:grid-cols-2 gap-8 items-stretch"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf9 \strokec9 <!-- Text Card -->\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card rounded-2xl p-8 flex flex-col justify-between"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "space-y-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 h3\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-2xl font-bold text-emerald-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "def-title-1"\cf5 \strokec5 >\cf4 \strokec4 What are Microplastics?\cf5 \strokec5 </\cf2 \strokec2 h3\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 leading-relaxed text-sm sm:text-base"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "def-body-1"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               Plastics do not biodegrade in nature; instead, sun rays (UV light), ocean wave friction, and heat break them into microscopic fragments. Microplastics are defined as synthetic plastic particles smaller than \cf5 \strokec5 <\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 5 millimeters\cf5 \strokec5 </\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4  (about the size of a sesame seed).\cb1 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "space-y-3 pt-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "p-4 rounded-xl bg-ocean-800/80 border border-slate-700/60"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3                 \cf5 \strokec5 <\cf2 \strokec2 h4\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-white font-bold text-sm mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "def-primary-head"\cf5 \strokec5 >\cf4 \strokec4 Primary Microplastics\cf5 \strokec5 </\cf2 \strokec2 h4\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3                 \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "def-primary-text"\cf5 \strokec5 >\cf4 \strokec4 Microbeads manufactured for facial scrubs, cosmetics, and industrial raw resin pellets ("nurdles").\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "p-4 rounded-xl bg-ocean-800/80 border border-slate-700/60"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3                 \cf5 \strokec5 <\cf2 \strokec2 h4\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-white font-bold text-sm mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "def-secondary-head"\cf5 \strokec5 >\cf4 \strokec4 Secondary Microplastics\cf5 \strokec5 </\cf2 \strokec2 h4\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3                 \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "def-secondary-text"\cf5 \strokec5 >\cf4 \strokec4 Particles formed when larger single-use sachets, plastic bags, and bottles weather and break down in tropical waters.\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf9 \strokec9 <!-- Image Container with Editable Overlay -->\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card rounded-2xl overflow-hidden relative min-h-[320px] flex items-center justify-center"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 img\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "img-def"\cf4 \strokec4  \cf6 \strokec6 src\cf5 \strokec5 =\cf7 \strokec7 "https://environmentalhealth.ucdavis.edu/sites/g/files/dgvnsk2556/files/media/images/Microplastics%20in%20soil.jpeg"\cf4 \strokec4  \cf6 \strokec6 alt\cf5 \strokec5 =\cf7 \strokec7 "Microplastics scientific sample"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "w-full h-full object-cover"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 button\cf4 \strokec4  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf7 \strokec7 "changeImagePrompt('img-def')"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "img-edit-btn hidden absolute top-4 right-4 bg-slate-900/90 text-emerald-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-emerald-500/50 hover:bg-emerald-500 hover:text-slate-900 transition-all flex items-center space-x-1 shadow-lg"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-image"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \strokec4 Change Image URL\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 button\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 section\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 <!-- SECTION 2: STATUS -->\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 section\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "status"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3 mb-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"\cf5 \strokec5 >\cf4 \strokec4 Pillar 02\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400 uppercase tracking-widest font-semibold"\cf5 \strokec5 >\cf4 \strokec4 Local Context\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 h2\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white mb-8"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "status-heading"\cf5 \strokec5 >\cf4 \strokec4 2. Status: The Scale in the Philippines\cf5 \strokec5 </\cf2 \strokec2 h2\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf9 \strokec9 <!-- Key Philippine Metrics Grid -->\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-emerald-500"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white block mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-val-1"\cf5 \strokec5 >\cf4 \strokec4 163 Million\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-2"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-lbl-1"\cf5 \strokec5 >\cf4 \strokec4 Daily Sachet Usage\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-desc-1"\cf5 \strokec5 >\cf4 \strokec4 Filipinos consume over 163 million single-use sachets daily, equating to nearly 60 billion sachets annually.\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-accent-coral"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white block mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-val-2"\cf5 \strokec5 >\cf4 \strokec4 #1 Global River\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs font-bold uppercase tracking-wider text-accent-coral block mb-2"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-lbl-2"\cf5 \strokec5 >\cf4 \strokec4 Pasig River Impact\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-desc-2"\cf5 \strokec5 >\cf4 \strokec4 Studies identify the Pasig River as one of the world's highest contributors of riverine ocean plastic pollution.\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-accent-amber"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white block mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-val-3"\cf5 \strokec5 >\cf4 \strokec4 350,000+ Tons\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs font-bold uppercase tracking-wider text-accent-amber block mb-2"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-lbl-3"\cf5 \strokec5 >\cf4 \strokec4 Annual Ocean Leakage\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-desc-3"\cf5 \strokec5 >\cf4 \strokec4 Estimated metric tons of mismanaged plastic leaking directly into Philippine seas and coastal waters annually.\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-ocean-400"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white block mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-val-4"\cf5 \strokec5 >\cf4 \strokec4 &lt; 10%\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs font-bold uppercase tracking-wider text-ocean-400 block mb-2"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-lbl-4"\cf5 \strokec5 >\cf4 \strokec4 Recycling Efficiency\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stat-desc-4"\cf5 \strokec5 >\cf4 \strokec4 Due to multi-layer film compositions in sachets, recycling rates remain critically low nationwide.\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf9 \strokec9 <!-- Local Case Study Card -->\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card rounded-2xl p-8 grid md:grid-cols-2 gap-8 items-center"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "space-y-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 h3\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xl font-bold text-white"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "status-case-title"\cf5 \strokec5 >\cf4 \strokec4 Manila Bay & River System Contamination\cf5 \strokec5 </\cf2 \strokec2 h3\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 text-sm leading-relaxed"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "status-case-body"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             Recent studies by Philippine marine scientists have confirmed the presence of microplastics in Manila Bay sediments, local tap water samples, and commercially sold fish species like \cf5 \strokec5 <\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4 Bangus\cf5 \strokec5 </\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4  (Milkfish) and \cf5 \strokec5 <\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4 Galunggong\cf5 \strokec5 </\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4  (Round Scad).\cb1 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "rounded-xl overflow-hidden relative h-56"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 img\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "img-status"\cf4 \strokec4  \cf6 \strokec6 src\cf5 \strokec5 =\cf7 \strokec7 "https://images.squarespace-cdn.com/content/v1/5369465be4b0507a1fd05af0/1545091517468-ILOFFQ43A9CTHK6EV7PQ/Ben+Hicks.JPG"\cf4 \strokec4  \cf6 \strokec6 alt\cf5 \strokec5 =\cf7 \strokec7 "Pollution in Manila Bay"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "w-full h-full object-cover"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 button\cf4 \strokec4  \cf6 \strokec6 onclick\cf5 \strokec5 =\cf7 \strokec7 "changeImagePrompt('img-status')"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "img-edit-btn hidden absolute top-4 right-4 bg-slate-900/90 text-emerald-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-emerald-500/50 hover:bg-emerald-500 hover:text-slate-900 transition-all flex items-center space-x-1 shadow-lg"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-image"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \strokec4 Change Image URL\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 button\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 section\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 <!-- SECTION 3: CAUSES -->\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 section\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "causes"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3 mb-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"\cf5 \strokec5 >\cf4 \strokec4 Pillar 03\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400 uppercase tracking-widest font-semibold"\cf5 \strokec5 >\cf4 \strokec4 Root Drivers\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 h2\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white mb-8"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "causes-heading"\cf5 \strokec5 >\cf4 \strokec4 3. Key Causes in the Philippine Context\cf5 \strokec5 </\cf2 \strokec2 h2\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "grid md:grid-cols-3 gap-6"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf9 \strokec9 <!-- Cause 1 -->\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "w-12 h-12 rounded-xl bg-accent-coral/10 border border-accent-coral/30 text-accent-coral flex items-center justify-center text-xl mb-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-store"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 h3\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-lg font-bold text-white mb-2"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "cause-title-1"\cf5 \strokec5 >\cf4 \strokec4 1. The "Sachet Economy"\cf5 \strokec5 </\cf2 \strokec2 h3\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 text-xs leading-relaxed"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "cause-body-1"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               Low-income households rely on daily purchasing power in local \cf5 \strokec5 <\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4 sari-sari\cf5 \strokec5 </\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4  stores, buying single-serving portions of coffee, shampoo, and cooking oil packaged in non-recyclable multi-layer foil/plastic sachets.\cb1 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf9 \strokec9 <!-- Cause 2 -->\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl mb-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-dumpster"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 h3\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-lg font-bold text-white mb-2"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "cause-title-2"\cf5 \strokec5 >\cf4 \strokec4 2. Waste Infrastructure Deficits\cf5 \strokec5 </\cf2 \strokec2 h3\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 text-xs leading-relaxed"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "cause-body-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               Many local government units (LGUs) lack the resources for comprehensive MRF (Materials Recovery Facility) waste segregation, resulting in open dump sites near riverbanks and coastal zones.\cb1 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf9 \strokec9 <!-- Cause 3 -->\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "w-12 h-12 rounded-xl bg-accent-amber/10 border border-accent-amber/30 text-accent-amber flex items-center justify-center text-xl mb-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-shirt"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 h3\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-lg font-bold text-white mb-3"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "cause-title-3"\cf5 \strokec5 >\cf4 \strokec4 3. Synthetic Microfibers & Tires\cf5 \strokec5 </\cf2 \strokec2 h3\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 text-xs leading-relaxed"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "cause-body-3"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               Washing synthetic clothing (polyester/nylon) and friction from vehicle tires on major roads shed millions of micro-particles into storm drains and urban canals during typhoon rains.\cb1 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 section\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 <!-- SECTION 4: EFFECTS -->\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 section\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "effects"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3 mb-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"\cf5 \strokec5 >\cf4 \strokec4 Pillar 04\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400 uppercase tracking-widest font-semibold"\cf5 \strokec5 >\cf4 \strokec4 Consolidated Impacts\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 h2\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white mb-8"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "effects-heading"\cf5 \strokec5 >\cf4 \strokec4 4. Ecosystem & Human Health Effects\cf5 \strokec5 </\cf2 \strokec2 h2\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "grid lg:grid-cols-2 gap-8"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf9 \strokec9 <!-- Ecosystem Effects Card -->\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card rounded-2xl p-8 space-y-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3 text-emerald-400"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-fish-fins text-2xl"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 h3\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xl font-bold text-white"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "eff-eco-title"\cf5 \strokec5 >\cf4 \strokec4 Marine & Coral Ecosystem Threats\cf5 \strokec5 </\cf2 \strokec2 h3\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 ul\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "space-y-3 text-sm text-slate-300"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 li\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-start space-x-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-circle-chevron-right text-emerald-400 mt-1"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "eff-eco-1"\cf5 \strokec5 ><\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 Coral Bleaching & Pathogens:\cf5 \strokec5 </\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4  Plastics smother coral reefs in the Coral Triangle, harboring harmful bacteria that increase disease incidence.\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 li\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 li\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-start space-x-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-circle-chevron-right text-emerald-400 mt-1"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "eff-eco-2"\cf5 \strokec5 ><\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 Trophic Bioaccumulation:\cf5 \strokec5 </\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4  Fish mistake microplastics for plankton, absorbing toxic persistent organic pollutants (POPs) that travel up the food chain.\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 li\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 ul\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3         \cf9 \strokec9 <!-- Human Health Effects Card -->\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card rounded-2xl p-8 space-y-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-center space-x-3 text-accent-coral"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-heart-pulse text-2xl"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 h3\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xl font-bold text-white"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "eff-human-title"\cf5 \strokec5 >\cf4 \strokec4 Human Health & Food Safety Risks\cf5 \strokec5 </\cf2 \strokec2 h3\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 ul\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "space-y-3 text-sm text-slate-300"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 li\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-start space-x-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-circle-chevron-right text-accent-coral mt-1"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "eff-human-1"\cf5 \strokec5 ><\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 Dietary Ingestion:\cf5 \strokec5 </\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4  Microplastics have been identified in commercial sea salt, bottled water, and edible fish organ tissues in local markets.\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 li\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 li\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "flex items-start space-x-2"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 i\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "fa-solid fa-circle-chevron-right text-accent-coral mt-1"\cf5 \strokec5 ></\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "eff-human-2"\cf5 \strokec5 ><\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 Endocrine Disruption:\cf5 \strokec5 </\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4  Additives like BPA and phthalates attached to plastics act as hormone disruptors linked to reproductive and cellular health issues.\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 li\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 ul\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 section\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 <!-- SECTION 5: SOLUTIONS & POLICY -->\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 section\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "solutions"\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card rounded-3xl p-8 lg:p-12 border border-emerald-500/30 bg-gradient-to-br from-ocean-800 via-ocean-900 to-slate-950"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-3xl space-y-6"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 span\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500 text-slate-950"\cf5 \strokec5 >\cf4 \strokec4 Action & Governance\cf5 \strokec5 </\cf2 \strokec2 span\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 h2\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-3xl font-extrabold text-white"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "sol-heading"\cf5 \strokec5 >\cf4 \strokec4 Philippine Solutions & Policy Response\cf5 \strokec5 </\cf2 \strokec2 h2\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-slate-300 text-sm sm:text-base leading-relaxed"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "sol-body"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             In 2022, the Philippines enacted the \cf5 \strokec5 <\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 Extended Producer Responsibility (EPR) Act (RA 11898)\cf5 \strokec5 </\cf2 \strokec2 b\cf5 \strokec5 >\cf4 \strokec4 , legally requiring large brand enterprises to account for and recover 80% of their plastic packaging footprint by 2028.\cb1 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "grid sm:grid-cols-2 gap-4 pt-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "p-4 rounded-xl bg-ocean-800/80 border border-slate-700"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 h4\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-emerald-400 font-bold text-sm mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "sol-box1-head"\cf5 \strokec5 >\cf4 \strokec4 Refill & Zero-Waste Systems\cf5 \strokec5 </\cf2 \strokec2 h4\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "sol-box1-body"\cf5 \strokec5 >\cf4 \strokec4 Community \cf5 \strokec5 <\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4 sari-sari\cf5 \strokec5 </\cf2 \strokec2 i\cf5 \strokec5 >\cf4 \strokec4  refill stations replacing single-use sachets with reusable container systems.\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "p-4 rounded-xl bg-ocean-800/80 border border-slate-700"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 h4\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-emerald-400 font-bold text-sm mb-1"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "sol-box2-head"\cf5 \strokec5 >\cf4 \strokec4 River Interceptors\cf5 \strokec5 </\cf2 \strokec2 h4\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3               \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "text-xs text-slate-400"\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "sol-box2-body"\cf5 \strokec5 >\cf4 \strokec4 Deploying automated solar-powered cleanup boats along Pasig River tributaries to trap waste before it reaches Manila Bay.\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3             \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3           \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 section\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 main\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3   \cf9 \strokec9 <!-- Footer -->\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 footer\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "glass-card border-t border-slate-800 text-center py-8 text-xs text-slate-500"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 <\cf2 \strokec2 div\cf4 \strokec4  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "max-w-7xl mx-auto px-4"\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 <\cf2 \strokec2 p\cf4 \strokec4  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "footer-text"\cf5 \strokec5 >\cf4 \strokec4 Educational Web App for "People and the Earth's Ecosystem" \'95 Focus: Philippines\cf5 \strokec5 </\cf2 \strokec2 p\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 </\cf2 \strokec2 div\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 footer\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\
-\cb3   \cf9 \strokec9 <!-- Inline Script for Live Editing & Admin Interactivity -->\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 <\cf2 \strokec2 script\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cb3     \cf8 \strokec8 let\cf4 \strokec4  isEditMode \cf5 \strokec5 =\cf4 \strokec4  \cf8 \strokec8 false\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 // Toggle Admin Edit Mode\cf4 \cb1 \strokec4 \
-\cb3     \cf8 \strokec8 function\cf4 \strokec4  toggleEditMode\cf5 \strokec5 ()\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       isEditMode \cf5 \strokec5 =\cf4 \strokec4  \cf5 \strokec5 !\cf4 \strokec4 isEditMode\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  body \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 body\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  btnText \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 getElementById\cf5 \strokec5 (\cf7 \strokec7 'editBtnText'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  banner \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 getElementById\cf5 \strokec5 (\cf7 \strokec7 'editModeBanner'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  copyBtn \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 getElementById\cf5 \strokec5 (\cf7 \strokec7 'copyContentBtn'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf8 \strokec8 if\cf4 \strokec4  \cf5 \strokec5 (\cf4 \strokec4 isEditMode\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3         body\cf5 \strokec5 .\cf4 \strokec4 classList\cf5 \strokec5 .\cf4 \strokec4 add\cf5 \strokec5 (\cf7 \strokec7 'editable-active'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3         btnText\cf5 \strokec5 .\cf4 \strokec4 innerText \cf5 \strokec5 =\cf4 \strokec4  \cf7 \strokec7 'Exit Edit Mode'\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3         banner\cf5 \strokec5 .\cf4 \strokec4 classList\cf5 \strokec5 .\cf4 \strokec4 remove\cf5 \strokec5 (\cf7 \strokec7 'hidden'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3         copyBtn\cf5 \strokec5 .\cf4 \strokec4 classList\cf5 \strokec5 .\cf4 \strokec4 remove\cf5 \strokec5 (\cf7 \strokec7 'hidden'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3         setEditableAttributes\cf5 \strokec5 (\cf8 \strokec8 true\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 \}\cf4 \strokec4  \cf8 \strokec8 else\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3         body\cf5 \strokec5 .\cf4 \strokec4 classList\cf5 \strokec5 .\cf4 \strokec4 remove\cf5 \strokec5 (\cf7 \strokec7 'editable-active'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3         btnText\cf5 \strokec5 .\cf4 \strokec4 innerText \cf5 \strokec5 =\cf4 \strokec4  \cf7 \strokec7 'Enable Edit Mode'\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3         banner\cf5 \strokec5 .\cf4 \strokec4 classList\cf5 \strokec5 .\cf4 \strokec4 add\cf5 \strokec5 (\cf7 \strokec7 'hidden'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3         copyBtn\cf5 \strokec5 .\cf4 \strokec4 classList\cf5 \strokec5 .\cf4 \strokec4 add\cf5 \strokec5 (\cf7 \strokec7 'hidden'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3         setEditableAttributes\cf5 \strokec5 (\cf8 \strokec8 false\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 // Set or unset contenteditable attribute across elements\cf4 \cb1 \strokec4 \
-\cb3     \cf8 \strokec8 function\cf4 \strokec4  setEditableAttributes\cf5 \strokec5 (\cf4 \strokec4 enable\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  editableIds \cf5 \strokec5 =\cf4 \strokec4  \cf5 \strokec5 [\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'hero-title'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'hero-description'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'def-heading'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'def-title-1'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'def-body-1'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'def-primary-head'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'def-primary-text'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'def-secondary-head'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'def-secondary-text'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'status-heading'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-val-1'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-lbl-1'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-desc-1'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'stat-val-2'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-lbl-2'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-desc-2'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-val-3'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-lbl-3'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-desc-3'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'stat-val-4'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-lbl-4'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'stat-desc-4'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'status-case-title'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'status-case-body'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'causes-heading'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'cause-title-1'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'cause-body-1'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'cause-title-2'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'cause-body-2'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'cause-title-3'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'cause-body-3'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'effects-heading'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'eff-eco-title'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'eff-eco-1'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'eff-eco-2'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'eff-human-title'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'eff-human-1'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'eff-human-2'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'sol-heading'\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
-\cb3         \cf7 \strokec7 'sol-body'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'sol-box1-head'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'sol-box1-body'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'sol-box2-head'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'sol-box2-body'\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 'footer-text'\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 ];\cf4 \cb1 \strokec4 \
-\
-\cb3       editableIds\cf5 \strokec5 .\cf4 \strokec4 forEach\cf5 \strokec5 (\cf4 \strokec4 id \cf5 \strokec5 =>\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3         \cf8 \strokec8 const\cf4 \strokec4  el \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 getElementById\cf5 \strokec5 (\cf4 \strokec4 id\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3         \cf8 \strokec8 if\cf4 \strokec4  \cf5 \strokec5 (\cf4 \strokec4 el\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3           el\cf5 \strokec5 .\cf4 \strokec4 contentEditable \cf5 \strokec5 =\cf4 \strokec4  enable \cf5 \strokec5 ?\cf4 \strokec4  \cf7 \strokec7 "true"\cf4 \strokec4  \cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 "false"\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3         \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 \});\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 // Prompt user to update image URL\cf4 \cb1 \strokec4 \
-\cb3     \cf8 \strokec8 function\cf4 \strokec4  changeImagePrompt\cf5 \strokec5 (\cf4 \strokec4 imgId\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  imgEl \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 getElementById\cf5 \strokec5 (\cf4 \strokec4 imgId\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 if\cf4 \strokec4  \cf5 \strokec5 (!\cf4 \strokec4 imgEl\cf5 \strokec5 )\cf4 \strokec4  \cf8 \strokec8 return\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  newUrl \cf5 \strokec5 =\cf4 \strokec4  prompt\cf5 \strokec5 (\cf7 \strokec7 "Enter a new image URL for this image slot:"\cf5 \strokec5 ,\cf4 \strokec4  imgEl\cf5 \strokec5 .\cf4 \strokec4 src\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 if\cf4 \strokec4  \cf5 \strokec5 (\cf4 \strokec4 newUrl \cf5 \strokec5 &&\cf4 \strokec4  newUrl\cf5 \strokec5 .\cf4 \strokec4 trim\cf5 \strokec5 ()\cf4 \strokec4  \cf5 \strokec5 !==\cf4 \strokec4  \cf7 \strokec7 ""\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3         imgEl\cf5 \strokec5 .\cf4 \strokec4 src \cf5 \strokec5 =\cf4 \strokec4  newUrl\cf5 \strokec5 .\cf4 \strokec4 trim\cf5 \strokec5 ();\cf4 \cb1 \strokec4 \
-\cb3       \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\
-\cb3     \cf9 \strokec9 // Copy formatted HTML with updated user text\cf4 \cb1 \strokec4 \
-\cb3     \cf8 \strokec8 function\cf4 \strokec4  copyModifiedHTML\cf5 \strokec5 ()\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
-\cb3       \cf9 \strokec9 // Disable edit mode temporarily prior to copying so editable outlines aren't captured\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  originalState \cf5 \strokec5 =\cf4 \strokec4  isEditMode\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 if\cf4 \strokec4  \cf5 \strokec5 (\cf4 \strokec4 isEditMode\cf5 \strokec5 )\cf4 \strokec4  toggleEditMode\cf5 \strokec5 ();\cf4 \cb1 \strokec4 \
-\
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  pageHtml \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 documentElement\cf5 \strokec5 .\cf4 \strokec4 outerHTML\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       \cb1 \
-\cb3       \cf9 \strokec9 // Copy using standard document command\cf4 \cb1 \strokec4 \
-\cb3       \cf8 \strokec8 const\cf4 \strokec4  dummy \cf5 \strokec5 =\cf4 \strokec4  document\cf5 \strokec5 .\cf4 \strokec4 createElement\cf5 \strokec5 (\cf7 \strokec7 'textarea'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       document\cf5 \strokec5 .\cf4 \strokec4 body\cf5 \strokec5 .\cf4 \strokec4 appendChild\cf5 \strokec5 (\cf4 \strokec4 dummy\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       dummy\cf5 \strokec5 .\cf4 \strokec4 value \cf5 \strokec5 =\cf4 \strokec4  pageHtml\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
-\cb3       dummy\cf5 \strokec5 .\cf4 \strokec4 select\cf5 \strokec5 ();\cf4 \cb1 \strokec4 \
-\cb3       document\cf5 \strokec5 .\cf4 \strokec4 execCommand\cf5 \strokec5 (\cf7 \strokec7 'copy'\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       document\cf5 \strokec5 .\cf4 \strokec4 body\cf5 \strokec5 .\cf4 \strokec4 removeChild\cf5 \strokec5 (\cf4 \strokec4 dummy\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\
-\cb3       alert\cf5 \strokec5 (\cf7 \strokec7 "Page HTML copied to clipboard! You can save this exact customized page layout."\cf5 \strokec5 );\cf4 \cb1 \strokec4 \
-\cb3       \cb1 \
-\cb3       \cf8 \strokec8 if\cf4 \strokec4  \cf5 \strokec5 (\cf4 \strokec4 originalState\cf5 \strokec5 )\cf4 \strokec4  toggleEditMode\cf5 \strokec5 ();\cf4 \cb1 \strokec4 \
-\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
-\cb3   \cf5 \strokec5 </\cf2 \strokec2 script\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3 \strokec5 </\cf2 \strokec2 body\cf5 \strokec5 >\cf4 \cb1 \strokec4 \
-\cf5 \cb3 \strokec5 </\cf2 \strokec2 html\cf5 \strokec5 >}
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accent-emerald to-ocean-400 flex items-center justify-center text-slate-900 font-extrabold text-xl shadow-lg">
+          PH
+        </div>
+        <div>
+          <span class="text-lg font-bold text-white tracking-tight block">Plastic Crisis PH</span>
+          <span class="text-xs text-emerald-400 font-medium">Ecosystem & People Focus</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#definition" class="text-slate-300 hover:text-emerald-400 transition-colors">1. Definition</a>
+        <a href="#status" class="text-slate-300 hover:text-emerald-400 transition-colors">2. Status</a>
+        <a href="#causes" class="text-slate-300 hover:text-emerald-400 transition-colors">3. Causes</a>
+        <a href="#effects" class="text-slate-300 hover:text-emerald-400 transition-colors">4. Effects</a>
+        <a href="#solutions" class="text-slate-300 hover:text-emerald-400 transition-colors">Solutions</a>
+      </nav>
+
+      <!-- Admin / Edit Toggle Controls -->
+      <div class="flex items-center space-x-3">
+        <button id="toggleEditBtn" onclick="toggleEditMode()" class="px-4 py-2 text-xs font-bold rounded-lg border border-emerald-500/40 bg-emerald-950/40 text-emerald-300 hover:bg-emerald-500 hover:text-slate-950 transition-all flex items-center space-x-2">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <span id="editBtnText">Enable Edit Mode</span>
+        </button>
+
+        <button id="copyContentBtn" onclick="copyModifiedHTML()" class="hidden px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all flex items-center space-x-1">
+          <i class="fa-regular fa-copy"></i>
+          <span>Copy Page HTML</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Edit Mode Banner Bar -->
+  <div id="editModeBanner" class="hidden bg-emerald-500 text-slate-950 px-4 py-2 text-xs font-semibold text-center flex items-center justify-center space-x-2">
+    <i class="fa-solid fa-circle-info"></i>
+    <span><b>Edit Mode Active:</b> Click on any text, heading, or image button on the page to customize content live!</span>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 overflow-hidden bg-gradient-to-b from-ocean-900 via-ocean-800 to-ocean-900 border-b border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-6">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Philippine Environmental Spotlight</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6" id="hero-title">
+          The Plastic & Microplastic Crisis in the Philippines
+        </h1>
+        <p class="text-lg text-slate-300 mb-8 leading-relaxed" id="hero-description">
+          An in-depth study on how the single-use "sachet economy", river pathways like the Pasig River, and plastic fragmentation impact Philippine marine biodiversity and human health.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#definition" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20">
+            Explore 4 Key Pillars
+          </a>
+          <a href="#solutions" class="px-6 py-3 rounded-xl glass-card hover:bg-ocean-700 text-white font-semibold text-sm transition-all border border-slate-700">
+            PH Policy & Action (EPR Act)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-grow space-y-24 py-16">
+
+    <!-- SECTION 1: DEFINITION -->
+    <section id="definition" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Pillar 01</span>
+        <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Core Concepts</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-white mb-8" id="def-heading">1. Definition: Microplastics & Polymers</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 items-stretch">
+        <!-- Text Card -->
+        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-emerald-400" id="def-title-1">What are Microplastics?</h3>
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base" id="def-body-1">
+              Plastics do not biodegrade in nature; instead, sun rays (UV light), ocean wave friction, and heat break them into microscopic fragments. Microplastics are defined as synthetic plastic particles smaller than <b>5 millimeters</b> (about the size of a sesame seed).
+            </p>
+            <div class="space-y-3 pt-2">
+              <div class="p-4 rounded-xl bg-ocean-800/80 border border-slate-700/60">
+                <h4 class="text-white font-bold text-sm mb-1" id="def-primary-head">Primary Microplastics</h4>
+                <p class="text-xs text-slate-400" id="def-primary-text">Microbeads manufactured for facial scrubs, cosmetics, and industrial raw resin pellets ("nurdles").</p>
+              </div>
+              <div class="p-4 rounded-xl bg-ocean-800/80 border border-slate-700/60">
+                <h4 class="text-white font-bold text-sm mb-1" id="def-secondary-head">Secondary Microplastics</h4>
+                <p class="text-xs text-slate-400" id="def-secondary-text">Particles formed when larger single-use sachets, plastic bags, and bottles weather and break down in tropical waters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Container with Editable Overlay -->
+        <div class="glass-card rounded-2xl overflow-hidden relative min-h-[320px] flex items-center justify-center">
+          <img id="img-def" src="https://environmentalhealth.ucdavis.edu/sites/g/files/dgvnsk2556/files/media/images/Microplastics%20in%20soil.jpeg" alt="Microplastics scientific sample" class="w-full h-full object-cover">
+          <button onclick="changeImagePrompt('img-def')" class="img-edit-btn hidden absolute top-4 right-4 bg-slate-900/90 text-emerald-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-emerald-500/50 hover:bg-emerald-500 hover:text-slate-900 transition-all flex items-center space-x-1 shadow-lg">
+            <i class="fa-solid fa-image"></i>
+            <span>Change Image URL</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STATUS -->
+    <section id="status" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Pillar 02</span>
+        <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Local Context</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-white mb-8" id="status-heading">2. Status: The Scale in the Philippines</h2>
+
+      <!-- Key Philippine Metrics Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-emerald-500">
+          <span class="text-3xl font-extrabold text-white block mb-1" id="stat-val-1">163 Million</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-2" id="stat-lbl-1">Daily Sachet Usage</span>
+          <p class="text-xs text-slate-400" id="stat-desc-1">Filipinos consume over 163 million single-use sachets daily, equating to nearly 60 billion sachets annually.</p>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-accent-coral">
+          <span class="text-3xl font-extrabold text-white block mb-1" id="stat-val-2">#1 Global River</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-accent-coral block mb-2" id="stat-lbl-2">Pasig River Impact</span>
+          <p class="text-xs text-slate-400" id="stat-desc-2">Studies identify the Pasig River as one of the world's highest contributors of riverine ocean plastic pollution.</p>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-accent-amber">
+          <span class="text-3xl font-extrabold text-white block mb-1" id="stat-val-3">350,000+ Tons</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-accent-amber block mb-2" id="stat-lbl-3">Annual Ocean Leakage</span>
+          <p class="text-xs text-slate-400" id="stat-desc-3">Estimated metric tons of mismanaged plastic leaking directly into Philippine seas and coastal waters annually.</p>
+        </div>
+
+        <div class="glass-card glass-card-hover rounded-xl p-6 border-l-4 border-l-ocean-400">
+          <span class="text-3xl font-extrabold text-white block mb-1" id="stat-val-4">&lt; 10%</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-ocean-400 block mb-2" id="stat-lbl-4">Recycling Efficiency</span>
+          <p class="text-xs text-slate-400" id="stat-desc-4">Due to multi-layer film compositions in sachets, recycling rates remain critically low nationwide.</p>
+        </div>
+      </div>
+
+      <!-- Local Case Study Card -->
+      <div class="glass-card rounded-2xl p-8 grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-white" id="status-case-title">Manila Bay & River System Contamination</h3>
+          <p class="text-slate-300 text-sm leading-relaxed" id="status-case-body">
+            Recent studies by Philippine marine scientists have confirmed the presence of microplastics in Manila Bay sediments, local tap water samples, and commercially sold fish species like <i>Bangus</i> (Milkfish) and <i>Galunggong</i> (Round Scad).
+          </p>
+        </div>
+        <div class="rounded-xl overflow-hidden relative h-56">
+          <img id="img-status" src="https://images.squarespace-cdn.com/content/v1/5369465be4b0507a1fd05af0/1545091517468-ILOFFQ43A9CTHK6EV7PQ/Ben+Hicks.JPG" alt="Pollution in Manila Bay" class="w-full h-full object-cover">
+          <button onclick="changeImagePrompt('img-status')" class="img-edit-btn hidden absolute top-4 right-4 bg-slate-900/90 text-emerald-400 px-3 py-1.5 rounded-lg text-xs font-bold border border-emerald-500/50 hover:bg-emerald-500 hover:text-slate-900 transition-all flex items-center space-x-1 shadow-lg">
+            <i class="fa-solid fa-image"></i>
+            <span>Change Image URL</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CAUSES -->
+    <section id="causes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Pillar 03</span>
+        <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Root Drivers</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-white mb-8" id="causes-heading">3. Key Causes in the Philippine Context</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Cause 1 -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-accent-coral/10 border border-accent-coral/30 text-accent-coral flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2" id="cause-title-1">1. The "Sachet Economy"</h3>
+            <p class="text-slate-300 text-xs leading-relaxed" id="cause-body-1">
+              Low-income households rely on daily purchasing power in local <i>sari-sari</i> stores, buying single-serving portions of coffee, shampoo, and cooking oil packaged in non-recyclable multi-layer foil/plastic sachets.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cause 2 -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-dumpster"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2" id="cause-title-2">2. Waste Infrastructure Deficits</h3>
+            <p class="text-slate-300 text-xs leading-relaxed" id="cause-body-2">
+              Many local government units (LGUs) lack the resources for comprehensive MRF (Materials Recovery Facility) waste segregation, resulting in open dump sites near riverbanks and coastal zones.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cause 3 -->
+        <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-accent-amber/10 border border-accent-amber/30 text-accent-amber flex items-center justify-center text-xl mb-4">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3" id="cause-title-3">3. Synthetic Microfibers & Tires</h3>
+            <p class="text-slate-300 text-xs leading-relaxed" id="cause-body-3">
+              Washing synthetic clothing (polyester/nylon) and friction from vehicle tires on major roads shed millions of micro-particles into storm drains and urban canals during typhoon rains.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: EFFECTS -->
+    <section id="effects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Pillar 04</span>
+        <span class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Consolidated Impacts</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-white mb-8" id="effects-heading">4. Ecosystem & Human Health Effects</h2>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Ecosystem Effects Card -->
+        <div class="glass-card rounded-2xl p-8 space-y-4">
+          <div class="flex items-center space-x-3 text-emerald-400">
+            <i class="fa-solid fa-fish-fins text-2xl"></i>
+            <h3 class="text-xl font-bold text-white" id="eff-eco-title">Marine & Coral Ecosystem Threats</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-start space-x-2">
+              <i class="fa-solid fa-circle-chevron-right text-emerald-400 mt-1"></i>
+              <span id="eff-eco-1"><b>Coral Bleaching & Pathogens:</b> Plastics smother coral reefs in the Coral Triangle, harboring harmful bacteria that increase disease incidence.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fa-solid fa-circle-chevron-right text-emerald-400 mt-1"></i>
+              <span id="eff-eco-2"><b>Trophic Bioaccumulation:</b> Fish mistake microplastics for plankton, absorbing toxic persistent organic pollutants (POPs) that travel up the food chain.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Human Health Effects Card -->
+        <div class="glass-card rounded-2xl p-8 space-y-4">
+          <div class="flex items-center space-x-3 text-accent-coral">
+            <i class="fa-solid fa-heart-pulse text-2xl"></i>
+            <h3 class="text-xl font-bold text-white" id="eff-human-title">Human Health & Food Safety Risks</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-start space-x-2">
+              <i class="fa-solid fa-circle-chevron-right text-accent-coral mt-1"></i>
+              <span id="eff-human-1"><b>Dietary Ingestion:</b> Microplastics have been identified in commercial sea salt, bottled water, and edible fish organ tissues in local markets.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i class="fa-solid fa-circle-chevron-right text-accent-coral mt-1"></i>
+              <span id="eff-human-2"><b>Endocrine Disruption:</b> Additives like BPA and phthalates attached to plastics act as hormone disruptors linked to reproductive and cellular health issues.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SOLUTIONS & POLICY -->
+    <section id="solutions" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+      <div class="glass-card rounded-3xl p-8 lg:p-12 border border-emerald-500/30 bg-gradient-to-br from-ocean-800 via-ocean-900 to-slate-950">
+        <div class="max-w-3xl space-y-6">
+          <span class="px-3 py-1 text-xs font-extrabold tracking-wider uppercase rounded-md bg-emerald-500 text-slate-950">Action & Governance</span>
+          <h2 class="text-3xl font-extrabold text-white" id="sol-heading">Philippine Solutions & Policy Response</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed" id="sol-body">
+            In 2022, the Philippines enacted the <b>Extended Producer Responsibility (EPR) Act (RA 11898)</b>, legally requiring large brand enterprises to account for and recover 80% of their plastic packaging footprint by 2028.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-ocean-800/80 border border-slate-700">
+              <h4 class="text-emerald-400 font-bold text-sm mb-1" id="sol-box1-head">Refill & Zero-Waste Systems</h4>
+              <p class="text-xs text-slate-400" id="sol-box1-body">Community <i>sari-sari</i> refill stations replacing single-use sachets with reusable container systems.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-ocean-800/80 border border-slate-700">
+              <h4 class="text-emerald-400 font-bold text-sm mb-1" id="sol-box2-head">River Interceptors</h4>
+              <p class="text-xs text-slate-400" id="sol-box2-body">Deploying automated solar-powered cleanup boats along Pasig River tributaries to trap waste before it reaches Manila Bay.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="glass-card border-t border-slate-800 text-center py-8 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <p id="footer-text">Educational Web App for "People and the Earth's Ecosystem" • Focus: Philippines</p>
+    </div>
+  </footer>
+
+  <!-- Inline Script for Live Editing & Admin Interactivity -->
+  <script>
+    let isEditMode = false;
+
+    // Toggle Admin Edit Mode
+    function toggleEditMode() {
+      isEditMode = !isEditMode;
+      const body = document.body;
+      const btnText = document.getElementById('editBtnText');
+      const banner = document.getElementById('editModeBanner');
+      const copyBtn = document.getElementById('copyContentBtn');
+
+      if (isEditMode) {
+        body.classList.add('editable-active');
+        btnText.innerText = 'Exit Edit Mode';
+        banner.classList.remove('hidden');
+        copyBtn.classList.remove('hidden');
+        setEditableAttributes(true);
+      } else {
+        body.classList.remove('editable-active');
+        btnText.innerText = 'Enable Edit Mode';
+        banner.classList.add('hidden');
+        copyBtn.classList.add('hidden');
+        setEditableAttributes(false);
+      }
+    }
+
+    // Set or unset contenteditable attribute across elements
+    function setEditableAttributes(enable) {
+      const editableIds = [
+        'hero-title', 'hero-description', 'def-heading', 'def-title-1', 'def-body-1',
+        'def-primary-head', 'def-primary-text', 'def-secondary-head', 'def-secondary-text',
+        'status-heading', 'stat-val-1', 'stat-lbl-1', 'stat-desc-1',
+        'stat-val-2', 'stat-lbl-2', 'stat-desc-2', 'stat-val-3', 'stat-lbl-3', 'stat-desc-3',
+        'stat-val-4', 'stat-lbl-4', 'stat-desc-4', 'status-case-title', 'status-case-body',
+        'causes-heading', 'cause-title-1', 'cause-body-1', 'cause-title-2', 'cause-body-2',
+        'cause-title-3', 'cause-body-3', 'effects-heading', 'eff-eco-title', 'eff-eco-1',
+        'eff-eco-2', 'eff-human-title', 'eff-human-1', 'eff-human-2', 'sol-heading',
+        'sol-body', 'sol-box1-head', 'sol-box1-body', 'sol-box2-head', 'sol-box2-body', 'footer-text'
+      ];
+
+      editableIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.contentEditable = enable ? "true" : "false";
+        }
+      });
+    }
+
+    // Prompt user to update image URL
+    function changeImagePrompt(imgId) {
+      const imgEl = document.getElementById(imgId);
+      if (!imgEl) return;
+      const newUrl = prompt("Enter a new image URL for this image slot:", imgEl.src);
+      if (newUrl && newUrl.trim() !== "") {
+        imgEl.src = newUrl.trim();
+      }
+    }
+
+    // Copy formatted HTML with updated user text
+    function copyModifiedHTML() {
+      // Disable edit mode temporarily prior to copying so editable outlines aren't captured
+      const originalState = isEditMode;
+      if (isEditMode) toggleEditMode();
+
+      const pageHtml = document.documentElement.outerHTML;
+      
+      // Copy using standard document command
+      const dummy = document.createElement('textarea');
+      document.body.appendChild(dummy);
+      dummy.value = pageHtml;
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+
+      alert("Page HTML copied to clipboard! You can save this exact customized page layout.");
+      
+      if (originalState) toggleEditMode();
+    }
+  </script>
+</body>
+</html>
