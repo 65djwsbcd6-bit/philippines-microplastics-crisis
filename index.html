@@ -1,3 +1,18 @@
+Here is the complete, single-file update for your `index.html`.
+
+### Key Adjustments:
+
+1. **Home Tab (Strictly Non-Scrollable):** Locked to `h-[calc(100vh-120px)]` with `overflow-hidden` so it fits perfectly on your screen without any vertical scrollbars.
+2. **Inner Tabs (Scrollable):** `Definition`, `Status`, `Causes`, and `Effects` tabs are configured with `overflow-y-auto` and custom scrollbar styling so you can smoothly scroll through long content.
+3. **Rich Visual Cards:** High-quality Unsplash image cards are integrated across all topic pages with glassmorphism overlays and icons.
+
+---
+
+### Updated Code for `index.html`
+
+Replace all content in your GitHub repository's `index.html` file with this code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,37 +44,43 @@
     .glass-card { background: rgba(13, 40, 48, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
     .nav-tab.active { background-color: rgba(16, 185, 129, 0.2); color: #10b981; border-color: rgba(16, 185, 129, 0.4); }
     .tab-content { display: none; }
-    .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .tab-content.active { display: flex; animation: fadeIn 0.4s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Custom Scrollbar for Inner Pages */
+    .custom-scroll::-webkit-scrollbar { width: 6px; }
+    .custom-scroll::-webkit-scrollbar-track { background: rgba(6, 19, 24, 0.5); }
+    .custom-scroll::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.4); border-radius: 4px; }
+    .custom-scroll::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.7); }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white overflow-hidden">
 
-  <!-- Interactive Particle Background Layer -->
+  <!-- Interactive Background Canvas -->
   <canvas id="particleCanvas" class="fixed inset-0 pointer-events-auto z-0 opacity-40"></canvas>
 
-  <!-- Video Background in Hero Header -->
+  <!-- Video Background Layer -->
   <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-    <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-25">
+    <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-20">
       <source src="https://assets.mixkit.co/videos/preview/mixkit-underwater-view-of-swimming-sea-turtle-41548-large.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-gradient-to-b from-ocean-900/80 via-ocean-900/90 to-ocean-900"></div>
   </div>
 
   <!-- Header Navigation -->
-  <header class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 lg:px-8 py-3.5">
+  <header class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 lg:px-8 py-3">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-ocean-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
           <i class="fa-solid fa-water text-xl"></i>
         </div>
         <div>
-          <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold block">Environmental Science</span>
-          <h1 class="text-sm md:text-base font-bold text-white tracking-tight">Philippine Microplastics Crisis</h1>
+          <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold block">Ecosystem Case Study</span>
+          <h1 class="text-sm md:text-base font-bold text-white tracking-tight">Philippines Plastic Crisis</h1>
         </div>
       </div>
 
-      <!-- Page Tabs (No Scroll Switching) -->
+      <!-- Page Tabs -->
       <nav class="flex items-center gap-1.5 md:gap-2 overflow-x-auto py-1">
         <button onclick="switchTab('home')" id="tab-home" class="nav-tab active px-3.5 py-1.5 rounded-lg text-xs font-semibold border border-transparent transition-all hover:text-emerald-400">
           <i class="fa-solid fa-house mr-1.5"></i>Home
@@ -80,165 +101,208 @@
     </div>
   </header>
 
-  <!-- Main View Container -->
-  <main class="flex-grow max-w-6xl mx-auto w-full px-4 py-8 relative z-10 flex items-center">
+  <!-- Main View Area -->
+  <main class="flex-grow max-w-6xl mx-auto w-full px-4 relative z-10 flex items-center justify-center">
 
-    <!-- PAGE 1: HOME HUB -->
-    <div id="page-home" class="tab-content active w-full">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-4">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Interactive Ecosystem Spotlight
+    <!-- TAB 1: HOME (STRICTLY NON-SCROLLABLE FULL SCREEN) -->
+    <div id="page-home" class="tab-content active w-full h-[calc(100vh-120px)] flex flex-col justify-center items-center overflow-hidden py-2">
+      <div class="text-center max-w-3xl mx-auto mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Interactive Marine Spotlight
         </span>
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-2">
           The Plastic & Microplastic Crisis in the Philippines
         </h1>
-        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
-          Move your cursor to interact with the floating microplastic particles over the ocean video background. Select any topic header above to explore details.
+        <p class="text-slate-300 text-xs md:text-sm leading-relaxed max-w-2xl mx-auto">
+          Move your cursor over the underwater background to scatter microplastics. Click the tabs above to navigate between visual topics.
         </p>
       </div>
 
-      <!-- Interactive Calculator Embed on Home Page -->
-      <div class="glass-card p-6 md:p-8 rounded-3xl border border-white/10 max-w-2xl mx-auto">
-        <div class="text-center mb-6">
-          <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Interactive Simulation</span>
-          <h2 class="text-xl font-bold text-white">Philippine Sachet Impact Calculator</h2>
+      <!-- Sachet Impact Calculator -->
+      <div class="glass-card p-5 rounded-3xl border border-white/10 max-w-xl w-full shadow-2xl">
+        <div class="text-center mb-3">
+          <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Interactive Calculator</span>
+          <h2 class="text-base font-bold text-white">Household Sachet Accumulation</h2>
         </div>
 
-        <div class="mb-6">
-          <div class="flex justify-between text-xs font-semibold mb-2">
-            <span class="text-slate-300">Daily Household Usage:</span>
+        <div class="mb-4">
+          <div class="flex justify-between text-xs font-semibold mb-1">
+            <span class="text-slate-300">Daily Sachet Count:</span>
             <span class="text-emerald-400 font-bold" id="sachetCountText">5 sachets / day</span>
           </div>
           <input type="range" id="sachetRange" min="1" max="30" value="5" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-400" oninput="calculateImpact()">
         </div>
 
         <div class="grid grid-cols-3 gap-3 text-center">
-          <div class="bg-ocean-900/80 p-3.5 rounded-xl border border-white/5">
+          <div class="bg-ocean-900/80 p-3 rounded-xl border border-white/5">
             <span class="text-[10px] text-slate-400 block">Monthly</span>
-            <div class="text-lg font-bold text-emerald-400" id="monthlyWaste">150</div>
+            <div class="text-base font-extrabold text-emerald-400" id="monthlyWaste">150</div>
           </div>
-          <div class="bg-ocean-900/80 p-3.5 rounded-xl border border-white/5">
+          <div class="bg-ocean-900/80 p-3 rounded-xl border border-white/5">
             <span class="text-[10px] text-slate-400 block">Yearly</span>
-            <div class="text-lg font-bold text-amber-400" id="yearlyWaste">1,825</div>
+            <div class="text-base font-extrabold text-amber-400" id="yearlyWaste">1,825</div>
           </div>
-          <div class="bg-ocean-900/80 p-3.5 rounded-xl border border-white/5">
+          <div class="bg-ocean-900/80 p-3 rounded-xl border border-white/5">
             <span class="text-[10px] text-slate-400 block">10 Years</span>
-            <div class="text-lg font-bold text-coral" id="decadeWaste">18,250</div>
+            <div class="text-base font-extrabold text-coral" id="decadeWaste">18,250</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- PAGE 2: DEFINITION -->
-    <div id="page-definition" class="tab-content w-full">
+    <!-- TAB 2: DEFINITION (SCROLLABLE WITH PICTURES) -->
+    <div id="page-definition" class="tab-content w-full flex-col py-6 overflow-y-auto max-h-[calc(100vh-120px)] custom-scroll pr-2">
       <div class="mb-6">
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">01. Conceptual Framework</span>
-        <h2 class="text-2xl font-bold text-white">Definition & Classification</h2>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">01. Classification</span>
+        <h2 class="text-2xl font-bold text-white">Plastic Scale & Degradation</h2>
       </div>
+
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass-card p-6 rounded-2xl">
-          <i class="fa-solid fa-bottle-water text-3xl text-emerald-400 mb-4 block"></i>
-          <h3 class="text-lg font-bold text-white mb-2">Macroplastics</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">Debris greater than 5 mm. Includes single-use sachet films, bottles, and abandoned ghost fishing nets damaging Philippine coral reefs.</p>
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=800&q=80" alt="Macroplastics" class="h-44 w-full object-cover">
+          <div class="p-5 flex-grow">
+            <i class="fa-solid fa-bottle-water text-xl text-emerald-400 mb-2 block"></i>
+            <h3 class="text-base font-bold text-white mb-2">Macroplastics (&gt; 5 mm)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Visible ocean debris including single-use sachet wrappers, shopping bags, plastic bottles, and lost fishing nets adrift in marine sanctuaries.</p>
+          </div>
         </div>
-        <div class="glass-card p-6 rounded-2xl">
-          <i class="fa-solid fa-disease text-3xl text-amber-400 mb-4 block"></i>
-          <h3 class="text-lg font-bold text-white mb-2">Microplastics</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">Particles smaller than 5 mm. Formed either as primary manufactured microbeads or secondary fragments weathered by UV rays and ocean waves.</p>
+
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?auto=format&fit=crop&w=800&q=80" alt="Microplastics" class="h-44 w-full object-cover">
+          <div class="p-5 flex-grow">
+            <i class="fa-solid fa-disease text-xl text-amber-400 mb-2 block"></i>
+            <h3 class="text-base font-bold text-white mb-2">Microplastics (&lt; 5 mm)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Particles resulting from wave friction, UV weathering, or primary manufactured microbeads in cosmetics and industrial nurdles.</p>
+          </div>
         </div>
-        <div class="glass-card p-6 rounded-2xl">
-          <i class="fa-solid fa-dna text-3xl text-coral mb-4 block"></i>
-          <h3 class="text-lg font-bold text-white mb-2">Nanoplastics</h3>
-          <p class="text-xs text-slate-300 leading-relaxed">Particles under 1 micrometer ($<1\ \mu\text{m}$). Capable of penetrating intestinal walls, entering bloodstream systems, and accumulating in organ tissues.</p>
+
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=800&q=80" alt="Nanoplastics" class="h-44 w-full object-cover">
+          <div class="p-5 flex-grow">
+            <i class="fa-solid fa-dna text-xl text-coral mb-2 block"></i>
+            <h3 class="text-base font-bold text-white mb-2">Nanoplastics (&lt; 1 µm)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Ultra-fine particles small enough to penetrate cellular membranes, translocate into fish tissue, and enter food chains.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- PAGE 3: STATUS -->
-    <div id="page-status" class="tab-content w-full">
+    <!-- TAB 3: STATUS (SCROLLABLE WITH PICTURES) -->
+    <div id="page-status" class="tab-content w-full flex-col py-6 overflow-y-auto max-h-[calc(100vh-120px)] custom-scroll pr-2">
       <div class="mb-6">
         <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">02. Data & Scale</span>
         <h2 class="text-2xl font-bold text-white">Current Status in the Philippines</h2>
       </div>
-      <div class="grid lg:grid-cols-3 gap-6">
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-emerald-400">
-          <div class="text-3xl font-extrabold text-emerald-400 mb-1">163 Million</div>
-          <h4 class="font-bold text-white text-sm mb-2">Daily Sachets Consumed</h4>
-          <p class="text-xs text-slate-300">The Philippines relies heavily on single-use portion packaging due to low-income purchasing structures.</p>
+
+      <div class="grid lg:grid-cols-2 gap-6 mb-6">
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col md:flex-row">
+          <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=800&q=80" alt="Pasig River" class="md:w-1/2 h-48 md:h-auto object-cover">
+          <div class="p-5 flex flex-col justify-center">
+            <span class="text-2xl font-extrabold text-amber-400 mb-1">Pasig River</span>
+            <h4 class="text-sm font-bold text-white mb-2">Global River Plastic Contributor</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Environmental studies identify Manila's Pasig River as one of the leading global riverways carrying urban plastic runoff into ocean bays.</p>
+          </div>
         </div>
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-amber-400">
-          <div class="text-3xl font-extrabold text-amber-400 mb-1">#1 Worldwide</div>
-          <h4 class="font-bold text-white text-sm mb-2">Pasig River Emission</h4>
-          <p class="text-xs text-slate-300">Studies rank Metro Manila's Pasig River as the top river emitter of ocean plastics globally.</p>
+
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col md:flex-row">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Verde Island Passage" class="md:w-1/2 h-48 md:h-auto object-cover">
+          <div class="p-5 flex flex-col justify-center">
+            <span class="text-2xl font-extrabold text-emerald-400 mb-1">Verde Passage</span>
+            <h4 class="text-sm font-bold text-white mb-2">Biodiversity Center Threatened</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Floating plastic micro-fragments accumulate in coastal waters surrounding the Verde Island Passage, threatening critical coral reefs.</p>
+          </div>
         </div>
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-coral">
-          <div class="text-3xl font-extrabold text-coral mb-1">350,000+ Tons</div>
-          <h4 class="font-bold text-white text-sm mb-2">Annual Ocean Leakage</h4>
-          <p class="text-xs text-slate-300">Estimated total plastic waste leaking into surrounding seas, municipal bays, and coastal sanctuaries each year.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="glass-card p-4 rounded-xl border-l-4 border-emerald-400 text-center">
+          <div class="text-2xl font-black text-emerald-400">163 Million</div>
+          <p class="text-[11px] text-slate-300 mt-1">Single-use sachets consumed daily across LGUs.</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl border-l-4 border-amber-400 text-center">
+          <div class="text-2xl font-black text-amber-400">52% Waste</div>
+          <p class="text-[11px] text-slate-300 mt-1">Sachets make up over half of residual plastic volume.</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl border-l-4 border-coral text-center">
+          <div class="text-2xl font-black text-coral">350,000 Tons</div>
+          <p class="text-[11px] text-slate-300 mt-1">Estimated yearly ocean leakage from land sources.</p>
         </div>
       </div>
     </div>
 
-    <!-- PAGE 4: CAUSES -->
-    <div id="page-causes" class="tab-content w-full">
+    <!-- TAB 4: CAUSES (SCROLLABLE WITH PICTURES) -->
+    <div id="page-causes" class="tab-content w-full flex-col py-6 overflow-y-auto max-h-[calc(100vh-120px)] custom-scroll pr-2">
       <div class="mb-6">
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">03. Drivers</span>
-        <h2 class="text-2xl font-bold text-white">Root Causes</h2>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">03. Key Drivers</span>
+        <h2 class="text-2xl font-bold text-white">Root Causes of Plastic Runoff</h2>
       </div>
+
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass-card p-6 rounded-2xl">
-          <h3 class="font-bold text-white text-sm mb-2"><i class="fa-solid fa-store text-emerald-400 mr-2"></i>Sachet Economy</h3>
-          <p class="text-xs text-slate-300">Multi-layer non-recyclable plastic sachets targeted at low-income consumer habits across local barangays.</p>
+        <div class="glass-card rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1604186837056-8e7c286756f2?auto=format&fit=crop&w=800&q=80" alt="Sachet Packaging" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-white text-sm mb-2"><i class="fa-solid fa-store text-emerald-400 mr-2"></i>Sachet Economy & Market Structure</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Low-income purchasing habits encourage reliance on non-recyclable multi-layer sachets for everyday items (shampoo, coffee, seasonings).</p>
+          </div>
         </div>
-        <div class="glass-card p-6 rounded-2xl">
-          <h3 class="font-bold text-white text-sm mb-2"><i class="fa-solid fa-dumpster text-amber-400 mr-2"></i>Infrastructure Deficits</h3>
-          <p class="text-xs text-slate-300">Insufficient waste recovery, sorting facilities, and landfills in coastal municipal LGUs.</p>
-        </div>
-        <div class="glass-card p-6 rounded-2xl">
-          <h3 class="font-bold text-white text-sm mb-2"><i class="fa-solid fa-shirt text-coral mr-2"></i>Synthetic Microfibers</h3>
-          <p class="text-xs text-slate-300">Polyester garment washing discharges hundreds of thousands of microfibers into municipal waterways per wash cycle.</p>
-        </div>
-        <div class="glass-card p-6 rounded-2xl">
-          <h3 class="font-bold text-white text-sm mb-2"><i class="fa-solid fa-car text-ocean-400 mr-2"></i>Tire Wear & Runoff</h3>
-          <p class="text-xs text-slate-300">Frictional rubber wear and industrial nurdles washed into drains during heavy rainstorms and typhoons.</p>
+
+        <div class="glass-card rounded-2xl overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80" alt="Waste Management Deficit" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-white text-sm mb-2"><i class="fa-solid fa-dumpster text-amber-400 mr-2"></i>Waste Recovery Infrastructure</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Gaps in municipal waste segregation and landfill capacity lead to uncollected waste washing into drainage canals during typhoon rainstorms.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- PAGE 5: EFFECTS -->
-    <div id="page-effects" class="tab-content w-full">
+    <!-- TAB 5: EFFECTS (SCROLLABLE WITH PICTURES) -->
+    <div id="page-effects" class="tab-content w-full flex-col py-6 overflow-y-auto max-h-[calc(100vh-120px)] custom-scroll pr-2">
       <div class="mb-6">
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">04. Ecological & Human Impact</span>
-        <h2 class="text-2xl font-bold text-white">Consequences and Hazards</h2>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block">04. Consequences</span>
+        <h2 class="text-2xl font-bold text-white">Ecological & Human Health Impacts</h2>
       </div>
+
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass-card p-6 rounded-2xl">
-          <i class="fa-solid fa-fish-fins text-2xl text-emerald-400 mb-3 block"></i>
-          <h3 class="font-bold text-white text-sm mb-2">Marine Mortality</h3>
-          <p class="text-xs text-slate-300">Ingestion by sea turtles, whale sharks, and fish causes internal blockage, starvation, and habitat decay.</p>
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Marine Life Threats" class="h-40 w-full object-cover">
+          <div class="p-5 flex-grow">
+            <i class="fa-solid fa-fish-fins text-emerald-400 text-xl mb-2 block"></i>
+            <h3 class="font-bold text-white text-sm mb-2">Marine Mortality</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Sea turtles and marine species mistake floating debris for jellyfish, causing intestinal blockage, toxicity, and starvation.</p>
+          </div>
         </div>
-        <div class="glass-card p-6 rounded-2xl">
-          <i class="fa-solid fa-diagram-project text-2xl text-amber-400 mb-3 block"></i>
-          <h3 class="font-bold text-white text-sm mb-2">Food Web Transfer</h3>
-          <p class="text-xs text-slate-300">Microplastics accumulate in plankton, moving up marine food chains to commercial fish harvested for consumption.</p>
+
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" alt="Food Chain Transfer" class="h-40 w-full object-cover">
+          <div class="p-5 flex-grow">
+            <i class="fa-solid fa-diagram-project text-amber-400 text-xl mb-2 block"></i>
+            <h3 class="font-bold text-white text-sm mb-2">Food Web Bioaccumulation</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Microparticles eaten by plankton transfer up marine food webs into commercial fish species harvested for consumer markets.</p>
+          </div>
         </div>
-        <div class="glass-card p-6 rounded-2xl">
-          <i class="fa-solid fa-notes-medical text-2xl text-coral mb-3 block"></i>
-          <h3 class="font-bold text-white text-sm mb-2">Human Toxicity</h3>
-          <p class="text-xs text-slate-300">Chemical additives like BPA and phthalates act as endocrine disruptors when ingested via seafood and tap water.</p>
+
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Human Health Exposure" class="h-40 w-full object-cover">
+          <div class="p-5 flex-grow">
+            <i class="fa-solid fa-notes-medical text-coral text-xl mb-2 block"></i>
+            <h3 class="font-bold text-white text-sm mb-2">Human Health Risks</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Ingested microplastics absorb heavy metals and persistent organic pollutants, posing endocrine disruptor risks.</p>
+          </div>
         </div>
       </div>
     </div>
 
   </main>
 
-  <footer class="glass-card border-t border-white/10 py-4 px-4 text-center text-xs text-slate-400 relative z-10">
+  <!-- Footer -->
+  <footer class="glass-card border-t border-white/10 py-2 px-4 text-center text-xs text-slate-400 relative z-10">
     <p>People and the Earth's Ecosystem Presentation — Philippines Environmental Case Study</p>
   </footer>
 
-  <!-- Tab Navigation & Canvas Particle Script -->
+  <!-- Scripts -->
   <script>
-    // Tab switching logic (no page scroll)
+    // Tab Switching Logic
     function switchTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
@@ -247,7 +311,7 @@
       document.getElementById('tab-' + tabId).classList.add('active');
     }
 
-    // Sachet Calculator logic
+    // Sachet Calculator Logic
     function calculateImpact() {
       const daily = parseInt(document.getElementById('sachetRange').value);
       document.getElementById('sachetCountText').innerText = daily + ' sachets / day';
@@ -298,7 +362,6 @@
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-        // Interaction with mouse cursor
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
         let distance = Math.sqrt(dx * dx + dy * dy);
@@ -315,7 +378,7 @@
 
     function initParticles() {
       particles = [];
-      for (let i = 0; i < 70; i++) {
+      for (let i = 0; i < 60; i++) {
         particles.push(new Particle());
       }
     }
@@ -331,3 +394,5 @@
   </script>
 </body>
 </html>
+
+```
