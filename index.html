@@ -1,205 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Plastic &amp; Microplastic Crisis in the Philippines</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background:#04141a; color:#d6e6e4; }
-  .img-box { background: linear-gradient(135deg,#0b3b3a,#06202c); overflow:hidden; }
-  .img-box img { width:100%; height:100%; object-fit:cover; }
-  [contenteditable="true"] { outline:1px dashed #34d399; outline-offset:3px; border-radius:4px; }
-  [contenteditable="true"]:focus { background:rgba(52,211,153,.08); }
-  .tab-btn[aria-selected="true"] { background:#34d399; color:#04141a; }
-  .panel { display:none; } .panel.active { display:block; }
-  html { scroll-behavior:smooth; }
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
-  a:focus-visible, button:focus-visible { outline:2px solid #34d399; outline-offset:2px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philippine Plastic & Microplastic Crisis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+          colors: {
+            ocean: { 900: '#0d2830', 700: '#143843', 600: '#1a4b59', 500: '#226071', 400: '#2c7a90', 100: '#e0f2f7' },
+            coral: '#f0625d',
+            emerald: '#10b981',
+            amber: '#f59e0b'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #07161b; color: #e2e8f0; scroll-behavior: smooth; }
+    .editable-active { contenteditable: true; outline: 2px dashed #10b981; outline-offset: 4px; border-radius: 4px; background-color: rgba(16, 185, 129, 0.08); cursor: text; }
+    .editable-active .img-edit-btn { display: flex !important; }
+    .glass-card { background: rgba(13, 40, 48, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-card-hover { transition: all 0.3s ease; }
+    .glass-card-hover:hover { transform: translateY(-4px); border-color: rgba(16, 185, 129, 0.3); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5); }
+  </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
 
-<!-- Nav -->
-<header class="fixed top-0 inset-x-0 z-40 bg-[#04141a]/90 backdrop-blur border-b border-emerald-900/50">
-  <nav class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
-    <a href="#top" class="font-extrabold text-emerald-300">Plastic Crisis PH</a>
-    <div class="hidden md:flex gap-6 text-sm">
-      <a href="#definition" class="hover:text-emerald-300">Definitions</a>
-      <a href="#status" class="hover:text-emerald-300">Status</a>
-      <a href="#causes" class="hover:text-emerald-300">Causes</a>
-      <a href="#effects" class="hover:text-emerald-300">Effects</a>
-    </div>
-    <button id="editToggle" class="text-sm px-3 py-1.5 rounded-full border border-emerald-400 text-emerald-300 hover:bg-emerald-400 hover:text-[#04141a]" aria-pressed="false">Edit mode: Off</button>
-  </nav>
-</header>
-
-<!-- Hero -->
-<section id="top" class="relative min-h-screen flex items-center pt-16">
-  <div class="absolute inset-0 img-box">
-    <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=1800&q=70" alt="Plastic waste floating in the ocean" onerror="this.remove()">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#04141a]/70 via-[#04141a]/80 to-[#04141a]"></div>
-  </div>
-  <div class="relative max-w-6xl mx-auto px-5 py-20">
-    <p class="text-emerald-300 font-medium mb-4" data-edit>Environmental Science &middot; Class Presentation</p>
-    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight max-w-4xl" data-edit>The Plastic &amp; Microplastic Crisis in the Philippines</h1>
-    <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl" data-edit>From a ten-peso sachet to a fish on your plate: how one of the world's most plastic-leaking archipelagos is filling its seas, soils, and bodies with particles it cannot take back.</p>
-    <a href="#definition" class="inline-block mt-10 bg-emerald-400 text-[#04141a] font-bold px-7 py-3 rounded-full hover:bg-emerald-300">Start with the basics</a>
-  </div>
-</section>
-
-<main class="max-w-6xl mx-auto px-5">
-
-<!-- Definitions -->
-<section id="definition" class="py-20">
-  <h2 class="text-3xl md:text-5xl font-extrabold" data-edit>What counts as plastic pollution?</h2>
-  <p class="mt-4 text-slate-300 max-w-2xl" data-edit>Plastics are grouped by size, and by how the particles came to be.</p>
-  <div class="mt-10 grid md:grid-cols-3 gap-5">
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-      <h3 class="text-xl font-bold text-emerald-300" data-edit>Macroplastics</h3>
-      <p class="mt-1 text-sm text-slate-400">Larger than 5 mm</p>
-      <p class="mt-3" data-edit>Bottles, bags, wrappers, fishing nets. Visible, and the source of most entanglement and clogged waterways.</p>
-    </div>
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-      <h3 class="text-xl font-bold text-emerald-300" data-edit>Microplastics</h3>
-      <p class="mt-1 text-sm text-slate-400">1 &micro;m to 5 mm</p>
-      <p class="mt-3" data-edit>Fragments, fibers, beads and pellets small enough to be eaten by plankton, shellfish and fish.</p>
-    </div>
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-      <h3 class="text-xl font-bold text-emerald-300" data-edit>Nanoplastics</h3>
-      <p class="mt-1 text-sm text-slate-400">Smaller than 1 &micro;m</p>
-      <p class="mt-3" data-edit>Particles that may cross cell membranes. Hardest to detect, and the least understood in terms of health effects.</p>
-    </div>
-  </div>
-
-  <h3 class="mt-14 text-2xl font-bold" data-edit>Primary vs. secondary microplastics</h3>
-  <div role="tablist" class="mt-5 flex gap-2">
-    <button role="tab" aria-selected="true" data-tab="primary" class="tab-btn px-5 py-2 rounded-full border border-emerald-700 font-medium">Primary</button>
-    <button role="tab" aria-selected="false" data-tab="secondary" class="tab-btn px-5 py-2 rounded-full border border-emerald-700 font-medium">Secondary</button>
-  </div>
-  <div id="primary" class="panel active mt-5 p-6 rounded-xl bg-[#0a2a30] border border-emerald-900 max-w-3xl">
-    <p data-edit>Manufactured small on purpose: microbeads in some cosmetics and scrubs, and the industrial pellets (nurdles) used to make plastic products. They enter water through drains and spills.</p>
-  </div>
-  <div id="secondary" class="panel mt-5 p-6 rounded-xl bg-[#0a2a30] border border-emerald-900 max-w-3xl">
-    <p data-edit>Formed when larger plastic breaks down through sunlight, waves and abrasion, or is shed by products such as synthetic clothing and car tires. Most microplastics in the environment are of this kind.</p>
-  </div>
-</section>
-
-<!-- Status -->
-<section id="status" class="py-20 border-t border-emerald-900/50">
-  <div class="grid md:grid-cols-2 gap-10 items-center">
-    <div>
-      <h2 class="text-3xl md:text-5xl font-extrabold" data-edit>Status in the Philippines</h2>
-      <p class="mt-4 text-slate-300" data-edit>An archipelago of more than 7,000 islands, heavy coastal populations and uneven waste collection makes the country one of the largest sources of plastic entering the ocean.</p>
-      <h3 class="mt-8 text-xl font-bold text-emerald-300" data-edit>The sachet economy</h3>
-      <p class="mt-2 text-slate-300" data-edit>Shampoo, coffee, detergent and sauces are sold in single-serve sachets that low-income households can afford daily. Multilayer sachets are cheap and convenient, but are rarely recyclable. Advocacy group GAIA has estimated that Filipinos use about 164 million sachets every day.</p>
-      <h3 class="mt-6 text-xl font-bold text-emerald-300" data-edit>Rivers as conveyor belts</h3>
-      <p class="mt-2 text-slate-300" data-edit>Studies of global river emissions place the Pasig River, which flows through Metro Manila into Manila Bay, among the largest river sources of ocean plastic. The Philippines hosts a large share of the world's most polluting rivers.</p>
-    </div>
-    <div class="img-box rounded-2xl h-80 md:h-[28rem]">
-      <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=1000&q=70" alt="Plastic waste on a coastline" onerror="this.remove()">
-    </div>
-  </div>
-  <div class="mt-12 grid sm:grid-cols-3 gap-5">
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900"><p class="text-4xl font-extrabold text-emerald-300" data-edit>~2.7 Mt</p><p class="mt-2 text-slate-300" data-edit>plastic waste generated per year (World Bank estimate)</p></div>
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900"><p class="text-4xl font-extrabold text-emerald-300" data-edit>~20%</p><p class="mt-2 text-slate-300" data-edit>of that waste leaks into the environment and ocean</p></div>
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900"><p class="text-4xl font-extrabold text-emerald-300" data-edit>~164 M</p><p class="mt-2 text-slate-300" data-edit>sachets used daily (GAIA, 2019)</p></div>
-  </div>
-  <p class="mt-4 text-xs text-slate-500" data-edit>Figures are approximate and drawn from published estimates. Verify against the latest sources before presenting.</p>
-</section>
-
-<!-- Causes -->
-<section id="causes" class="py-20 border-t border-emerald-900/50">
-  <h2 class="text-3xl md:text-5xl font-extrabold" data-edit>Causes</h2>
-  <div class="mt-10 grid md:grid-cols-2 gap-5">
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-      <h3 class="text-xl font-bold text-emerald-300" data-edit>Single-use packaging</h3>
-      <p class="mt-2" data-edit>Sachets, thin bags and disposable cups are built into daily buying habits and into the sari-sari store retail model.</p>
-    </div>
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-      <h3 class="text-xl font-bold text-emerald-300" data-edit>Fast fashion</h3>
-      <p class="mt-2" data-edit>Polyester, nylon and acrylic clothing sheds synthetic microfibers in every wash. Wastewater treatment is limited, so fibers flow to rivers and the sea.</p>
-    </div>
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-      <h3 class="text-xl font-bold text-emerald-300" data-edit>Tire wear</h3>
-      <p class="mt-2" data-edit>Tires contain synthetic rubber and shed particles as they wear. Heavy traffic in cities like Metro Manila washes this dust into drains during rain.</p>
-    </div>
-    <div class="p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-      <h3 class="text-xl font-bold text-emerald-300" data-edit>Waste management gaps</h3>
-      <p class="mt-2" data-edit>Uneven collection, open dumps, few sorting and recycling facilities, and waste dumped along waterways let plastic escape before it is ever processed.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Effects -->
-<section id="effects" class="py-20 border-t border-emerald-900/50">
-  <h2 class="text-3xl md:text-5xl font-extrabold" data-edit>Effects</h2>
-  <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
-    <div class="img-box rounded-2xl h-72 md:h-96">
-      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=70" alt="Coral reef and marine life" onerror="this.remove()">
-    </div>
-    <div>
-      <div role="tablist" class="flex flex-wrap gap-2">
-        <button role="tab" aria-selected="true" data-tab="e-marine" class="tab-btn px-4 py-2 rounded-full border border-emerald-700 text-sm font-medium">Marine life</button>
-        <button role="tab" aria-selected="false" data-tab="e-soil" class="tab-btn px-4 py-2 rounded-full border border-emerald-700 text-sm font-medium">Soil &amp; farming</button>
-        <button role="tab" aria-selected="false" data-tab="e-food" class="tab-btn px-4 py-2 rounded-full border border-emerald-700 text-sm font-medium">Food web</button>
-        <button role="tab" aria-selected="false" data-tab="e-health" class="tab-btn px-4 py-2 rounded-full border border-emerald-700 text-sm font-medium">Human health</button>
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 glass-card border-b border-white/10 px-4 lg:px-8 py-3 transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-ocean-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
+          <i class="fa-solid font-bold fa-water text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider text-emerald-400 font-semibold block">Ecosystem Case Study</span>
+          <h1 class="text-sm md:text-base font-bold text-white tracking-tight">Philippines Plastic Crisis</h1>
+        </div>
       </div>
-      <div id="e-marine" class="panel active mt-5 p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-        <p data-edit>Sea turtles, seabirds and fish become entangled in nets and bags, or swallow plastic they mistake for food. Ingestion causes blocked guts, false fullness and starvation. Plastic also carries pathogens onto coral reefs.</p>
-      </div>
-      <div id="e-soil" class="panel mt-5 p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-        <p data-edit>Microplastics reach farmland through irrigation water, compost, sludge and degraded mulch film. They can alter soil structure and water retention and harm earthworms and soil microbes, affecting crop growth.</p>
-      </div>
-      <div id="e-food" class="panel mt-5 p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-        <p data-edit>Plankton and filter feeders such as mussels take in particles, which move up to fish and then to people. Plastics also absorb toxic chemicals, which can build up (bioaccumulate) along the food chain.</p>
-      </div>
-      <div id="e-health" class="panel mt-5 p-6 rounded-xl bg-[#0a2a30] border border-emerald-900">
-        <p data-edit>People are exposed through seafood, salt, water and air. Plastics contain additives such as phthalates and bisphenols, which are known endocrine disruptors that interfere with hormones. Research on long-term effects is still developing.</p>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#definition" class="hover:text-emerald-400 transition-colors">Definition</a>
+        <a href="#status" class="hover:text-emerald-400 transition-colors">Current Status</a>
+        <a href="#causes" class="hover:text-emerald-400 transition-colors">Causes</a>
+        <a href="#effects" class="hover:text-emerald-400 transition-colors">Effects</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="editToggleBtn" onclick="toggleEditMode()" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-pen-to-square text-emerald-400"></i>
+          <span id="editBtnText">Admin Edit Mode</span>
+        </button>
       </div>
     </div>
+  </header>
+
+  <!-- Banner Notification for Edit Mode -->
+  <div id="editBanner" class="hidden bg-emerald-600/90 text-white text-xs py-2 px-4 text-center font-medium sticky top-[61px] z-40 backdrop-blur-md border-b border-emerald-400/30">
+    <i class="fa-solid fa-circle-info mr-1.5"></i> Edit Mode Enabled: Click on any text directly to customize or translate content for your presentation!
   </div>
-</section>
 
-</main>
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative py-20 lg:py-28 px-4 overflow-hidden">
+      <div class="absolute inset-0 z-0 opacity-30 bg-[radial-gradient(#2c7a90_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Environmental Issue Spotlight: Philippines
+        </span>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6" data-editable="title-hero">
+          The Plastic & Microplastic Crisis in Philippine Waters
+        </h1>
+        <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10" data-editable="desc-hero">
+          Examining the ecological breakdown, human health risks, and systemic causes of plastic pollution across the Philippine archipelago.
+        </p>
+      </div>
+    </section>
 
-<footer class="border-t border-emerald-900/50 py-10 text-center text-sm text-slate-500">
-  <p data-edit>Environmental Science Class &middot; Presented by [Your Name / Group]</p>
-</footer>
+    <!-- Definition Section -->
+    <section id="definition" class="py-16 px-4 max-w-7xl mx-auto">
+      <div class="mb-10 text-center md:text-left">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">01. Conceptual Framework</span>
+        <h2 class="text-3xl font-bold text-white" data-editable="title-def">Definition & Classification</h2>
+      </div>
 
-<script>
-  // Tabs: each tablist controls the panels with matching ids within its section
-  document.querySelectorAll('[role="tablist"]').forEach(list => {
-    const btns = list.querySelectorAll('[role="tab"]');
-    btns.forEach(btn => btn.addEventListener('click', () => {
-      btns.forEach(b => {
-        const on = b === btn;
-        b.setAttribute('aria-selected', on);
-        document.getElementById(b.dataset.tab).classList.toggle('active', on);
-      });
-    }));
-  });
+      <div class="grid md:grid-grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="glass-card glass-card-hover p-6 rounded-2xl border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-ocean-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold mb-4">
+            <i class="fa-solid fa-bottle-water"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2" data-editable="def-1-title">Macroplastics</h3>
+          <p class="text-slate-300 text-sm leading-relaxed" data-editable="def-1-body">
+            Plastic debris larger than 5 mm in size. Includes discarded packaging, single-use shopping bags, beverage bottles, and abandoned ghost fishing gear choking Philippine coastal reefs.
+          </p>
+        </div>
 
-  // Edit mode: make [data-edit] elements editable, and keep edits in this browser
-  const toggle = document.getElementById('editToggle');
-  const editable = [...document.querySelectorAll('[data-edit]')];
-  const KEY = 'plastic-ph-edits';
-  try {
-    const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
-    editable.forEach((el, i) => { if (saved[i]) el.innerHTML = saved[i]; });
-  } catch (e) {}
-  const save = () => {
-    try { localStorage.setItem(KEY, JSON.stringify(Object.fromEntries(editable.map((el, i) => [i, el.innerHTML])))); } catch (e) {}
-  };
-  toggle.addEventListener('click', () => {
-    const on = toggle.getAttribute('aria-pressed') !== 'true';
-    toggle.setAttribute('aria-pressed', on);
-    toggle.textContent = 'Edit mode: ' + (on ? 'On' : 'Off');
-    editable.forEach(el => el.contentEditable = on);
-    if (!on) save();
-  });
-</script>
+        <div class="glass-card glass-card-hover p-6 rounded-2xl border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-ocean-500/40 flex items-center justify-center text-amber-400 text-xl font-bold mb-4">
+            <i class="fa-solid fa-disease"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2" data-editable="def-2-title">Microplastics</h3>
+          <p class="text-slate-300 text-sm leading-relaxed" data-editable="def-2-body">
+            Synthetic polymer particles smaller than 5 millimeters. Categorized as <strong>Primary</strong> (manufactured microbeads/nurdles) or <strong>Secondary</strong> (weathered fragmentation from solar UV and wave action).
+          </p>
+        </div>
+
+        <div class="glass-card glass-card-hover p-6 rounded-2xl border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-ocean-500/40 flex items-center justify-center text-coral text-xl font-bold mb-4">
+            <i class="fa-solid fa-dna"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2" data-editable="def-3-title">Nanoplastics</h3>
+          <p class="text-slate-300 text-sm leading-relaxed" data-editable="def-3-body">
+            Microscopic particles under 1 micrometer ($<1\ \mu\text{m}$). These extremely small particles can easily pass through tissue barriers, enter cellular structures, and circulate through bloodstream systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status Section -->
+    <section id="status" class="py-16 px-4 max-w-7xl mx-auto">
+      <div class="mb-10 text-center md:text-left">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">02. Data & Scale</span>
+        <h2 class="text-3xl font-bold text-white" data-editable="title-status">Current Status in the Philippines</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-6">
+          <div class="glass-card p-6 rounded-2xl border border-white/10 flex items-start gap-4">
+            <div class="text-3xl font-extrabold text-emerald-400">163M+</div>
+            <div>
+              <h4 class="font-semibold text-white mb-1" data-editable="stat-1-title">Daily Sachet Consumption</h4>
+              <p class="text-xs text-slate-300 leading-relaxed" data-editable="stat-1-body">
+                The Philippines consumes over 163 million single-use sachets daily due to low-income packaging dependency, generating vast non-recyclable multi-layer waste.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/10 flex items-start gap-4">
+            <div class="text-3xl font-extrabold text-amber-400">#1</div>
+            <div>
+              <h4 class="font-semibold text-white mb-1" data-editable="stat-2-title">Pasig River Ocean Contribution</h4>
+              <p class="text-xs text-slate-300 leading-relaxed" data-editable="stat-2-body">
+                Studies identify the Pasig River in Metro Manila as the single largest ocean plastic-emitting river globally, discharging tens of thousands of tons annually.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/10 flex items-start gap-4">
+            <div class="text-3xl font-extrabold text-coral">350K</div>
+            <div>
+              <h4 class="font-semibold text-white mb-1" data-editable="stat-3-title">Metric Tons Discharged Yearly</h4>
+              <p class="text-xs text-slate-300 leading-relaxed" data-editable="stat-3-body">
+                An estimated 350,000+ metric tons of plastic leak directly into Philippine marine ecosystems each year, threatening coral reefs and local fisheries.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative rounded-2xl overflow-hidden glass-card p-2 border border-white/10">
+          <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=1000&q=80" alt="Ocean Plastic Pollution" class="w-full h-80 object-cover rounded-xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section id="causes" class="py-16 px-4 max-w-7xl mx-auto">
+      <div class="mb-10 text-center md:text-left">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">03. Systemic Drivers</span>
+        <h2 class="text-3xl font-bold text-white" data-editable="title-causes">Root Causes</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-card p-6 rounded-2xl border border-white/10">
+          <h3 class="font-bold text-white mb-2" data-editable="cause-1-title">Sachet Economy</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-editable="cause-1-body">
+            Multinational companies aggressively market low-cost, single-use sachet portions targeting low-income barangay households lacking bulk purchasing power.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10">
+          <h3 class="font-bold text-white mb-2" data-editable="cause-2-title">Infrastructure Gap</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-editable="cause-2-body">
+            Municipal solid waste management systems in many LGUs lack sorting facilities, sanitary landfills, and funding to match rapid urban consumption.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10">
+          <h3 class="font-bold text-white mb-2" data-editable="cause-3-title">Synthetic Textiles</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-editable="cause-3-body">
+            Polyester fast fashion releases hundreds of thousands of microfibers per laundry load directly into untreated municipal water outlets.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10">
+          <h3 class="font-bold text-white mb-2" data-editable="cause-4-title">Industrial Runoff</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-editable="cause-4-body">
+            Frictional car tire wear and lost raw plastic pellets ("nurdles") enter stormwater drains during heavy tropical rainstorms and typhoon runoffs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Effects Section -->
+    <section id="effects" class="py-16 px-4 max-w-7xl mx-auto mb-16">
+      <div class="mb-10 text-center md:text-left">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">04. Ecological & Human Impact</span>
+        <h2 class="text-3xl font-bold text-white" data-editable="title-effects">Consequences and Hazards</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-emerald-400 font-bold text-lg"><i class="fa-solid fa-fish-fins mr-2"></i>Marine Ecosystems</div>
+          <p class="text-xs text-slate-300 leading-relaxed" data-editable="effect-1-body">
+            Endangered sea turtles, whale sharks, and fish species ingest macroplastics, causing physical starvation, internal organ tearing, and coral mortality.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-amber-400 font-bold text-lg"><i class="fa-solid fa-diagram-project mr-2"></i>Bioaccumulation</div>
+          <p class="text-xs text-slate-300 leading-relaxed" data-editable="effect-2-body">
+            Microplastics bioaccumulate up Philippine marine food chains. Small fish eat plastic-laden plankton, concentrating toxins before commercial fish reach market tables.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+          <div class="text-coral font-bold text-lg"><i class="fa-solid fa-notes-medical mr-2"></i>Human Health Risks</div>
+          <p class="text-xs text-slate-300 leading-relaxed" data-editable="effect-3-body">
+            Microplastics carry endocrine-disrupting additives (phthalates, BPA) into human blood, organs, and tissue via consumed seafood, tap water, and commercial sea salt.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-card border-t border-white/10 py-6 px-4 text-center text-xs text-slate-400">
+    <p>People and the Earth's Ecosystem Presentation — Philippines Environmental Case Study</p>
+  </footer>
+
+  <script>
+    let isEditMode = false;
+    function toggleEditMode() {
+      isEditMode = !isEditMode;
+      const banner = document.getElementById('editBanner');
+      const editBtnText = document.getElementById('editBtnText');
+      const editableElements = document.querySelectorAll('[data-editable]');
+
+      if (isEditMode) {
+        banner.classList.remove('hidden');
+        editBtnText.innerText = 'Exit Edit Mode';
+        editableElements.forEach(el => el.classList.add('editable-active'));
+      } else {
+        banner.classList.add('hidden');
+        editBtnText.innerText = 'Admin Edit Mode';
+        editableElements.forEach(el => el.classList.remove('editable-active'));
+      }
+    }
+  </script>
 </body>
 </html>
