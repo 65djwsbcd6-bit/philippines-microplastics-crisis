@@ -1,651 +1,1220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Philippine Plastic Crisis — Marine Eco Study</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/font-awesome/6.5.1/css/all.min.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
-          colors: {
-            ocean: { 900: '#061318', 800: '#0d2830', 700: '#143843', 500: '#226071' },
-            emerald: { 400: '#34d399', 500: '#10b981' }
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Plastic We Throw Away Never Truly Goes Away | Philippine Microplastic Crisis</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            950: '#040b0e',
+                            900: '#061318',
+                            850: '#0b1f28',
+                            800: '#112b37',
+                            700: '#183c4d',
+                            600: '#23556d',
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                        },
+                        sand: {
+                            300: '#fde68a',
+                            400: '#f59e0b',
+                            500: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
-  <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #061318; color: #f8fafc; overflow-x: hidden; }
-    
-    /* Modern Floating Pill Nav styling */
-    .pill-navbar { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(20px); }
-    .nav-link { color: #334155; transition: all 0.2s ease; }
-    .nav-link:hover { color: #0f172a; }
-    .nav-link.active { background-color: #0f172a; color: #ffffff !important; }
+    </script>
 
-    /* Glass Panels */
-    .glass-card { background: rgba(13, 40, 48, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.12); }
-    
-    .tab-content { display: none; }
-    .tab-content.active { display: flex; animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-    /* Custom Scrollbar for Content Pages */
-    .custom-scroll::-webkit-scrollbar { width: 8px; }
-    .custom-scroll::-webkit-scrollbar-track { background: rgba(6, 19, 24, 0.4); }
-    .custom-scroll::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.4); border-radius: 99px; }
-    .custom-scroll::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.7); }
-  </style>
+    <style>
+        /* Custom scrollbar and glassmorphism styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #061318;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #183c4d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
+        }
+        .glass-panel {
+            background: rgba(11, 31, 40, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(17, 43, 55, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+        }
+        .pulse-pin {
+            animation: pulse-ring 2s infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+<body class="bg-ocean-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-ocean-950 min-h-screen flex flex-col justify-between">
 
-  <!-- Interactive Background Canvas Particles -->
-  <canvas id="particleCanvas" class="fixed inset-0 pointer-events-auto z-0 opacity-40"></canvas>
+    <!-- Sticky Glass Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-3 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto glass-panel rounded-2xl px-4 py-2.5 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-ocean-950 font-black text-lg shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-bold fa-water"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-sm tracking-wide text-white group-hover:text-emerald-400 transition-colors">PHILIPPINES</span>
+                    <span class="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">Plastic & Microplastic Crisis</span>
+                </div>
+            </a>
 
-  <!-- Video Background -->
-  <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-    <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-25">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-underwater-view-of-swimming-sea-turtle-41548-large.mp4" type="video/mp4">
-    </video>
-    <div class="absolute inset-0 bg-gradient-to-b from-ocean-900/60 via-ocean-900/80 to-ocean-900"></div>
-  </div>
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+                <a href="#happening" class="nav-link px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-emerald-400 hover:bg-ocean-800/50 transition-all">What is Happening?</a>
+                <a href="#scale" class="nav-link px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-emerald-400 hover:bg-ocean-800/50 transition-all">How Big is the Problem?</a>
+                <a href="#causes" class="nav-link px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-emerald-400 hover:bg-ocean-800/50 transition-all">Where Does It Come From?</a>
+                <a href="#impacts" class="nav-link px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-emerald-400 hover:bg-ocean-800/50 transition-all">Ecosystem Impact</a>
+                <a href="#solutions" class="nav-link px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-emerald-400 hover:bg-ocean-800/50 transition-all">Action Plan</a>
+            </nav>
 
-  <!-- FLOATING PILL NAVBAR -->
-  <header class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-    <div class="pill-navbar pointer-events-auto rounded-full px-3 py-2 shadow-2xl border border-white/20 flex items-center justify-between gap-2 md:gap-6 max-w-4xl w-full">
-      
-      <!-- Brand Logo -->
-      <div class="flex items-center gap-2 pl-3">
-        <div class="w-7 h-7 rounded-full bg-emerald-500 flex items-center justify-center text-white text-xs shadow-md">
-          <i class="fa-solid fa-droplet"></i>
+            <div class="flex items-center gap-3">
+                <button onclick="toggleSourcesModal()" class="px-3.5 py-1.5 rounded-xl bg-ocean-800 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-ocean-950 text-xs font-bold transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <span>Citations</span>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
-        <span class="font-bold text-slate-900 text-xs md:text-sm tracking-tight">EcoPhilippine</span>
-      </div>
 
-      <!-- Nav Links -->
-      <nav class="flex items-center gap-1">
-        <button onclick="switchTab('home')" id="tab-home" class="nav-link active px-4 py-1.5 rounded-full text-xs font-semibold">
-          Home
-        </button>
-        <button onclick="switchTab('definition')" id="tab-definition" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold">
-          Definition
-        </button>
-        <button onclick="switchTab('status')" id="tab-status" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold">
-          Status
-        </button>
-        <button onclick="switchTab('causes')" id="tab-causes" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold">
-          Causes
-        </button>
-        <button onclick="switchTab('effects')" id="tab-effects" class="nav-link px-4 py-1.5 rounded-full text-xs font-semibold">
-          Effects
-        </button>
-      </nav>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden max-w-7xl mx-auto mt-2 glass-panel rounded-2xl p-4 flex flex-col gap-2 border border-slate-700/50">
+            <a href="#happening" class="mobile-nav-link px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-ocean-800">What is Happening?</a>
+            <a href="#scale" class="mobile-nav-link px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-ocean-800">How Big is the Problem?</a>
+            <a href="#causes" class="mobile-nav-link px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-ocean-800">Where Does It Come From?</a>
+            <a href="#impacts" class="mobile-nav-link px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-ocean-800">Ecosystem Impact</a>
+            <a href="#solutions" class="mobile-nav-link px-3 py-2 rounded-lg text-sm text-slate-200 hover:bg-ocean-800">Action Plan</a>
+        </div>
+    </header>
 
-      <!-- Action Button -->
-      <button onclick="openVideoModal()" class="hidden md:flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-medium px-4 py-2 rounded-full transition-all shadow-md">
-        <span>Play Reel</span>
-        <i class="fa-solid fa-play text-[10px]"></i>
-      </button>
+    <main class="flex-grow">
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+            <!-- Background Image with Gradient Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=2000&q=80" 
+                     alt="Ocean plastic pollution coastline" 
+                     class="w-full h-full object-cover object-center filter brightness-40 contrast-110"
+                     onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80'">
+                <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/70 to-ocean-950/40"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-ocean-950/50 to-ocean-950"></div>
+            </div>
 
+            <!-- Animated Canvas Overlay for Microplastic Particles -->
+            <canvas id="hero-particles" class="absolute inset-0 z-10 pointer-events-none opacity-60"></canvas>
+
+            <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center gap-6">
+                <!-- Academic Subject Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest backdrop-blur-md animate-fade-in">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    People and Earth's Ecosystems — Academic Study
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.15]">
+                    THE PLASTIC WE THROW AWAY <br class="hidden sm:inline"/>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-sand-400 text-glow">
+                        NEVER TRULY GOES AWAY
+                    </span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-base sm:text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
+                    Exploring the Global Plastic & Microplastic Crisis through the Philippines—tracing the path of single-use sachets from neighborhood stores to marine food webs.
+                </p>
+
+                <!-- Hero Story Card -->
+                <div class="glass-panel p-5 sm:p-6 rounded-2xl max-w-2xl text-left border border-slate-700/60 shadow-2xl mt-2">
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <strong class="text-emerald-400 font-semibold">Everyday Reality:</strong> Plastic is embedded in daily Philippine life—from food packaging and sachets to bottles and shopping bags. But when thrown away, it doesn't disappear. It travels through urban streets, drainage channels, and major rivers like the Pasig before reaching our seas—breaking down over decades into microscopic toxic particles.
+                    </p>
+                </div>
+
+                <!-- CTA & Fast Stat -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 w-full max-w-md">
+                    <a href="#happening" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-ocean-950 font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-emerald-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                        <span>SEE WHAT HAPPENS TO OUR PLASTIC</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+
+                <!-- Hero Key Stat Pill -->
+                <div class="mt-6 flex flex-wrap justify-center items-center gap-6 text-xs text-slate-400 border-t border-slate-800/80 pt-6 w-full max-w-3xl">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-emerald-400"></i>
+                        <span><strong class="text-white">2.7 Million</strong> metric tons generated annually in PH</span>
+                    </div>
+                    <div class="hidden sm:block text-slate-700">•</div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-box-open text-sand-400"></i>
+                        <span><strong class="text-white">163 Million</strong> sachets used daily</span>
+                    </div>
+                    <div class="hidden sm:block text-slate-700">•</div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-water text-teal-400"></i>
+                        <span><strong class="text-white">350,000+</strong> tons leaked to ocean yearly</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. WHAT IS HAPPENING? -->
+        <section id="happening" class="py-20 bg-ocean-900 relative border-t border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-2">01. Ecosystem Degradation Mechanics</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">
+                        What Happens to Plastic After We Throw It Away?
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-3">
+                        Plastic doesn't biodegrade like organic matter. Instead, sun exposure, ocean currents, and physical friction fragment larger debris into dangerous micro-sized particles.
+                    </p>
+                </div>
+
+                <!-- Dual Concepts Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <!-- Macro plastic card -->
+                    <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Macro-Plastic Pollution</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                Visible plastic waste—such as beverage bottles, shopping bags, single-use sachets, and food containers—accumulating in terrestrial habitats, drainage channels, and coastal beaches.
+                            </p>
+                        </div>
+                        <div class="bg-ocean-950/60 p-3.5 rounded-xl border border-slate-800 text-xs text-slate-400">
+                            <strong class="text-slate-200">Impact:</strong> Causes direct physical entanglement, blocks urban storm drainage causing floods, and smothers mangrove air roots.
+                        </div>
+                    </div>
+
+                    <!-- Microplastics card -->
+                    <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-sand-400/10 border border-sand-400/20 text-sand-400 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-dharmachakra"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Microplastics (&lt; 5mm)</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                Tiny synthetic particles smaller than 5 millimeters (about the size of a sesame seed). They adsorb toxic environmental pollutants and enter the base of marine aquatic food webs.
+                            </p>
+                        </div>
+                        <div class="bg-ocean-950/60 p-3.5 rounded-xl border border-slate-800 text-xs text-slate-400">
+                            <strong class="text-slate-200">Impact:</strong> Ingested by plankton, shellfish, and fish; transfers toxic chemicals through bioaccumulation into human diets.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Step-by-Step Breakdown Simulator -->
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700/60">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
+                        <div>
+                            <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-diagram-project text-emerald-400"></i>
+                                Interactive Visual Timeline: Plastic Degradation Pipeline
+                            </h3>
+                            <p class="text-slate-400 text-xs sm:text-sm mt-1">Click through each phase to observe how a single plastic bottle disintegrates and infiltrates marine ecosystems.</p>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs font-mono bg-ocean-950 px-3 py-1.5 rounded-lg border border-slate-800 text-emerald-400">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>Interactive Model</span>
+                        </div>
+                    </div>
+
+                    <!-- Step Buttons -->
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-8" id="step-buttons">
+                        <button onclick="setBreakdownStep(1)" id="step-btn-1" class="step-btn active p-3 rounded-xl border text-left text-xs font-semibold transition-all bg-emerald-500/20 border-emerald-500 text-white">
+                            <span class="block text-[10px] text-emerald-400 font-mono">STEP 01</span>
+                            Disposal & Leakage
+                        </button>
+                        <button onclick="setBreakdownStep(2)" id="step-btn-2" class="step-btn p-3 rounded-xl border text-left text-xs font-semibold transition-all bg-ocean-950 border-slate-800 text-slate-400 hover:text-white">
+                            <span class="block text-[10px] text-slate-500 font-mono">STEP 02</span>
+                            UV & Hydro Degradation
+                        </button>
+                        <button onclick="setBreakdownStep(3)" id="step-btn-3" class="step-btn p-3 rounded-xl border text-left text-xs font-semibold transition-all bg-ocean-950 border-slate-800 text-slate-400 hover:text-white">
+                            <span class="block text-[10px] text-slate-500 font-mono">STEP 03</span>
+                            Fragmentation
+                        </button>
+                        <button onclick="setBreakdownStep(4)" id="step-btn-4" class="step-btn p-3 rounded-xl border text-left text-xs font-semibold transition-all bg-ocean-950 border-slate-800 text-slate-400 hover:text-white">
+                            <span class="block text-[10px] text-slate-500 font-mono">STEP 04</span>
+                            Microparticle Ingestion
+                        </button>
+                        <button onclick="setBreakdownStep(5)" id="step-btn-5" class="step-btn col-span-2 sm:col-span-1 p-3 rounded-xl border text-left text-xs font-semibold transition-all bg-ocean-950 border-slate-800 text-slate-400 hover:text-white">
+                            <span class="block text-[10px] text-slate-500 font-mono">STEP 05</span>
+                            Trophic Transfer
+                        </button>
+                    </div>
+
+                    <!-- Step Display Content Area -->
+                    <div id="step-content" class="bg-ocean-950/80 p-6 rounded-2xl border border-slate-800 flex flex-col md:flex-row gap-6 items-center min-h-[220px]">
+                        <!-- Dynamic JS Content populated by setBreakdownStep() -->
+                    </div>
+
+                    <!-- Primary vs Secondary Microplastics Info -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-800/80 text-xs">
+                        <div class="bg-ocean-900/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-emerald-400 font-bold block mb-1">Primary Microplastics</span>
+                            <p class="text-slate-300">Manufactured directly at tiny sizes—such as microbeads in cosmetics, industrial nurdles (pellets), and synthetic fibers shed during laundry.</p>
+                        </div>
+                        <div class="bg-ocean-900/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-sand-400 font-bold block mb-1">Secondary Microplastics</span>
+                            <p class="text-slate-300">Created when larger plastic debris (sachets, bottles, fishing nets) break down due to solar ultraviolet radiation, wave action, and weathering.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. HOW BIG IS THE PROBLEM? -->
+        <section id="scale" class="py-20 bg-ocean-950 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-2">02. National Environmental Baseline</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">
+                        How Much Plastic Is Entering Our Environment?
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-3">
+                        The Philippines faces severe waste management pressures. Despite high collection efforts in urban centers, geography, archipelago monsoon runs, and market structures lead to massive ocean leakage.
+                    </p>
+                </div>
+
+                <!-- Big Number Stat Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-400 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Annual National Generation</span>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white mb-2 font-mono">2.7M</div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Metric tons of plastic waste generated each year across the Philippine archipelago.
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-slate-500 mt-4 block">Source: World Bank Study (2021)</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-sand-400 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Daily Single-Use Sachets</span>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-sand-400 mb-2 font-mono">163M</div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Single-use plastic sachets consumed daily across neighborhood <em>sari-sari</em> retail stores.
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-slate-500 mt-4 block">Source: GAIA Alliance Report</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-teal-400 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Annual Marine Leakage</span>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-teal-400 mb-2 font-mono">350K+</div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Metric tons of unmanaged plastic leaking directly into Philippine rivers and marine waters.
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-slate-500 mt-4 block">Source: DENR-EMB / UNEP Data</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-l-rose-400 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Pasig River Ocean Share</span>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-rose-400 mb-2 font-mono">6.4%</div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                The Pasig River alone contributes an estimated 6.4% of total global riverine ocean plastic inputs.
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-slate-500 mt-4 block">Source: Meijer et al. (Science Advances)</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Map & Hotspot Explorer Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-ocean-900/80 p-6 sm:p-8 rounded-3xl border border-slate-800">
+                    <div class="lg:col-span-7 relative flex flex-col items-center">
+                        <div class="w-full flex justify-between items-center mb-4">
+                            <h3 class="text-base font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-map-location-dot text-emerald-400"></i>
+                                Philippine Plastic Hotspot & River Network Map
+                            </h3>
+                            <span class="text-[10px] text-slate-400">Click a pin to inspect ecological data</span>
+                        </div>
+
+                        <!-- Custom SVG Map of Philippines with Interactive Hotspot Pins -->
+                        <div class="relative w-full max-w-md bg-ocean-950 p-4 rounded-2xl border border-slate-800/80 flex justify-center items-center">
+                            <svg viewBox="0 0 400 550" class="w-full h-auto max-h-[460px] filter drop-shadow-md">
+                                <!-- Simplified Islands SVG paths -->
+                                <!-- Luzon -->
+                                <path d="M150,40 L190,30 L220,60 L240,110 L230,160 L200,200 L180,210 L150,180 L130,130 L140,80 Z" fill="#112b37" stroke="#183c4d" stroke-width="2"/>
+                                <!-- Visayas -->
+                                <path d="M180,240 L230,230 L260,260 L240,300 L190,310 L160,280 Z" fill="#112b37" stroke="#183c4d" stroke-width="2"/>
+                                <!-- Palawan -->
+                                <path d="M70,250 L110,290 L90,340 L50,300 Z" fill="#112b37" stroke="#183c4d" stroke-width="2"/>
+                                <!-- Mindanao -->
+                                <path d="M200,340 L260,330 L290,380 L280,450 L220,470 L180,420 L210,380 Z" fill="#112b37" stroke="#183c4d" stroke-width="2"/>
+                                
+                                <!-- Rivers overlay -->
+                                <path d="M185,155 L165,160 M170,160 L155,165" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+
+                                <!-- Hotspot Pins -->
+                                <!-- Pin 1: Manila Bay & Pasig River -->
+                                <g class="cursor-pointer group" onclick="selectMapHotspot('pasig')">
+                                    <circle cx="170" cy="160" r="12" class="fill-rose-500/30 pulse-pin"/>
+                                    <circle cx="170" cy="160" r="5" class="fill-rose-500 group-hover:fill-white transition-colors"/>
+                                    <text x="180" y="163" class="text-[10px] font-bold fill-slate-200">Manila Bay & Pasig River</text>
+                                </g>
+
+                                <!-- Pin 2: Verde Island Passage -->
+                                <g class="cursor-pointer group" onclick="selectMapHotspot('verde')">
+                                    <circle cx="165" cy="195" r="10" class="fill-emerald-500/30 pulse-pin"/>
+                                    <circle cx="165" cy="195" r="5" class="fill-emerald-400 group-hover:fill-white transition-colors"/>
+                                    <text x="175" y="198" class="text-[10px] font-bold fill-slate-200">Verde Island Passage</text>
+                                </g>
+
+                                <!-- Pin 3: Visayan Sea -->
+                                <g class="cursor-pointer group" onclick="selectMapHotspot('visayan')">
+                                    <circle cx="210" cy="270" r="10" class="fill-sand-500/30 pulse-pin"/>
+                                    <circle cx="210" cy="270" r="5" class="fill-sand-400 group-hover:fill-white transition-colors"/>
+                                    <text x="220" y="273" class="text-[10px] font-bold fill-slate-200">Visayan Sea Fisheries</text>
+                                </g>
+
+                                <!-- Pin 4: Palawan Coastal Waters -->
+                                <g class="cursor-pointer group" onclick="selectMapHotspot('palawan')">
+                                    <circle cx="80" cy="300" r="10" class="fill-teal-500/30 pulse-pin"/>
+                                    <circle cx="80" cy="300" r="5" class="fill-teal-400 group-hover:fill-white transition-colors"/>
+                                    <text x="90" y="303" class="text-[10px] font-bold fill-slate-200">Palawan Coast</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Selected Hotspot Information Display -->
+                    <div class="lg:col-span-5 flex flex-col justify-between">
+                        <div id="hotspot-card" class="bg-ocean-950 p-6 rounded-2xl border border-slate-800">
+                            <!-- Dynamically loaded content -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hydrological Waste Flow Simulator: "From Streets to Sea" -->
+                <div class="mt-14 glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700/60">
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider block mb-1">Hydrological Transport Visualizer</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">FROM OUR STREETS TO THE SEA</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-1">Trace how uncollected plastic packaging moves through local infrastructure into marine ecosystems during rain events.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 relative">
+                        <div class="bg-ocean-950 p-4 rounded-xl border border-slate-800 text-center flex flex-col items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 text-emerald-400 flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-house-user"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white block mb-1">1. Household Use</span>
+                            <p class="text-[11px] text-slate-400">Sachets & single-use plastics discarded without collection.</p>
+                        </div>
+
+                        <div class="bg-ocean-950 p-4 rounded-xl border border-slate-800 text-center flex flex-col items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 text-sand-400 flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white block mb-1">2. Street Runoff</span>
+                            <p class="text-[11px] text-slate-400">Rainstorms wash light plastic waste into open curbside gutters.</p>
+                        </div>
+
+                        <div class="bg-ocean-950 p-4 rounded-xl border border-slate-800 text-center flex flex-col items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 text-teal-400 flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-water-ladder"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white block mb-1">3. Drainage Outfalls</span>
+                            <p class="text-[11px] text-slate-400">Storm sewers concentrate trash and empty directly into urban canals.</p>
+                        </div>
+
+                        <div class="bg-ocean-950 p-4 rounded-xl border border-slate-800 text-center flex flex-col items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 text-blue-400 flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-bridge-water"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white block mb-1">4. Major Rivers</span>
+                            <p class="text-[11px] text-slate-400">Pasig and Tullahan rivers carry high-volume waste flows toward bays.</p>
+                        </div>
+
+                        <div class="bg-ocean-950 p-4 rounded-xl border border-slate-800 text-center flex flex-col items-center">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 text-rose-400 flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-fish"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white block mb-1">5. Marine Sink</span>
+                            <p class="text-[11px] text-slate-400">Waves break macro-plastics down into microplastics in coastal habitats.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. WHERE DOES THE PLASTIC COME FROM? -->
+        <section id="causes" class="py-20 bg-ocean-900 border-t border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-2">03. Drivers & Systemic Factors</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">
+                        Why Is There So Much Plastic in the First Place?
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-3">
+                        The Philippine plastic footprint is shaped by economic purchasing models, geographical archipelagic realities, and infrastructure gaps rather than simple consumer negligence.
+                    </p>
+                </div>
+
+                <!-- 6 Interactive Cause Cards with Responsive Flex/Grid and Auto Height -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Card 1: Sachet Economy -->
+                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">The Sachet Economy & Retail Models</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Socioeconomic factors encourage purchasing fast-moving consumer goods in small, low-cost single-use sachets through neighborhood <em>sari-sari</em> stores. While budget-friendly, this market structure generates billions of non-recyclable multi-layer foil/plastic wrappers.
+                            </p>
+                        </div>
+                        <div class="px-6 py-3 bg-ocean-950/80 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
+                            <span>Key Driver: Micro-retail affordability</span>
+                            <i class="fa-solid fa-circle-info text-amber-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Waste Infrastructure -->
+                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-dumpster"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Municipal Waste Infrastructure Gaps</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Many island municipalities lack adequate sorting facilities, sanitary landfills, or systematic waste collection networks. Overburdened local systems lead to unmanaged waste disposal near shorelines and riverbanks.
+                            </p>
+                        </div>
+                        <div class="px-6 py-3 bg-ocean-950/80 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
+                            <span>Key Driver: Collection capacity shortfall</span>
+                            <i class="fa-solid fa-circle-info text-rose-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Monsoon & Topography -->
+                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-cloud-showers-heavy"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Monsoon Flooding & Island Topography</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                High seasonal rainfall, monsoons, and frequent typhoons wash uncollected land-based plastic directly into storm drains, agricultural channels, and river systems, transporting waste into ocean basins rapidly.
+                            </p>
+                        </div>
+                        <div class="px-6 py-3 bg-ocean-950/80 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
+                            <span>Key Driver: Hydrological transport</span>
+                            <i class="fa-solid fa-circle-info text-teal-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Soft Plastics Resale Value -->
+                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Low Market Value of Soft Plastics</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Unlike rigid PET bottles or aluminum cans, thin plastic films and multi-layered sachets have little to no resale value for waste pickers and junk shops, resulting in extremely low recovery and collection rates.
+                            </p>
+                        </div>
+                        <div class="px-6 py-3 bg-ocean-950/80 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
+                            <span>Key Driver: Absence of economic incentive</span>
+                            <i class="fa-solid fa-circle-info text-emerald-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Ghost Nets & Fishing Debris -->
+                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-anchor"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Fishing Operations & Abandoned Gear</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Discarded nylon ropes, lost monofilament fishing lines, and ghost nets from commercial and artisanal fishing continuously degrade in open water, entangling marine life and creating persistent microfibers.
+                            </p>
+                        </div>
+                        <div class="px-6 py-3 bg-ocean-950/80 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
+                            <span>Key Driver: Marine sector debris</span>
+                            <i class="fa-solid fa-circle-info text-sky-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Corporate EPR Gaps -->
+                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                        <div class="p-6">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg mb-4">
+                                <i class="fa-solid fa-building-flag"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Corporate Responsibility Challenges</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                For decades, fast-moving consumer goods (FMCG) corporations shifted waste collection costs onto local municipalities. Extended Producer Responsibility (EPR) regulations are currently addressing this systemic imbalance.
+                            </p>
+                        </div>
+                        <div class="px-6 py-3 bg-ocean-950/80 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
+                            <span>Key Driver: Upstream packaging policies</span>
+                            <i class="fa-solid fa-circle-info text-purple-400"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Household Single-Use Plastic Footprint Calculator -->
+                <div class="mt-14 glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700/60">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
+                        <div>
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider block mb-1">Interactive Household Calculator</span>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white">Estimate Your Household Single-Use Accumulation</h3>
+                            <p class="text-slate-400 text-xs sm:text-sm mt-1">Adjust the slider to see how small daily sachet and packaging purchases accumulate over time.</p>
+                        </div>
+                        <div class="bg-ocean-950 p-4 rounded-2xl border border-slate-800 text-right">
+                            <span class="text-[10px] text-slate-400 block uppercase font-mono">Estimated Annual Generation</span>
+                            <span id="calc-result" class="text-3xl font-extrabold text-emerald-400 font-mono">1,095</span>
+                            <span class="text-xs text-slate-300 block">individual plastic sachets / year</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 max-w-3xl">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-slate-300 mb-2">
+                                <span>Daily Household Sachets/Wrappers Purchased:</span>
+                                <span id="sachet-val" class="text-emerald-400 font-mono text-sm">3 items / day</span>
+                            </div>
+                            <input type="range" id="sachet-slider" min="1" max="20" value="3" class="w-full h-2 bg-ocean-950 rounded-lg appearance-none cursor-pointer accent-emerald-400" oninput="calculateFootprint()">
+                            <div class="flex justify-between text-[10px] text-slate-500 mt-1 font-mono">
+                                <span>1 item (Minimal)</span>
+                                <span>10 items (Average Family)</span>
+                                <span>20 items (High Consumption)</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800/80 text-center">
+                            <div class="bg-ocean-950 p-3 rounded-xl border border-slate-800">
+                                <span class="text-[10px] text-slate-400 block">5-Year Cumulative Output</span>
+                                <span id="five-year-val" class="text-lg font-bold text-sand-400 font-mono">5,475 units</span>
+                            </div>
+                            <div class="bg-ocean-950 p-3 rounded-xl border border-slate-800">
+                                <span class="text-[10px] text-slate-400 block">Estimated Weight</span>
+                                <span id="weight-val" class="text-lg font-bold text-teal-400 font-mono">8.21 kg</span>
+                            </div>
+                            <div class="bg-ocean-950 p-3 rounded-xl border border-slate-800">
+                                <span class="text-[10px] text-slate-400 block">Potential Microplastic Particles</span>
+                                <span id="micro-val" class="text-lg font-bold text-rose-400 font-mono">5.4 Million</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. WHAT DOES IT DO TO US AND NATURE? -->
+        <section id="impacts" class="py-20 bg-ocean-950 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-2">04. Ecological Consequences</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">
+                        Where Does the Plastic End Up?
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-3">
+                        Plastic pollution does not remain static. It permeates every stratum of Philippine marine ecosystems—from shallow coastal mangroves to high-level predator food chains and coastal human communities.
+                    </p>
+                </div>
+
+                <!-- Ecosystem Category Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    
+                    <!-- Waterways -->
+                    <div class="glass-card p-6 rounded-2xl border-t-4 border-t-teal-400 flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-3">🌊</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Our Waterways & Sediments</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Dense microplastic particles sink into estuarine riverbeds and seabed sediment columns, altering sediment permeability and creating toxic hotspots in marine bottom habitats.
+                            </p>
+                        </div>
+                        <div class="text-[11px] text-teal-400 font-semibold">Impact Area: Riverbed benthic layers</div>
+                    </div>
+
+                    <!-- Wildlife -->
+                    <div class="glass-card p-6 rounded-2xl border-t-4 border-t-emerald-400 flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-3">🐢</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Marine Wildlife & Turtles</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Sea turtles confuse floating plastic bags with jellyfish. Ingestion leads to intestinal blockages, false feeling of fullness, starvation, and toxic chemical leaching inside animal tissues.
+                            </p>
+                        </div>
+                        <div class="text-[11px] text-emerald-400 font-semibold">Impact Area: Endangered marine fauna</div>
+                    </div>
+
+                    <!-- Coral Reefs -->
+                    <div class="glass-card p-6 rounded-2xl border-t-4 border-t-rose-400 flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-3">🪸</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Coral Reefs & Mangroves</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Snagged plastic bags smother coral colonies, depriving them of light and oxygen while increasing disease risk 20-fold. In mangroves, debris block breathing pneumatophore roots.
+                            </p>
+                        </div>
+                        <div class="text-[11px] text-rose-400 font-semibold">Impact Area: Biodiversity hotspots</div>
+                    </div>
+
+                    <!-- Communities -->
+                    <div class="glass-card p-6 rounded-2xl border-t-4 border-t-sand-400 flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-3">👨‍👩‍‍👧</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Coastal Communities & Flooding</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Clogged urban pumping stations aggravate severe monsoon flooding in Metro Manila. Coastal fishing villages suffer from damaged boat propellers and reduced fish catches.
+                            </p>
+                        </div>
+                        <div class="text-[11px] text-sand-400 font-semibold">Impact Area: Livelihoods & safety</div>
+                    </div>
+
+                    <!-- Air & Microfibers -->
+                    <div class="glass-card p-6 rounded-2xl border-t-4 border-t-sky-400 flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-3">💨</div>
+                            <h3 class="text-lg font-bold text-white mb-2">Atmospheric Transport</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Microscopic synthetic clothing fibers become airborne during dry periods, being inhaled by coastal residents or settling onto agricultural soils and freshwater supplies.
+                            </p>
+                        </div>
+                        <div class="text-[11px] text-sky-400 font-semibold">Impact Area: Inhalation & terrestrial deposition</div>
+                    </div>
+
+                    <!-- The Invisible Problem -->
+                    <div class="glass-card p-6 rounded-2xl border-t-4 border-t-purple-400 flex flex-col justify-between">
+                        <div>
+                            <div class="text-2xl mb-3">🔍</div>
+                            <h3 class="text-lg font-bold text-white mb-2">The Plastic We Can't See</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Even when a plastic bottle is no longer visible on a beach, it persists as millions of micro-particles absorb endocrine-disrupting chemicals in seawater.
+                            </p>
+                        </div>
+                        <div class="text-[11px] text-purple-400 font-semibold">Principle: Plastic shrinks, problem grows</div>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Trophic Biomagnification Visualizer -->
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700/60">
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider block mb-1">Trophic Transfer Diagram</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">🍽️ Microplastics in the Food Web</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-1">Trace how microplastics migrate from zooplankton at the base of the marine food chain into commercially harvested fish species and human diets.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 relative">
+                        <!-- Level 1 -->
+                        <div class="bg-ocean-950 p-5 rounded-2xl border border-slate-800 relative hover:border-emerald-500/50 transition-all group">
+                            <span class="text-[10px] font-mono text-emerald-400 block mb-1">TROPHIC LEVEL 1</span>
+                            <h4 class="font-bold text-white text-sm mb-2">Plankton & Micro-fauna</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Microscopic zooplankton ingest tiny plastic fragments floating in the water column, mistaking them for organic food particles.</p>
+                            <div class="mt-3 text-[10px] text-slate-500 font-mono">Particle Size: &lt; 0.1 mm</div>
+                        </div>
+
+                        <!-- Level 2 -->
+                        <div class="bg-ocean-950 p-5 rounded-2xl border border-slate-800 relative hover:border-teal-500/50 transition-all group">
+                            <span class="text-[10px] font-mono text-teal-400 block mb-1">TROPHIC LEVEL 2</span>
+                            <h4 class="font-bold text-white text-sm mb-2">Small Forage Fish</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Small fish (like <em>Galunggong</em> / Round Scad) consume thousands of plankton daily, accumulating concentrated plastic particles in their digestive tracts.</p>
+                            <div class="mt-3 text-[10px] text-slate-500 font-mono">Particle Concentration: 10x</div>
+                        </div>
+
+                        <!-- Level 3 -->
+                        <div class="bg-ocean-950 p-5 rounded-2xl border border-slate-800 relative hover:border-sand-400/50 transition-all group">
+                            <span class="text-[10px] font-mono text-sand-400 block mb-1">TROPHIC LEVEL 3</span>
+                            <h4 class="font-bold text-white text-sm mb-2">Larger Apex Predators</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Tuna, mackerel, and larger marine predators eat smaller fish, bioaccumulating both plastic particles and associated chemical pollutants.</p>
+                            <div class="mt-3 text-[10px] text-slate-500 font-mono">Chemical Biomagnification</div>
+                        </div>
+
+                        <!-- Level 4 -->
+                        <div class="bg-ocean-950 p-5 rounded-2xl border border-emerald-500/40 relative hover:border-emerald-400 transition-all group">
+                            <span class="text-[10px] font-mono text-rose-400 block mb-1">HUMAN CONSUMPTION</span>
+                            <h4 class="font-bold text-white text-sm mb-2">Seafood & Salt Consumption</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">Studies confirm microplastics in commercial seafood and sea salt. Research continues into long-term biological impacts on human health.</p>
+                            <div class="mt-3 text-[10px] text-emerald-400 font-mono">Human Diet Connection</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-center bg-ocean-950/60 p-4 rounded-xl border border-slate-800">
+                        <p class="text-xs text-slate-300 font-medium">
+                            <strong class="text-emerald-400">Scientific Note:</strong> Scientists continue to study chemical additive leaching (phthalates, BPA) from ingested microplastics into muscle tissue consumed by humans.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. WHAT CAN WE CHANGE? -->
+        <section id="solutions" class="py-20 bg-ocean-900 border-t border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest block mb-2">05. Systemic & Personal Action</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white">
+                        What Can We Change?
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-3">
+                        Addressing the plastic crisis requires both individual daily choices and structural policy changes under the Philippine Extended Producer Responsibility (EPR) Act.
+                    </p>
+                </div>
+
+                <!-- 6 Action Points Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-base mb-4">1</div>
+                        <h3 class="text-base font-bold text-white mb-2">REDUCE Single-Use Items</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Opt for refillable containers for household items where available, reducing reliance on daily single-use sachets.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-base mb-4">2</div>
+                        <h3 class="text-base font-bold text-white mb-2">REUSE & Refill Stations</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Support community refillery models and zero-waste store initiatives expanding across Philippine barangays.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-10 h-10 rounded-xl bg-sand-400/10 border border-sand-400/20 text-sand-400 flex items-center justify-center font-bold text-base mb-4">3</div>
+                        <h3 class="text-base font-bold text-white mb-2">SEGREGATE Waste Properly</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Separate dry recyclables from organic kitchen waste at home to prevent contamination that renders plastics unrecyclable.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-10 h-10 rounded-xl bg-sky-400/10 border border-sky-400/20 text-sky-400 flex items-center justify-center font-bold text-base mb-4">4</div>
+                        <h3 class="text-base font-bold text-white mb-2">SUPPORT EPR Compliance</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Advocate for strict enforcement of RA 11898 (Extended Producer Responsibility Act) requiring major brand owners to collect packaging.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-10 h-10 rounded-xl bg-purple-400/10 border border-purple-400/20 text-purple-400 flex items-center justify-center font-bold text-base mb-4">5</div>
+                        <h3 class="text-base font-bold text-white mb-2">UPGRADE Waste Recovery</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Invest in municipal Materials Recovery Facilities (MRFs) and support waste picker integration into formal collection economies.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                        <div class="w-10 h-10 rounded-xl bg-rose-400/10 border border-rose-400/20 text-rose-400 flex items-center justify-center font-bold text-base mb-4">6</div>
+                        <h3 class="text-base font-bold text-white mb-2">PROTECT Coastal Rivers</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Participate in river cleanup drives and support trash-trapping technology deployment along major river mouths.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Final Full Screen Closing Call to Action Banner -->
+                <div class="relative glass-panel rounded-3xl p-8 sm:p-12 overflow-hidden border border-emerald-500/30 text-center flex flex-col items-center justify-center">
+                    <div class="absolute -top-24 -left-24 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest block mb-3">Concluding Environmental Reflection</span>
+                    <h3 class="font-serif text-2xl sm:text-4xl font-bold text-white max-w-3xl leading-snug mb-4">
+                        "Our plastic journey does not end when we throw something away. It continues somewhere in our ecosystem."
+                    </h3>
+                    <p class="text-slate-300 text-xs sm:text-sm max-w-2xl font-light leading-relaxed mb-6">
+                        Plastic may become smaller. The problem does not. As citizens of an island nation, protecting our rivers and marine habitats protects our own food security and future.
+                    </p>
+
+                    <a href="#hero" class="px-6 py-3 rounded-xl bg-emerald-500 text-ocean-950 hover:bg-emerald-400 font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/20">
+                        Return to Top & Share Knowledge
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER & ACADEMIC CREDITS -->
+    <footer class="bg-ocean-950 border-t border-slate-800 py-10 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-graduation-cap text-xs"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-white block">People and Earth's Ecosystems</span>
+                    <span class="text-[10px] text-slate-500">Academic Educational Project — Philippine Focus</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleSourcesModal()" class="text-slate-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <span>Sources & References</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SOURCES & REFERENCES MODAL -->
+    <div id="sources-modal" class="fixed inset-0 z-50 bg-ocean-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-panel max-w-2xl w-full max-h-[85vh] rounded-3xl border border-slate-700/80 p-6 overflow-y-auto flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-800">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-book-open-reader text-emerald-400"></i>
+                        Credible Academic Sources & References
+                    </h3>
+                    <button onclick="toggleSourcesModal()" class="text-slate-400 hover:text-white text-lg">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="space-y-4 text-xs text-slate-300">
+                    <div class="bg-ocean-950 p-3.5 rounded-xl border border-slate-800">
+                        <strong class="text-white block mb-1">World Bank Group (2021)</strong>
+                        <p class="text-slate-400">"Market Study for the Plastics Circularity in the Philippines." World Bank, Washington, DC. Analyzes 2.7M MT generation statistics.</p>
+                    </div>
+
+                    <div class="bg-ocean-950 p-3.5 rounded-xl border border-slate-800">
+                        <strong class="text-white block mb-1">Meijer et al. (2021) — Science Advances</strong>
+                        <p class="text-slate-400">"More than 1000 rivers account for 80% of global riverine plastic emissions into the ocean." Highlights Pasig River inputs.</p>
+                    </div>
+
+                    <div class="bg-ocean-950 p-3.5 rounded-xl border border-slate-800">
+                        <strong class="text-white block mb-1">DENR-EMB Philippines</strong>
+                        <p class="text-slate-400">Department of Environment and Natural Resources — Environmental Management Bureau reports on solid waste management.</p>
+                    </div>
+
+                    <div class="bg-ocean-950 p-3.5 rounded-xl border border-slate-800">
+                        <strong class="text-white block mb-1">GAIA (Global Alliance for Incinerator Alternatives)</strong>
+                        <p class="text-slate-400">"Plastensya: Single-use plastics in the Philippines." Daily sachet consumption survey data (163 million daily sachets).</p>
+                    </div>
+
+                    <div class="bg-ocean-950 p-3.5 rounded-xl border border-slate-800">
+                        <strong class="text-white block mb-1">UNEP (United Nations Environment Programme)</strong>
+                        <p class="text-slate-400">"Single-Use Plastics: A Roadmap for Sustainability" & Marine Litter Assessment Reports.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 text-right">
+                <button onclick="toggleSourcesModal()" class="px-5 py-2 rounded-xl bg-emerald-500 text-ocean-950 font-bold text-xs hover:bg-emerald-400 transition-colors">
+                    Close Window
+                </button>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- MAIN PAGE DISPLAY -->
-  <main class="flex-grow pt-28 pb-12 max-w-5xl mx-auto w-full px-4 relative z-10 flex flex-col justify-center">
+    <!-- JAVASCRIPT INTERACTIVE LOGIC -->
+    <script>
+        // 1. Hero Microparticle Canvas Animation
+        const canvas = document.getElementById('hero-particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
 
-    <!-- PAGE 1: HOME -->
-    <div id="page-home" class="tab-content active w-full flex-col items-center justify-center text-center space-y-6 my-auto">
-      
-      <!-- Status Badge -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white text-xs font-medium shadow-sm">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        Interactive Environmental Case Study
-      </div>
-
-      <!-- Hero Headline -->
-      <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15] max-w-3xl">
-        Protecting Philippine Waters with Awareness.
-      </h1>
-
-      <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-        Examine microplastic pollution across the archipelago. Interactive particles respond to cursor movement in real time.
-      </p>
-
-      <!-- CTA Buttons -->
-      <div class="flex items-center justify-center gap-3 pt-2">
-        <button onclick="switchTab('definition')" class="bg-white text-slate-900 font-semibold text-xs md:text-sm px-6 py-3 rounded-full hover:bg-slate-100 transition-all shadow-lg flex items-center gap-2">
-          Explore Data <i class="fa-solid fa-arrow-right text-xs"></i>
-        </button>
-        <button onclick="openVideoModal()" class="glass-card hover:bg-white/10 text-white font-semibold text-xs md:text-sm px-6 py-3 rounded-full transition-all flex items-center gap-2">
-          <i class="fa-solid fa-circle-play text-emerald-400 text-base"></i> Watch Demo
-        </button>
-      </div>
-
-      <!-- Sachet Calculator -->
-      <div class="glass-card p-6 rounded-3xl border border-white/10 max-w-lg w-full text-left shadow-2xl mt-8">
-        <div class="flex items-center justify-between mb-4">
-          <div>
-            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Interactive Tool</span>
-            <h2 class="text-base font-bold text-white">Household Sachet Impact</h2>
-          </div>
-          <i class="fa-solid fa-calculator text-slate-400 text-lg"></i>
-        </div>
-
-        <div class="mb-5">
-          <div class="flex justify-between text-xs font-semibold mb-2">
-            <span class="text-slate-300">Daily Single-Use Sachets:</span>
-            <span class="text-emerald-400 font-bold" id="sachetCountText">5 sachets / day</span>
-          </div>
-          <input type="range" id="sachetRange" min="1" max="30" value="5" class="w-full h-2 bg-slate-700/80 rounded-lg appearance-none cursor-pointer accent-emerald-400" oninput="calculateImpact()">
-        </div>
-
-        <div class="grid grid-cols-3 gap-3 text-center">
-          <div class="bg-ocean-900/80 p-3 rounded-2xl border border-white/5">
-            <span class="text-[10px] text-slate-400 block mb-0.5">Monthly</span>
-            <div class="text-sm md:text-base font-extrabold text-emerald-400" id="monthlyWaste">150</div>
-          </div>
-          <div class="bg-ocean-900/80 p-3 rounded-2xl border border-white/5">
-            <span class="text-[10px] text-slate-400 block mb-0.5">Yearly</span>
-            <div class="text-sm md:text-base font-extrabold text-amber-400" id="yearlyWaste">1,825</div>
-          </div>
-          <div class="bg-ocean-900/80 p-3 rounded-2xl border border-white/5">
-            <span class="text-[10px] text-slate-400 block mb-0.5">10 Years</span>
-            <div class="text-sm md:text-base font-extrabold text-red-400" id="decadeWaste">18,250</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PAGE 2: DEFINITION (3+ FULL SCROLLS) -->
-    <div id="page-definition" class="tab-content w-full flex-col py-6 space-y-12">
-      
-      <!-- Section Header -->
-      <div class="border-b border-white/10 pb-6">
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">01. Scientific Framework & Classification</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Plastic Pollution: Scale & Spectrum</h2>
-        <p class="text-slate-300 text-sm md:text-base mt-3 max-w-2xl">Understanding marine plastic pollution requires examining how synthetic polymers degrade across physical sizes, chemical structures, and marine transport dynamics.</p>
-      </div>
-
-      <!-- Item 1 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=1200&q=80" alt="Macroplastics" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">Size: &gt; 25 mm</span>
-          <h3 class="text-2xl font-bold text-white">Macroplastics</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Macroplastics are visible, large-scale synthetic waste items that enter marine pathways directly. In the Philippines, this category is dominated by discarded beverage bottles, single-use carrier bags, rigid containers, and abandoned fishing gear (ghost nets).</p>
-          <div class="pt-2 text-xs text-slate-400 border-t border-white/10">
-            <strong>Primary Concern:</strong> Physical entanglement of wildlife and coastal drainage blockage leading to urban flooding.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1200&q=80" alt="Mesoplastics" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">Size: 5 mm – 25 mm</span>
-          <h3 class="text-2xl font-bold text-white">Mesoplastics</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Mesoplastics represent intermediate plastic debris. These include bottle caps, broken plastic cutlery, drinking straws, and pre-production plastic pellets (nurdles) lost during maritime freight transport.</p>
-          <div class="pt-2 text-xs text-slate-400 border-t border-white/10">
-            <strong>Primary Concern:</strong> High accumulation along high-tide coastal lines and shorelines across archipelago beaches.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?auto=format&fit=crop&w=1200&q=80" alt="Secondary Microplastics" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">Size: 1 µm – 5 mm</span>
-          <h3 class="text-2xl font-bold text-white">Secondary Microplastics</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Secondary microplastics are created when macro-debris undergoes fragmentation in sunny tropical environments. Intense ultraviolet (UV) radiation breaks polymer bonds, while physical wave action grinds plastic pieces into microscopic particles.</p>
-          <div class="pt-2 text-xs text-slate-400 border-t border-white/10">
-            <strong>Primary Concern:</strong> Readily ingested by filter feeders and small marine organisms mistaking them for food.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1200&q=80" alt="Primary Microplastics" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider">Size: Manufactured Micro-Scale</span>
-          <h3 class="text-2xl font-bold text-white">Primary Microplastics & Microfibers</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Intentionally manufactured microscopic particles include exfoliants in cosmetics, industrial abrasives, and synthetic garment fibers (polyester, nylon). Washing synthetic clothes releases thousands of fibers per laundry cycle directly into waterways.</p>
-          <div class="pt-2 text-xs text-slate-400 border-t border-white/10">
-            <strong>Primary Concern:</strong> Unfiltered bypass through standard municipal wastewater treatment systems.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Nanoplastics" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">Size: &lt; 1 µm</span>
-          <h3 class="text-2xl font-bold text-white">Nanoplastics</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Sub-micron scale particles formed through complete disintegration of synthetic polymers. Due to their minute dimensions, nanoplastics remain suspended in seawater as colloidal particles.</p>
-          <div class="pt-2 text-xs text-slate-400 border-t border-white/10">
-            <strong>Primary Concern:</strong> Ability to cross cellular membranes, enter bloodstreams, and accumulate in biological organs.
-          </div>
-        </div>
-      </div>
-
-      <!-- Comprehensive Polymer Summary Matrix -->
-      <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-6">
-        <h3 class="text-xl font-bold text-white">Common Plastic Polymers Found in Philippine Waters</h3>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-ocean-900/80 p-5 rounded-2xl border border-white/5 space-y-2">
-            <span class="text-xs font-bold text-emerald-400 uppercase">PET (Polyethylene Terephthalate)</span>
-            <p class="text-xs text-slate-300">Used in clear soda and water bottles. Dense, sinks in water, accumulating in estuarine sediments.</p>
-          </div>
-          <div class="bg-ocean-900/80 p-5 rounded-2xl border border-white/5 space-y-2">
-            <span class="text-xs font-bold text-amber-400 uppercase">PE / PP (Polyethylene / Polypropylene)</span>
-            <p class="text-xs text-slate-300">Used in multi-layer sachets and plastic bags. Highly buoyant, drifting across sea surfaces.</p>
-          </div>
-          <div class="bg-ocean-900/80 p-5 rounded-2xl border border-white/5 space-y-2">
-            <span class="text-xs font-bold text-red-400 uppercase">PS (Polystyrene)</span>
-            <p class="text-xs text-slate-300">Used in takeaway food containers and styrofoam coolers. Fragmenting into buoyant micro-beads.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PAGE 3: STATUS (3+ FULL SCROLLS) -->
-    <div id="page-status" class="tab-content w-full flex-col py-6 space-y-12">
-      
-      <!-- Section Header -->
-      <div class="border-b border-white/10 pb-6">
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">02. Regional Assessment & Data</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Current State in the Philippines</h2>
-        <p class="text-slate-300 text-sm md:text-base mt-3 max-w-2xl">An archipelagic analysis of river outflow volumes, marine hotspots, coastal trapping, and microplastic concentration metrics.</p>
-      </div>
-
-      <!-- Big Stat Grid -->
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="glass-card p-6 rounded-3xl border-l-4 border-emerald-400 text-center space-y-2">
-          <div class="text-4xl font-black text-emerald-400">163 Million</div>
-          <div class="text-xs font-bold uppercase text-slate-300">Daily Sachet Consumption</div>
-          <p class="text-xs text-slate-400">Single-use sachets consumed nationwide each day across households.</p>
-        </div>
-        <div class="glass-card p-6 rounded-3xl border-l-4 border-amber-400 text-center space-y-2">
-          <div class="text-4xl font-black text-amber-400">52% Waste</div>
-          <div class="text-xs font-bold uppercase text-slate-300">Residual Plastic Profile</div>
-          <p class="text-xs text-slate-400">Sachets composition relative to total municipal residual waste generated.</p>
-        </div>
-        <div class="glass-card p-6 rounded-3xl border-l-4 border-red-400 text-center space-y-2">
-          <div class="text-4xl font-black text-red-400">350,000 Tons</div>
-          <div class="text-xs font-bold uppercase text-slate-300">Annual Ocean Discharges</div>
-          <p class="text-xs text-slate-400">Estimated mismanaged plastic waste reaching ocean pathways annually.</p>
-        </div>
-      </div>
-
-      <!-- Item 1 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1200&q=80" alt="Pasig River Outflow" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">River Basin Focus</span>
-          <h3 class="text-2xl font-bold text-white">Pasig River Aquatic Transport</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">The Pasig River serves as a main aquatic conduit running through Metro Manila, transporting urban waste directly into Manila Bay. Environmental studies consistently cite it as one of the top contributing rivers globally for plastic emissions.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-amber-400">Field Finding:</strong> High concentration of floating multi-layer flexible sachets recorded during wet monsoon runoff months.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80" alt="Verde Island Passage" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">Biodiversity Hotspot</span>
-          <h3 class="text-2xl font-bold text-white">Verde Island Passage Incursion</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Recognized as the global center of shorefish biodiversity, the Verde Island Passage between Luzon and Mindoro experiences marine debris influxes from coastal settlements and passing shipping lanes.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-emerald-400">Ecological Status:</strong> Microfibers and degraded fragments detected along coral reef structures and feeding waters.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Manila Bay Benthic Layers" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">Benthic Survey</span>
-          <h3 class="text-2xl font-bold text-white">Manila Bay Bottom Sedimentation</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Sediment core studies reveal high densities of microplastics buried within Manila Bay's benthic seabed layer. Heavy polymer fractions settle into bottom sludge, affecting bottom-dwelling organisms.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-cyan-400">Sediment Metric:</strong> High ratio of degraded synthetic paint flakes and PET bottle fragments per kilogram of sediment.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80" alt="Visayan Sea Fisheries" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider">Fisheries Impact</span>
-          <h3 class="text-2xl font-bold text-white">Visayan Sea Fishery Contamination</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">The Visayan Sea is a major commercial fishing ground. Sampling of commercial catches reveals microplastic ingestion across pelagic and demersal fish species harvested for consumer markets.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-indigo-400">Market Risk:</strong> Ingestion verified in sardine (*Tamban*) and mackerel populations destined for regional markets.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80" alt="Mangrove Plastic Trapping" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider">Coastal Buffers</span>
-          <h3 class="text-2xl font-bold text-white">Mangrove Ecosystem Entrapment</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Mangrove forests across Philippine shorelines act as natural barrier traps for floating macro-debris. Trapped plastics smother breathing roots (*pneumatophores*) and break down into micro-particles within fish nursery grounds.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-emerald-300">Ecosystem Stress:</strong> Accelerated root decay and reduced juvenile fish survival in plastic-choked mangrove reserves.
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PAGE 4: CAUSES (3+ FULL SCROLLS) -->
-    <div id="page-causes" class="tab-content w-full flex-col py-6 space-y-12">
-      
-      <!-- Section Header -->
-      <div class="border-b border-white/10 pb-6">
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">03. Drivers & Root Factors</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Root Causes of Waste Leakage</h2>
-        <p class="text-slate-300 text-sm md:text-base mt-3 max-w-2xl">A study of market structures, geography, municipal collection gaps, and recycling economics in the Philippines.</p>
-      </div>
-
-      <!-- Item 1 (EVERGREEN LABS SACHET IMAGE) -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://static.wixstatic.com/media/8939c3_20f4c8fa72ef421fb3dd1fb56424e6ca~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/8939c3_20f4c8fa72ef421fb3dd1fb56424e6ca~mv2.jpg" alt="Single-Use Sachet Packaging - Evergreen Labs" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">Economic Model</span>
-          <h3 class="text-2xl font-bold text-white">The Sachet Economy & Retail Dynamics</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Socioeconomic factors encourage purchasing fast-moving consumer goods in small, low-cost single-use sachets through neighborhood *sari-sari* stores. While budget-friendly for daily wage earners, this packaging format generates millions of multi-layer flexible sachets daily.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-emerald-400">Market Driver:</strong> High volume of low-unit-cost packaging without sustainable disposal infrastructure.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=80" alt="Municipal Infrastructure Gaps" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">Infrastructure Deficit</span>
-          <h3 class="text-2xl font-bold text-white">Municipal Collection & Waste Capacity Gaps</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Many island municipalities lack material recovery facilities (MRFs), sanitary landfills, or systematic waste collection networks. Overburdened local systems lead to unmanaged waste disposal near shorelines and riverbanks.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-amber-400">System Bottleneck:</strong> Low waste collection coverage in remote island communities and informal urban settlements.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80" alt="Monsoon Hydrology" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">Geography & Hydrology</span>
-          <h3 class="text-2xl font-bold text-white">Archipelagic Geography & Monsoon Runoff</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">With over 7,600 islands and extensive coastlines, the country's geography creates short hydrological distances from land to ocean. High seasonal rainfall, monsoons, and typhoons flush land-based waste directly into sea channels.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-cyan-400">Climatic Factor:</strong> Storm surges and heavy rains wash informal dumping sites into river basins.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1200&q=80" alt="Recycling Economics" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">Market Economics</span>
-          <h3 class="text-2xl font-bold text-white">Low Commercial Value of Soft Plastics</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Unlike rigid PET bottles or aluminum cans, thin plastic films and multi-layered sachets have virtually no resale value for waste pickers and junk shops. Consequently, these materials are left uncollected in municipal waste streams.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-red-400">Economic Failure:</strong> Lack of financial incentive for informal waste sector retrieval.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=1200&q=80" alt="Corporate Responsibility" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider">Policy Gaps</span>
-          <h3 class="text-2xl font-bold text-white">Corporate Responsibility & EPR Implementation</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Historically, consumer goods manufacturers shifted post-consumer waste management costs onto local governments. Recent Extended Producer Responsibility (EPR) legislation aims to mandate brand accountability for recovery targets.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-purple-400">Regulatory Shift:</strong> Enforcing compliance across multinational brand owners operating locally.
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- PAGE 5: EFFECTS (3+ FULL SCROLLS) -->
-    <div id="page-effects" class="tab-content w-full flex-col py-6 space-y-12">
-      
-      <!-- Section Header -->
-      <div class="border-b border-white/10 pb-6">
-        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">04. Ecological & Human Impact</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Consequences on Marine Life & Health</h2>
-        <p class="text-slate-300 text-sm md:text-base mt-3 max-w-2xl">An evaluation of biological ingestion, food web biomagnification, chemical sorption, and economic impacts on coastal communities.</p>
-      </div>
-
-      <!-- Item 1 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80" alt="Direct Ingestion" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">Biological Hazard</span>
-          <h3 class="text-2xl font-bold text-white">Direct Ingestion & Gastrointestinal Blockage</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Sea turtles, cetaceans, planktivorous fish, and seabirds mistake floating plastic particles for natural prey. Ingestion leads to internal blockages, digestive tract perforation, false satiety, and starvation.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-emerald-400">Marine Impact:</strong> Documented stomach blockages in stranded green sea turtles along coastal island shores.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80" alt="Trophic Transfer" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider">Ecosystem Transfer</span>
-          <h3 class="text-2xl font-bold text-white">Trophic Transfer & Food Web Biomagnification</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Microplastics ingested by lower trophic organisms like zooplankton move upward through marine food chains. Larger predatory fish consume contaminated prey, allowing synthetic polymers to accumulate across trophic levels.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-amber-400">Food Web Impact:</strong> Accumulation of micro-particles in commercial game fish species and pelagic predators.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Chemical Toxicity" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider">Chemical Hazard</span>
-          <h3 class="text-2xl font-bold text-white">Chemical Sorption & Toxic Additive Leachate</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Microplastics act as hydrophobic sponge vectors in marine environments, absorbing heavy metals and persistent organic pollutants (POPs) such as PCBs and pesticides. Once ingested, these toxic compounds leach into organism tissues.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-red-400">Toxicity Effect:</strong> Endocrine disruption, organ inflammation, and reproductive impairment in marine species.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row-reverse items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Human Exposure" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider">Human Health Pathway</span>
-          <h3 class="text-2xl font-bold text-white">Human Exposure Through Seafood Consumption</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">As microplastics accumulate in commercial seafood like shellfish, sardines, and squid, micro-particles enter human dietary systems. Research investigates potential cellular stress and inflammatory reactions in human tissues.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-cyan-400">Human Pathway:</strong> Dietary intake of filter-feeding shellfish harvested from contaminated bays.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="glass-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-center border border-white/10 shadow-2xl">
-        <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1200&q=80" alt="Economic Damage" class="md:w-1/2 h-80 md:h-[400px] w-full object-cover">
-        <div class="p-8 md:w-1/2 space-y-4">
-          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider">Socioeconomic Damage</span>
-          <h3 class="text-2xl font-bold text-white">Economic Damage to Tourism & Coastal Fisheries</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">Accumulated beach plastic degrades natural coastal scenery, impacting ecotourism revenues. Local fishing communities face damaged nets, fouled propellers, and reduced fish catch quality.</p>
-          <div class="p-4 rounded-2xl bg-ocean-900/80 border border-white/5 text-xs text-slate-300">
-            <strong class="text-emerald-300">Economic Loss:</strong> High cleanup expenditures for coastal municipalities reliant on tourism.
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <!-- INTERACTIVE DEMO / VIDEO MODAL -->
-  <div id="videoModal" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="relative w-full max-w-3xl bg-ocean-900 rounded-3xl border border-white/20 overflow-hidden shadow-2xl">
-      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
-        <h3 class="text-sm font-bold text-white">Marine Plastic Spotlight — Video Reel</h3>
-        <button onclick="closeVideoModal()" class="text-slate-400 hover:text-white text-lg">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div class="relative aspect-video w-full">
-        <video id="modalVideo" controls class="w-full h-full object-cover">
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-underwater-view-of-swimming-sea-turtle-41548-large.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="py-6 text-center text-xs text-slate-400 relative z-10 border-t border-white/5">
-    <p>People and the Earth's Ecosystem — Philippines Environmental Study</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    // Tab Navigation System
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
-      
-      document.getElementById('page-' + tabId).classList.add('active');
-      document.getElementById('tab-' + tabId).classList.add('active');
-
-      // Scroll smoothly back to top when switching tabs
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Modal Video Player Functions
-    function openVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('modalVideo');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      video.play();
-    }
-
-    function closeVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('modalVideo');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      video.pause();
-    }
-
-    // Interactive Sachet Calculator
-    function calculateImpact() {
-      const daily = parseInt(document.getElementById('sachetRange').value);
-      document.getElementById('sachetCountText').innerText = daily + ' sachets / day';
-      document.getElementById('monthlyWaste').innerText = (daily * 30).toLocaleString();
-      document.getElementById('yearlyWaste').innerText = (daily * 365).toLocaleString();
-      document.getElementById('decadeWaste').innerText = (daily * 365 * 10).toLocaleString();
-    }
-
-    // Particle Canvas Effect
-    const canvas = document.getElementById('particleCanvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    let mouse = { x: null, y: null, radius: 120 };
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    window.addEventListener('mousemove', (e) => {
-      mouse.x = e.x;
-      mouse.y = e.y;
-    });
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.radius = Math.random() * 2 + 1;
-        this.vx = (Math.random() - 0.5) * 0.7;
-        this.vy = (Math.random() - 0.5) * 0.7;
-        this.color = Math.random() > 0.5 ? '#34d399' : '#226071';
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-        let dx = mouse.x - this.x;
-        let dy = mouse.y - this.y;
-        let distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < mouse.radius) {
-          let angle = Math.atan2(dy, dx);
-          let force = (mouse.radius - distance) / mouse.radius;
-          this.x -= Math.cos(angle) * force * 3;
-          this.y -= Math.sin(angle) * force * 3;
+        function resizeCanvas() {
+            if (!canvas) return;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
 
-        this.draw();
-      }
-    }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
 
-    function initParticles() {
-      particles = [];
-      for (let i = 0; i < 50; i++) {
-        particles.push(new Particle());
-      }
-    }
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 2 + 0.5;
+                this.color = Math.random() > 0.4 ? '#10b981' : (Math.random() > 0.5 ? '#f59e0b' : '#38bdf8');
+                this.vx = (Math.random() - 0.5) * 0.4;
+                this.vy = (Math.random() - 0.5) * 0.4;
+                this.alpha = Math.random() * 0.6 + 0.2;
+            }
 
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => p.update());
-      requestAnimationFrame(animate);
-    }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
 
-    initParticles();
-    animate();
-  </script>
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(Math.floor(window.innerWidth / 15), 60);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            if (!ctx) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Interactive Step-by-Step Breakdown Simulator Data & Logic
+        const breakdownData = {
+            1: {
+                title: "Step 01: Initial Consumer Disposal & Environmental Leakage",
+                desc: "A single-use PET bottle or sachet is discarded in a urban area. Due to unmanaged waste collection, rain events wash the packaging into local drainage gutters and river channels.",
+                icon: "fa-wine-bottle text-emerald-400",
+                metric: "Time elapsed: 0 - 1 Month"
+            },
+            2: {
+                title: "Step 02: Solar UV Exposure & Hydrodynamic Weathering",
+                desc: "Floating in ocean water or river banks, solar Ultraviolet (UV) radiation weakens the polymer chemical bonds, causing embrittlement and surface cracking.",
+                icon: "fa-sun text-sand-400",
+                metric: "Time elapsed: 1 - 5 Years"
+            },
+            3: {
+                title: "Step 03: Mechanical Fragmentation into Microparticles",
+                desc: "Wave friction against rocky coastlines and sand abrasions shatter brittle macro-plastics into millions of jagged micro-fragments under 5mm in length.",
+                icon: "fa-border-all text-teal-400",
+                metric: "Time elapsed: 10 - 50 Years"
+            },
+            4: {
+                title: "Step 04: Ingestion by Base Marine Organisms",
+                desc: "Zooplankton, bivalves, and larval fish mistake floating microplastics for biological prey, ingesting particles that remain trapped in their digestive tracts.",
+                icon: "fa-bacteria text-sky-400",
+                metric: "Microparticle Size: < 1 Millimeter"
+            },
+            5: {
+                title: "Step 05: Trophic Bioaccumulation in Food Webs",
+                desc: "Larger predators consume smaller organisms, concentrating both plastic particles and absorbed persistent organic chemical pollutants up the food chain.",
+                icon: "fa-fish text-rose-400",
+                metric: "Trophic Transfer: Reaches Human Seafood"
+            }
+        };
+
+        function setBreakdownStep(step) {
+            // Update button styles
+            document.querySelectorAll('.step-btn').forEach((btn, idx) => {
+                if (idx + 1 === step) {
+                    btn.classList.remove('bg-ocean-950', 'border-slate-800', 'text-slate-400');
+                    btn.classList.add('bg-emerald-500/20', 'border-emerald-500', 'text-white');
+                } else {
+                    btn.classList.add('bg-ocean-950', 'border-slate-800', 'text-slate-400');
+                    btn.classList.remove('bg-emerald-500/20', 'border-emerald-500', 'text-white');
+                }
+            });
+
+            // Update content area
+            const data = breakdownData[step];
+            const contentBox = document.getElementById('step-content');
+            contentBox.innerHTML = `
+                <div class="w-16 h-16 rounded-2xl bg-ocean-900 border border-slate-700 flex items-center justify-center text-3xl shrink-0">
+                    <i class="fa-solid ${data.icon}"></i>
+                </div>
+                <div class="flex-grow">
+                    <div class="flex items-center justify-between gap-2 mb-1">
+                        <h4 class="text-base font-bold text-white">${data.title}</h4>
+                        <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">${data.metric}</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${data.desc}</p>
+                </div>
+            `;
+        }
+
+        // Initialize default breakdown step
+        setBreakdownStep(1);
+
+        // 3. Interactive Hotspot Map Data & Selector
+        const hotspotData = {
+            pasig: {
+                name: "Manila Bay & Pasig River Basin",
+                type: "Major Hydrological Outfall",
+                status: "Critical Input Zone",
+                desc: "Connecting Laguna de Bay to Manila Bay through dense urban centers, the Pasig River is cited by global ocean research as conveying over 6.4% of total worldwide riverine plastic inputs into marine environments.",
+                stat: "63,000+ Tons ocean leakage / year",
+                source: "Meijer et al. (Science Advances)"
+            },
+            verde: {
+                name: "Verde Island Passage",
+                type: "Marine Biodiversity Center",
+                status: "Ecosystem Threat",
+                desc: "Known as the 'Center of the Center' of marine shorefish biodiversity, microplastics threaten delicate coral reef systems, sea turtle nesting grounds, and endemic marine species in this narrow strait.",
+                stat: "High coral disease risk from micro-debris",
+                source: "DENR Biodiversity Management Bureau"
+            },
+            visayan: {
+                name: "Visayan Sea Fishery Zone",
+                type: "Key Commercial Fishing Ground",
+                status: "Trophic Ingestion Risk",
+                desc: "Supplying a huge portion of national sardine and mackerel catches, research indicates increasing microplastic particle counts in pelagic fish species sampled across Visayan landing sites.",
+                stat: "High microplastic ingestion in commercial fish",
+                source: "Marine Biology Field Research Studies"
+            },
+            palawan: {
+                name: "Palawan Coastal Ecosystems",
+                type: "UNESCO Biosphere Reserve",
+                status: "Invasive Floating Debris",
+                desc: "Despite strong local environmental regulations, oceanic currents transport floating marine litter onto remote Palawan beaches and coral reefs from international sea lanes.",
+                stat: "Ocean current debris transport hotspot",
+                source: "Palawan Council for Sustainable Dev."
+            }
+        };
+
+        function selectMapHotspot(key) {
+            const data = hotspotData[key];
+            const card = document.getElementById('hotspot-card');
+            card.innerHTML = `
+                <div class="flex items-start justify-between gap-2 mb-3">
+                    <div>
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest block">${data.type}</span>
+                        <h4 class="text-lg font-bold text-white">${data.name}</h4>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20">${data.status}</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4">${data.desc}</p>
+                <div class="bg-ocean-900 p-3 rounded-xl border border-slate-800 mb-3">
+                    <span class="text-[10px] text-slate-400 block font-mono">Key Ecological Statistic</span>
+                    <span class="text-sm font-bold text-white">${data.stat}</span>
+                </div>
+                <span class="text-[10px] text-slate-500 block">Citation: ${data.source}</span>
+            `;
+        }
+
+        // Initialize default map hotspot
+        selectMapHotspot('pasig');
+
+        // 4. Household Footprint Calculator Logic
+        function calculateFootprint() {
+            const sliderVal = parseInt(document.getElementById('sachet-slider').value);
+            document.getElementById('sachet-val').innerText = `${sliderVal} items / day`;
+
+            const annual = sliderVal * 365;
+            const fiveYear = annual * 5;
+            const weightKg = (annual * 0.0025).toFixed(2); // ~2.5 grams per multi-layer sachet
+            const microparticles = (annual * 5000).toLocaleString(); // ~5000 microparticles per fragmented sachet
+
+            document.getElementById('calc-result').innerText = annual.toLocaleString();
+            document.getElementById('five-year-val').innerText = `${fiveYear.toLocaleString()} units`;
+            document.getElementById('weight-val').innerText = `${weightKg} kg`;
+            document.getElementById('micro-val').innerText = `${(annual * 5000 / 1000000).toFixed(1)} Million`;
+        }
+
+        // 5. Sources Modal Toggle
+        function toggleSourcesModal() {
+            const modal = document.getElementById('sources-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Header glass elevation on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-3');
+            } else {
+                header.classList.add('py-3');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
 </body>
 </html>
