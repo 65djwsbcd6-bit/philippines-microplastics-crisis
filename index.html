@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLASTIC ECO PH | The Crisis & The Solution</title>
+    <meta name="description" content="Educational platform exploring plastic and microplastic pollution in the Philippines, from systemic crises to circular economy solutions." />
+    <meta property="og:title" content="PLASTIC ECO PH | The Crisis & The Solution" />
+    <meta property="og:description" content="Educational platform exploring plastic and microplastic pollution in the Philippines, from systemic crises to circular economy solutions." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -27,6 +32,10 @@
                         },
                         sand: '#e2d5c3',
                         plasticRed: '#e63946',
+                        coastSand: '#CDB499',
+                        coastMist: '#B8C5B9',
+                        coastSage: '#8AA494',
+                        coastAqua: '#78AAA1',
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -109,7 +118,7 @@
     </style>
 </head>
 <body class="bg-ocean-900 text-slate-100 overflow-x-hidden">
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></symbol><symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 6h12l-1.5 15h-9zM5 6l1-3h12l1 3M12 3l2-2"/></symbol><symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2M6 2v20M20 22V2c-3 0-5 3-5 7s2 5 5 5"/></symbol><symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M12 2v6M4.2 10.2l1.4 1.4M1 18h2M21 18h2M18.4 11.6l1.4-1.4M23 22H1M8 6l4-4 4 4M16 18a4 4 0 0 0-8 0"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M16.5 9.4 7.5 4.2M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7zM3.3 7 12 12l8.7-5M12 22V12"/></symbol><symbol id="i-micro" viewBox="0 0 24 24"><path d="M6 18h12M8 22h8M10 18a5 5 0 0 1 0-9M9 3l4 6M14 5l-3 5"/></symbol><symbol id="i-plankton" viewBox="0 0 24 24"><path d="M7 12c0-2 2-3 5-3s5 1 5 3-2 3-5 3-5-1-5-3zM3 7l3 2M3 17l3-2M21 7l-3 2M21 17l-3-2M12 5v2M12 17v2"/></symbol><symbol id="i-fish" viewBox="0 0 24 24"><path d="M2 12c4-6 12-6 16 0-4 6-12 6-16 0zM18 12l4-4v8zM7 11h.01"/></symbol><symbol id="i-turtle" viewBox="0 0 24 24"><path d="M5 14a7 5 0 0 1 14 0zM19 12l3-1.5M7 14l-2 3M17 14l2 3M10 14V9M14 14V9"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 21a7 7 0 0 0-4-6"/></symbol><symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M4 8h4a2 2 0 1 1 4 0h4v4a2 2 0 1 1 0 4v4H4z"/></symbol><symbol id="i-rain" viewBox="0 0 24 24"><path d="M5 14a4 4 0 0 1 1-7.9A6 6 0 0 1 18 8a3.5 3.5 0 0 1 0 7M8 17v3M12 17v3M16 17v3"/></symbol><symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 8c3 3 5-3 10 0s7-3 10 0M2 14c3 3 5-3 10 0s7-3 10 0M2 20c3 3 5-3 10 0s7-3 10 0"/></symbol><symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0zM12 12v8a2 2 0 0 0 4 0"/></symbol><symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 22V12M12 12c0-4 3-6 7-6 0 4-3 6-7 6zM12 15c0-3-2-5-6-5 0 3 2 5 6 5z"/></symbol><symbol id="i-coral" viewBox="0 0 24 24"><path d="M12 21V11M12 15l-4-4V6M12 13l4-4V4M8 11 5 8"/></symbol><symbol id="i-soup" viewBox="0 0 24 24"><path d="M4 12h16a8 8 0 0 1-16 0zM8 4c1 1 1 2 0 3M12 4c1 1 1 2 0 3M16 4c1 1 1 2 0 3"/></symbol><symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5" cy="17" r="3"/><circle cx="19" cy="17" r="3"/><path d="M5 14h5l3-6h4l2 6M9 8h3"/></symbol><symbol id="i-sachet" viewBox="0 0 24 24"><path d="M5 3h14v3l-1 1v10l1 1v3H5v-3l1-1V7L5 6zM8 12h8"/></symbol><symbol id="i-bottle" viewBox="0 0 24 24"><path d="M10 2h4M10 2v3l-2 3v13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8l-2-3V2M8 12h8"/></symbol><symbol id="i-straw" viewBox="0 0 24 24"><path d="M15 2l-3 9M12 11 8 22M10 2h6"/></symbol><symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4-4L5 21"/></symbol></defs></svg>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></symbol><symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 6h12l-1.5 15h-9zM5 6l1-3h12l1 3M12 3l2-2"/></symbol><symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2M6 2v20M20 22V2c-3 0-5 3-5 7s2 5 5 5"/></symbol><symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M12 2v6M4.2 10.2l1.4 1.4M1 18h2M21 18h2M18.4 11.6l1.4-1.4M23 22H1M8 6l4-4 4 4M16 18a4 4 0 0 0-8 0"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M16.5 9.4 7.5 4.2M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7zM3.3 7 12 12l8.7-5M12 22V12"/></symbol><symbol id="i-micro" viewBox="0 0 24 24"><path d="M6 18h12M8 22h8M10 18a5 5 0 0 1 0-9M9 3l4 6M14 5l-3 5"/></symbol><symbol id="i-plankton" viewBox="0 0 24 24"><path d="M7 12c0-2 2-3 5-3s5 1 5 3-2 3-5 3-5-1-5-3zM3 7l3 2M3 17l3-2M21 7l-3 2M21 17l-3-2M12 5v2M12 17v2"/></symbol><symbol id="i-fish" viewBox="0 0 24 24"><path d="M2 12c4-6 12-6 16 0-4 6-12 6-16 0zM18 12l4-4v8zM7 11h.01"/></symbol><symbol id="i-turtle" viewBox="0 0 24 24"><path d="M5 14a7 5 0 0 1 14 0zM19 12l3-1.5M7 14l-2 3M17 14l2 3M10 14V9M14 14V9"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 21a7 7 0 0 0-4-6"/></symbol><symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M4 8h4a2 2 0 1 1 4 0h4v4a2 2 0 1 1 0 4v4H4z"/></symbol><symbol id="i-rain" viewBox="0 0 24 24"><path d="M5 14a4 4 0 0 1 1-7.9A6 6 0 0 1 18 8a3.5 3.5 0 0 1 0 7M8 17v3M12 17v3M16 17v3"/></symbol><symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 8c3 3 5-3 10 0s7-3 10 0M2 14c3 3 5-3 10 0s7-3 10 0M2 20c3 3 5-3 10 0s7-3 10 0"/></symbol><symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0zM12 12v8a2 2 0 0 0 4 0"/></symbol><symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 22V12M12 12c0-4 3-6 7-6 0 4-3 6-7 6zM12 15c0-3-2-5-6-5 0 3 2 5 6 5z"/></symbol><symbol id="i-coral" viewBox="0 0 24 24"><path d="M12 21V11M12 15l-4-4V6M12 13l4-4V4M8 11 5 8"/></symbol><symbol id="i-soup" viewBox="0 0 24 24"><path d="M4 12h16a8 8 0 0 1-16 0zM8 4c1 1 1 2 0 3M12 4c1 1 1 2 0 3M16 4c1 1 1 2 0 3"/></symbol><symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5" cy="17" r="3"/><circle cx="19" cy="17" r="3"/><path d="M5 14h5l3-6h4l2 6M9 8h3"/></symbol><symbol id="i-sachet" viewBox="0 0 24 24"><path d="M5 3h14v3l-1 1v10l1 1v3H5v-3l1-1V7L5 6zM8 12h8"/></symbol><symbol id="i-bottle" viewBox="0 0 24 24"><path d="M10 2h4M10 2v3l-2 3v13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8l-2-3V2M8 12h8"/></symbol><symbol id="i-straw" viewBox="0 0 24 24"><path d="M15 2l-3 9M12 11 8 22M10 2h6"/></symbol><symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4-4L5 21"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol><symbol id="i-landmark" viewBox="0 0 24 24"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/><line x1="2" x2="22" y1="18" y2="18"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></symbol></defs></svg>
 
     <!-- TOP GLOBAL NAVIGATION BAR -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass-panel px-4 lg:px-8 py-3 border-b border-white/10" id="mainNav">
@@ -118,8 +127,18 @@
                 <div class="w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-400 flex items-center justify-center group-hover:scale-105 transition">
                     <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
                 </div>
-                <span class="font-display font-bold text-lg tracking-wider text-white">PLASTIC<span class="text-cyan-400">ECO</span>.PH</span>
+                <span class="font-display font-bold text-lg tracking-wider text-white" id="brandTitle">PLASTIC<span class="text-cyan-400">ECO</span>.PH</span>
             </button>
+
+            <!-- AUTHOR BADGE (ON THE SAME LINE AS PLASTICECO.PH ON THE RIGHT) -->
+            <div id="authorBadge" class="flex flex-col items-end text-right leading-tight">
+                <span class="text-xs sm:text-sm font-bold tracking-wider uppercase text-slate-800" id="badgeTitle">
+                    People &amp; Earth's Ecosystem
+                </span>
+                <span class="text-[10px] sm:text-xs font-semibold text-[#577568]" id="badgeAuthor">
+                    by Alexies Jean Ballesteros
+                </span>
+            </div>
 
             <!-- CRISIS NAVIGATION LINKS -->
             <div id="crisisNavLinks" class="nav-links hidden items-center gap-5 text-xs uppercase tracking-wider font-semibold text-slate-300">
@@ -135,17 +154,21 @@
             </div>
 
             <!-- SOLUTION NAVIGATION LINKS -->
-            <div id="solutionNavLinks" class="nav-links hidden items-center gap-5 text-xs uppercase tracking-wider font-semibold text-slate-700">
-                <a href="#sol-pillars" class="hover:text-emerald-700 transition-colors">4 Pillars</a>
-                <a href="#sol-calculator" class="hover:text-emerald-700 transition-colors">Action Calculator</a>
-                <a href="#sol-innovations" class="hover:text-emerald-700 transition-colors">PH Innovations</a>
-                <a href="#sol-matrix" class="hover:text-emerald-700 transition-colors">Action Matrix</a>
-                <button onclick="switchView('crisis')" class="bg-ocean-800 hover:bg-ocean-700 text-cyan-300 font-bold px-4 py-1.5 rounded-full transition border border-cyan-500/30">← Review Crisis</button>
+            <div id="solutionNavLinks" class="nav-links hidden items-center gap-3 xl:gap-4 text-[11px] uppercase tracking-wider font-semibold text-slate-700">
+                <a href="#sol-vision" class="hover:text-emerald-400 transition-colors">Vision</a>
+                <a href="#sol-swaps" class="hover:text-emerald-400 transition-colors">Everyday Swaps</a>
+                <a href="#sol-system" class="hover:text-emerald-400 transition-colors">Circular Builder</a>
+                <a href="#sol-chain" class="hover:text-emerald-400 transition-colors">Intercept</a>
+                <a href="#sol-innovations" class="hover:text-emerald-400 transition-colors">PH Initiatives</a>
+                <a href="#sol-roles" class="hover:text-emerald-400 transition-colors">Shared Roles</a>
+                <a href="#sol-simulator" class="hover:text-emerald-400 transition-colors">My Impact</a>
+                <a href="#sol-future" class="hover:text-emerald-400 transition-colors">The Future</a>
+                <button onclick="switchView('crisis')" class="bg-ocean-800 hover:bg-ocean-700 text-cyan-300 font-bold px-3 py-1.5 rounded-full transition border border-cyan-500/30">← Review Crisis</button>
             </div>
 
             <!-- GATEWAY BACK BUTTON -->
             <div id="gatewayNavBtn" class="hidden">
-                <button onclick="switchView('gateway')" class="text-xs uppercase tracking-widest text-slate-300 hover:text-white border border-white/20 px-3.5 py-1.5 rounded-full transition">⌂ Gateway Home</button>
+                <button onclick="switchView('gateway')" class="text-xs uppercase tracking-widest text-slate-300 hover:text-white border border-white/20 px-3.5 py-1.5 rounded-full transition">Home</button>
             </div>
 
             <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 focus:outline-none">
@@ -154,9 +177,9 @@
         </div>
 
         <div id="mobileMenu" class="hidden lg:hidden flex-col gap-3 pt-4 pb-2 border-t border-white/10 mt-3 text-sm">
-            <button onclick="switchView('gateway'); closeMobileMenu()" class="text-left text-slate-200">⌂ Gateway Portal</button>
-            <button onclick="switchView('crisis'); closeMobileMenu()" class="text-left text-cyan-400">🌊 The Crisis View</button>
-            <button onclick="switchView('solution'); closeMobileMenu()" class="text-left text-emerald-400 font-bold">🌱 The Solution View</button>
+            <button onclick="switchView('gateway'); closeMobileMenu()" class="text-left text-slate-200">Home</button>
+            <button onclick="switchView('crisis'); closeMobileMenu()" class="text-left text-cyan-400">The Crisis View</button>
+            <button onclick="switchView('solution'); closeMobileMenu()" class="text-left text-emerald-400 font-bold">The Solution View</button>
             <div id="mobileCrisisLinks" class="hidden flex-col gap-3 pt-3 border-t border-white/10">
                 <a href="#home" class="mobile-link text-slate-200 hover:text-cyan-400">Home</a>
                 <a href="#interactives" class="mobile-link text-cyan-400">Interactive Hub</a>
@@ -168,56 +191,65 @@
                 <a href="#reflection" class="mobile-link text-cyan-400">Visual Reflection</a>
             </div>
             <div id="mobileSolutionLinks" class="hidden flex-col gap-3 pt-3 border-t border-white/10">
-                <a href="#sol-pillars" class="mobile-link text-slate-200 hover:text-emerald-400">4 Pillars</a>
-                <a href="#sol-calculator" class="mobile-link text-slate-200 hover:text-emerald-400">Action Calculator</a>
-                <a href="#sol-innovations" class="mobile-link text-slate-200 hover:text-emerald-400">PH Innovations</a>
-                <a href="#sol-matrix" class="mobile-link text-slate-200 hover:text-emerald-400">Action Matrix</a>
+                <a href="#sol-vision" class="mobile-link text-slate-200 hover:text-emerald-400">The Vision</a>
+                <a href="#sol-swaps" class="mobile-link text-slate-200 hover:text-emerald-400">Everyday Swaps</a>
+                <a href="#sol-system" class="mobile-link text-slate-200 hover:text-emerald-400">Circular System Builder</a>
+                <a href="#sol-chain" class="mobile-link text-slate-200 hover:text-emerald-400">Intercept The Plastic</a>
+                <a href="#sol-innovations" class="mobile-link text-slate-200 hover:text-emerald-400">PH Initiatives</a>
+                <a href="#sol-roles" class="mobile-link text-slate-200 hover:text-emerald-400">Shared Roles</a>
+                <a href="#sol-simulator" class="mobile-link text-slate-200 hover:text-emerald-400">My Impact Simulator</a>
+                <a href="#sol-future" class="mobile-link text-slate-200 hover:text-emerald-400">Choose The Future</a>
             </div>
         </div>
     </nav>
 
-    <!-- 1. HOMEPAGE — THE GATEWAY (FULLSCREEN) -->
-    <main id="viewGateway" class="view-section relative min-h-screen h-screen w-full flex items-center justify-center overflow-hidden bg-ocean-950 pt-16">
+    <!-- 1. HOMEPAGE — THE GATEWAY (FULLSCREEN - COASTAL LIGHT PALETTE) -->
+    <main id="viewGateway" class="view-section relative min-h-screen h-screen w-full flex items-center justify-center overflow-hidden bg-[#fbf9f6] pt-16">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&q=80&w=1920" alt="Philippine Waters" class="w-full h-full object-cover opacity-20 filter contrast-125">
-            <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/90 to-ocean-950/70"></div>
+            <video id="gatewayHeroVideo" class="absolute inset-0 w-full h-full object-cover opacity-35 filter contrast-110 saturate-125" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&q=80&w=1920" aria-hidden="true">
+                <source src="videos/hero-manila-bay.mp4" type="video/mp4">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-plastic-garbage-floating-in-the-sea-41584-large.mp4" type="video/mp4">
+            </video>
+            <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&q=80&w=1920" alt="Marine plastic waste and discarded packaging along shoreline waters" class="w-full h-full object-cover opacity-25 filter contrast-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#fbf9f6] via-[#fbf9f6]/80 to-[#78AAA1]/15"></div>
         </div>
         <div class="relative z-10 max-w-5xl mx-auto px-4 text-center space-y-8">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-semibold uppercase tracking-widest">
-                <span>People & Earth's Ecosystem Academic Platform</span>
+            <div class="space-y-3">
+                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 uppercase whitespace-nowrap overflow-hidden text-ellipsis font-display">
+                    PLASTIC. PEOPLE. PLANET.
+                </h1>
+                <p class="text-xs sm:text-lg md:text-xl lg:text-2xl font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#5a8069] via-[#48877d] to-[#ad8b66] whitespace-nowrap overflow-hidden text-ellipsis">
+                    SEE THE CRISIS. IMAGINE THE CHANGE.
+                </p>
             </div>
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white uppercase leading-tight">
-                PLASTIC IN THE PHILIPPINES:<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-amber-300 to-emerald-400">TWO PATHS FOR OUR FUTURE</span>
-            </h1>
-            <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+            <p class="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
                 Every sachet, bottle, and carrier bag tells a story of systemic design and ecological consequence. Choose an interactive lens to explore the problem or build the solution.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left pt-4">
-                <button onclick="switchView('crisis')" class="group p-8 rounded-2xl glass-card border border-rose-500/30 hover:border-rose-400/70 hover:shadow-2xl hover:shadow-rose-950/50 transition duration-300 text-left flex flex-col justify-between">
+                <button onclick="switchView('crisis')" class="group p-8 rounded-2xl bg-[#fcfbf9]/95 hover:bg-white backdrop-blur-md border-2 border-[#CDB499]/60 hover:border-[#8AA494] hover:shadow-xl hover:shadow-[#CDB499]/20 transition duration-300 text-left flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono font-bold text-rose-400 uppercase tracking-widest">PATH 01 // EXPOSE</span>
-                            <span class="w-3 h-3 rounded-full bg-rose-500 animate-pulse"></span>
+                            <span class="text-xs font-mono font-bold text-[#9e7d59] uppercase tracking-widest">EXPOSE</span>
+                            <span class="w-3 h-3 rounded-full bg-[#CDB499] animate-pulse"></span>
                         </div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-white group-hover:text-rose-300 transition uppercase mb-2 font-display">THE CRISIS</h2>
-                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">Dive deep into empirical research, hotspot maps, daily footprint calculators, and marine food web fragmentation.</p>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 group-hover:text-[#9e7d59] transition uppercase mb-2 font-display">THE CRISIS</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Dive deep into empirical research, hotspot maps, daily footprint calculators, and marine food web fragmentation.</p>
                     </div>
-                    <div class="mt-8 flex items-center justify-between border-t border-rose-500/20 pt-4 text-xs font-bold text-rose-300 uppercase tracking-wider">
-                        <span>Explore The Data & Impacts</span>
+                    <div class="mt-8 flex items-center justify-between border-t border-[#CDB499]/30 pt-4 text-xs font-bold text-[#9e7d59] group-hover:text-[#78AAA1] uppercase tracking-wider transition">
+                        <span>Explore The Data &amp; Impacts</span>
                         <span class="text-lg group-hover:translate-x-2 transition duration-300">→</span>
                     </div>
                 </button>
-                <button onclick="switchView('solution')" class="group p-8 rounded-2xl bg-gradient-to-br from-emerald-950/80 via-emerald-900/40 to-teal-950/90 border border-emerald-500/40 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-950/50 transition duration-300 text-left flex flex-col justify-between">
+                <button onclick="switchView('solution')" class="group p-8 rounded-2xl bg-[#f9fbfb]/95 hover:bg-white backdrop-blur-md border-2 border-[#78AAA1]/60 hover:border-[#78AAA1] hover:shadow-xl hover:shadow-[#78AAA1]/20 transition duration-300 text-left flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest">PATH 02 // RESTORE</span>
-                            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
+                            <span class="text-xs font-mono font-bold text-[#447a71] uppercase tracking-widest">RESTORE</span>
+                            <span class="w-3 h-3 rounded-full bg-[#78AAA1] animate-ping"></span>
                         </div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-white group-hover:text-emerald-300 transition uppercase mb-2 font-display">THE SOLUTION</h2>
-                        <p class="text-xs sm:text-sm text-emerald-100/80 leading-relaxed">Discover Extended Producer Responsibility (EPR Law), refill economies, community trash-to-cash networks, and your personal action plan.</p>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 group-hover:text-[#447a71] transition uppercase mb-2 font-display">THE SOLUTION</h2>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Discover Extended Producer Responsibility (EPR Law), refill economies, community trash-to-cash networks, and your personal action plan.</p>
                     </div>
-                    <div class="mt-8 flex items-center justify-between border-t border-emerald-500/30 pt-4 text-xs font-bold text-emerald-300 uppercase tracking-wider">
+                    <div class="mt-8 flex items-center justify-between border-t border-[#78AAA1]/30 pt-4 text-xs font-bold text-[#447a71] group-hover:text-[#8AA494] uppercase tracking-wider transition">
                         <span>Discover Systemic Action</span>
                         <span class="text-lg group-hover:translate-x-2 transition duration-300">→</span>
                     </div>
@@ -256,7 +288,7 @@
             </div>
 
             <div class="mt-12">
-                <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">Everyday Consumer Plastics → Environmental Dispersal</p>
+                <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">Everyday Consumer Plastics →Environmental Dispersal</p>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
                     <div class="glass-card rounded-xl overflow-hidden group">
                         <img src="images/ph-plastic-bottles-waste.jpg" alt="PET Bottles" class="w-full h-36 object-cover group-hover:scale-110 transition duration-500" onerror="ph(this)" onload="phOk(this)">
@@ -1121,219 +1153,1043 @@
     </main>
 
     <!-- 3. THE SOLUTION — RESTORATIVE INTERFACE (BRIGHT/EMERALD THEME) -->
+        <!-- 3. THE SOLUTION — RESTORATIVE INTERFACE (BRIGHT/EMERALD THEME) -->
     <main id="viewSolution" class="view-section hidden bg-slate-50 text-slate-800 pt-16 min-h-screen">
-        <section class="relative py-24 px-4 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white overflow-hidden">
-            <div class="absolute inset-0 opacity-15">
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1920" alt="Lush Marine Coral Life" class="w-full h-full object-cover">
+        <!-- 1. THE VISION: THE FUTURE IS NOT WRITTEN IN PLASTIC -->
+        <section id="sol-vision" class="relative py-20 lg:py-28 px-4 bg-gradient-to-b from-emerald-950 via-teal-900 to-slate-900 text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1920" alt="Philippine crystal clear coastal waters and white sands" class="w-full h-full object-cover opacity-25 filter brightness-110 contrast-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/70 to-transparent"></div>
             </div>
+
             <div class="relative z-10 max-w-5xl mx-auto text-center space-y-6">
-                <span class="inline-block px-4 py-1 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-emerald-200 text-xs font-bold uppercase tracking-widest">SYSTEMIC ACTION & ECOLOGICAL RENEWAL</span>
-                <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white font-display">TURNING THE TIDE IN THE PHILIPPINES</h1>
-                <p class="text-lg sm:text-xl text-emerald-100 font-light max-w-3xl mx-auto leading-relaxed">Moving beyond doomism into concrete legislative, circular economy, and community-driven innovations engineered for the Philippine archipelago.</p>
-                <div class="flex flex-wrap justify-center gap-4 pt-4">
-                    <a href="#sol-pillars" class="px-6 py-3 rounded-full bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-emerald-300 transition">THE 4 PILLARS ↓</a>
-                    <a href="#sol-calculator" class="px-6 py-3 rounded-full bg-emerald-950/60 text-emerald-200 border border-emerald-400/30 font-bold text-xs uppercase tracking-wider hover:bg-emerald-900 transition">REDUCTION CALCULATOR</a>
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-emerald-300 text-xs font-bold uppercase tracking-widest shadow-inner">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Path 02 // Restore — The Plastic Future, Rewritten</span>
                 </div>
-            </div>
-        </section>
 
-        <section id="sol-pillars" class="py-20 px-4 max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Architectural Framework</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display uppercase">FOUR PILLARS OF ECOLOGICAL RESTORATION</h2>
-                <p class="text-slate-600 text-sm">Solving single-use packaging requires simultaneous action across legislation, refill distribution models, waste worker equity, and consumer behavior shifts.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-solution-card p-6 rounded-2xl border-t-4 border-t-emerald-600 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-emerald-600 font-mono uppercase block mb-2">Pillar 01 // Policy</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">EPR Law Compliance</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">The Extended Producer Responsibility (EPR) Act of 2022 mandates large enterprises to recover 80% of their plastic packaging footprint by 2028.</p>
-                    </div>
-                    <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-100 text-[11px] text-emerald-800"><strong>Impact Target:</strong> Over 400 major FMCG corporations now legally bound to fund recovery schemes.</div>
-                </div>
-                <div class="glass-solution-card p-6 rounded-2xl border-t-4 border-t-teal-600 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-teal-600 font-mono uppercase block mb-2">Pillar 02 // Business</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Refill & Reuse Economy</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Scaling zero-waste <em>sari-sari</em> stores that swap single-use sachets for bulk liquid dispenser taps (shampoo, oil, laundry soap).</p>
-                    </div>
-                    <div class="bg-teal-50 p-3 rounded-xl border border-teal-100 text-[11px] text-teal-800"><strong>Impact Target:</strong> Up to 90% packaging waste reduction per consumer household.</div>
-                </div>
-                <div class="glass-solution-card p-6 rounded-2xl border-t-4 border-t-cyan-600 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-cyan-600 font-mono uppercase block mb-2">Pillar 03 // Equity</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Waste Worker Dignity</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Formalizing informal waste pickers, junk shops, and eco-cooperatives into recognized municipal waste management logistics networks.</p>
-                    </div>
-                    <div class="bg-cyan-50 p-3 rounded-xl border border-cyan-100 text-[11px] text-cyan-800"><strong>Impact Target:</strong> Fair wages, protective gear, and healthcare access for frontline recyclers.</div>
-                </div>
-                <div class="glass-solution-card p-6 rounded-2xl border-t-4 border-t-emerald-700 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-emerald-700 font-mono uppercase block mb-2">Pillar 04 // Material</span>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Bio-Based Packaging</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Replacing petroleum-derived thin films with indigenous seaweeds, cassava starch, and agricultural waste structural composites.</p>
-                    </div>
-                    <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-100 text-[11px] text-emerald-800"><strong>Impact Target:</strong> 100% home-compostable packaging within marine environments.</div>
-                </div>
-            </div>
-        </section>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white font-display leading-tight">
+                    THE FUTURE IS NOT<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-200">WRITTEN IN PLASTIC.</span>
+                </h1>
 
-        <section id="sol-calculator" class="py-20 bg-emerald-900 text-white">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                    <span class="text-emerald-300 text-xs font-bold uppercase tracking-widest">Interactive Action Tool</span>
-                    <h2 class="text-3xl sm:text-4xl font-black font-display uppercase">PERSONAL & COMMUNITY REDUCTION SIMULATOR</h2>
-                    <p class="text-emerald-100 text-sm">Select alternative habits to calculate how much plastic waste your household or barangay can prevent annually.</p>
+                <p class="text-base sm:text-xl text-emerald-100/90 font-light max-w-3xl mx-auto leading-relaxed">
+                    The crisis across our rivers, shorelines, and cities is profound—but our capacity to redesign the system is greater. Explore how everyday swaps, circular engineering, localized interventions, and collective responsibility rewrite the story of plastics in the Philippines.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <a href="#sol-swaps" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-400 to-teal-400 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-emerald-500/25 hover:from-emerald-300 hover:to-teal-300 transition hover:scale-105 flex items-center gap-2">
+                        <span>Explore How We Rewrite It</span>
+                        <span>↓</span>
+                    </a>
+                    <a href="#sol-system" class="px-7 py-3.5 rounded-full bg-emerald-950/80 text-emerald-200 border border-emerald-400/40 hover:bg-emerald-900 font-bold text-xs uppercase tracking-wider transition hover:scale-105">
+                        Build The Circular System
+                    </a>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-emerald-950 p-6 lg:p-10 rounded-3xl border border-emerald-700/50 shadow-2xl">
-                    <div class="lg:col-span-7 space-y-5">
-                        <div class="flex items-center justify-between p-4 bg-emerald-900/60 rounded-xl border border-emerald-700/40">
-                            <div><h4 class="font-bold text-sm text-white">Refillable Water Flask</h4><p class="text-xs text-emerald-200">Replace single-use PET bottles</p></div>
-                            <input type="checkbox" id="chkWater" onchange="calcSolution()" class="w-6 h-6 accent-emerald-400 cursor-pointer" checked>
+
+                <!-- Key Milestones of Hope -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-10 max-w-4xl mx-auto text-left">
+                    <div class="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+                        <div class="flex items-center gap-2 text-emerald-300 text-xs font-mono font-bold uppercase mb-1">
+                            <svg class="ic text-emerald-400"><use href="#i-shield"/></svg>
+                            <span>EPR Mandate</span>
                         </div>
-                        <div class="flex items-center justify-between p-4 bg-emerald-900/60 rounded-xl border border-emerald-700/40">
-                            <div><h4 class="font-bold text-sm text-white">Zero-Waste Refill Station for Hygiene</h4><p class="text-xs text-emerald-200">Replace daily shampoo & soap sachets</p></div>
-                            <input type="checkbox" id="chkSachet" onchange="calcSolution()" class="w-6 h-6 accent-emerald-400 cursor-pointer" checked>
+                        <div class="text-3xl font-black text-white font-display">80% Recovery</div>
+                        <p class="text-xs text-slate-300 mt-1">Legally required packaging footprint recovery target for major FMCG corporations by 2028 (RA 11898).</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+                        <div class="flex items-center gap-2 text-teal-300 text-xs font-mono font-bold uppercase mb-1">
+                            <svg class="ic text-teal-400"><use href="#i-refresh"/></svg>
+                            <span>Refill Economy</span>
                         </div>
-                        <div class="flex items-center justify-between p-4 bg-emerald-900/60 rounded-xl border border-emerald-700/40">
-                            <div><h4 class="font-bold text-sm text-white">Reusable Eco-Bag & Cutlery Kit</h4><p class="text-xs text-emerald-200">Decline single-use sando bags & takeout spoons</p></div>
-                            <input type="checkbox" id="chkBags" onchange="calcSolution()" class="w-6 h-6 accent-emerald-400 cursor-pointer" checked>
+                        <div class="text-3xl font-black text-white font-display">3,000+ Stores</div>
+                        <p class="text-xs text-slate-300 mt-1">Zero-waste sari-sari store refilling pilots providing accessible, sachet-free essentials to local neighborhoods.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+                        <div class="flex items-center gap-2 text-amber-300 text-xs font-mono font-bold uppercase mb-1">
+                            <svg class="ic text-amber-400"><use href="#i-sparkles"/></svg>
+                            <span>Zero-Waste Islands</span>
                         </div>
-                        <div class="p-4 bg-emerald-900/60 rounded-xl border border-emerald-700/40 space-y-2">
-                            <label class="block text-xs font-bold text-emerald-300 uppercase">Scale to Household / Community Size:</label>
-                            <input type="range" min="1" max="100" value="1" id="scaleRange" oninput="calcSolution()" class="w-full accent-emerald-400 cursor-pointer">
-                            <div class="flex justify-between text-xs text-emerald-200 font-mono">
-                                <span>1 Person</span>
-                                <span id="scaleLabel" class="font-bold text-emerald-300">1 Household (1 Person)</span>
-                                <span>100 People</span>
+                        <div class="text-3xl font-black text-white font-display">&gt;70% Diversion</div>
+                        <p class="text-xs text-slate-300 mt-1">Model communities like Apo Island and Siquijor redirecting ocean-bound waste into decentralized recovery.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Horizon Preview Comparison -->
+                <div class="pt-8 max-w-4xl mx-auto">
+                    <div class="bg-slate-900/90 rounded-2xl p-6 border border-emerald-500/30 text-left">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
+                            <div>
+                                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold">Interactive Horizon Comparison</span>
+                                <h3 class="text-lg font-bold text-white">Compare Two Coastal Futures</h3>
+                            </div>
+                            <div class="inline-flex p-1 bg-slate-950 rounded-xl border border-white/10 text-xs">
+                                <button onclick="setHorizonPreview('current')" id="horizonBtnCurrent" class="px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white font-semibold transition">Degraded Shoreline</button>
+                                <button onclick="setHorizonPreview('restored')" id="horizonBtnRestored" class="px-3.5 py-1.5 rounded-lg bg-emerald-500 text-slate-950 font-bold transition">Restored Philippine Coast</button>
+                            </div>
+                        </div>
+
+                        <div class="relative h-64 rounded-xl overflow-hidden group">
+                            <img id="horizonImg" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1200" alt="Restored vibrant marine life" class="w-full h-full object-cover transition-all duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                                <div class="max-w-xl">
+                                    <span id="horizonBadge" class="inline-block px-2.5 py-0.5 rounded-md bg-emerald-500/30 border border-emerald-400 text-emerald-300 text-[10px] font-mono font-bold uppercase mb-1">Status: Regenerated Sanctuary</span>
+                                    <h4 id="horizonTitle" class="text-xl font-bold text-white">Resilient Mangroves & Healthy Coral Gardens</h4>
+                                    <p id="horizonDesc" class="text-xs text-slate-200 mt-0.5">With plastic pollution intercepted upstream, coastal nurseries recover, sea turtles feed safely, and ecotourism sustains local coastal fisherfolk.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:col-span-5 bg-gradient-to-br from-emerald-800 to-teal-950 p-8 rounded-2xl border border-emerald-400/30 text-center space-y-6">
-                        <span class="text-xs font-bold text-emerald-300 uppercase tracking-widest block">Prevented Annual Environmental Leakage</span>
-                        <div class="space-y-1">
-                            <span id="solSavedItems" class="text-4xl sm:text-5xl font-black text-amber-300 font-display block">2,555</span>
-                            <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">Single-Use Plastics Diverted / Year</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PREVENTION: “START WITH ONE CHOICE” — EVERYDAY SWAPS -->
+        <section id="sol-swaps" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Journey Stage 01 // Prevention At Source</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 font-display uppercase">START WITH ONE CHOICE: THE EVERYDAY SWAP</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Single-use plastic isn't inevitable; it's a packaging design choice. Explore practical, accessible alternatives to everyday items and watch how one personal swap ripples across the entire community and marine environment.
+                </p>
+            </div>
+
+            <!-- Category Selector Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="selectSwapCategory('sachets')" id="swapCat-sachets" class="swap-cat-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition bg-emerald-600 text-white shadow-md">
+                    <svg class="ic mr-1.5"><use href="#i-sachet"/></svg> Sachets & Hygiene
+                </button>
+                <button onclick="selectSwapCategory('bottles')" id="swapCat-bottles" class="swap-cat-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <svg class="ic mr-1.5"><use href="#i-bottle"/></svg> Bottles & Cups
+                </button>
+                <button onclick="selectSwapCategory('food')" id="swapCat-food" class="swap-cat-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <svg class="ic mr-1.5"><use href="#i-box"/></svg> Food & Takeout
+                </button>
+                <button onclick="selectSwapCategory('ecommerce')" id="swapCat-ecommerce" class="swap-cat-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <svg class="ic mr-1.5"><use href="#i-package"/></svg> Online Deliveries
+                </button>
+            </div>
+
+            <!-- Interactive Swap Detail Card -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 lg:p-10 rounded-3xl border border-emerald-100 shadow-xl">
+                <!-- Left: Swap Comparison -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-center justify-between">
+                        <span id="swapItemBadge" class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Habit: Shampoo & Soap Sachets</span>
+                        <span class="text-xs text-slate-400">Click tabs above to switch habits</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Old Single Use -->
+                        <div class="p-5 rounded-2xl bg-rose-50 border border-rose-200 space-y-2">
+                            <div class="flex items-center gap-2 text-rose-700 text-xs font-bold uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                                <span>The Single-Use Habit</span>
+                            </div>
+                            <h4 id="swapOldTitle" class="text-lg font-bold text-rose-950">Multi-Layer Foil Sachets</h4>
+                            <p id="swapOldDesc" class="text-xs text-rose-900/80 leading-relaxed">
+                                Used once in 3 minutes, laminated aluminum-plastic layers cannot be mechanically recycled in municipal recovery systems and persist for centuries in storm channels.
+                            </p>
+                            <div class="pt-2 text-[11px] font-semibold text-rose-700">
+                                <strong>Common Cost:</strong> ~163M discarded daily in PH.
+                            </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-emerald-700/60">
-                            <div class="p-3 bg-emerald-950/60 rounded-lg"><span class="text-[10px] text-emerald-300 uppercase block font-mono">Saved Weight</span><span id="solSavedWeight" class="text-lg font-bold text-white">19.3 kg</span></div>
-                            <div class="p-3 bg-emerald-950/60 rounded-lg"><span class="text-[10px] text-emerald-300 uppercase block font-mono">CO₂ Equivalent</span><span id="solSavedCO2" class="text-lg font-bold text-emerald-300">58.0 kg</span></div>
+
+                        <!-- Practical Swap -->
+                        <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-300 space-y-2 relative overflow-hidden">
+                            <div class="flex items-center gap-2 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+                                <svg class="ic text-emerald-600"><use href="#i-check"/></svg>
+                                <span>Practical Alternative</span>
+                            </div>
+                            <h4 id="swapNewTitle" class="text-lg font-bold text-emerald-950">Bulk Refill Taps & Shampoo Bars</h4>
+                            <p id="swapNewDesc" class="text-xs text-emerald-900/80 leading-relaxed">
+                                Bring your own reusable bottle to neighborhood refilling stations, or choose concentrated solid bars with paper wrapping.
+                            </p>
+                            <div class="pt-2 text-[11px] font-semibold text-emerald-800">
+                                <strong>Philippine Reality:</strong> Accessible bulk dispensers in pilot <em>sari-sari</em> stores.
+                            </div>
                         </div>
-                        <p id="solMessage" class="text-xs text-emerald-200 italic leading-relaxed pt-2">"By making simple systemic swaps, you actively prevent thousands of packaging items from ever reaching Pasig River or Manila Bay."</p>
+                    </div>
+
+                    <!-- Small Change vs Big Change -->
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="font-bold text-slate-800 block mb-0.5">Small Personal Change:</span>
+                                <span id="swapSmallChange" class="text-slate-600">Eliminates 300–700 sachets per person every year from entering household trash.</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-emerald-800 block mb-0.5">System-Wide Impact:</span>
+                                <span id="swapBigChange" class="text-slate-600">Signals consumer demand to brands, accelerating bulk dispensing logistics across FMCG supply chains.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2">
+                        <button onclick="triggerRippleAnimation()" class="px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-2">
+                            <svg class="ic"><use href="#i-sparkles"/></svg>
+                            <span>Trigger Impact Ripple</span>
+                        </button>
+                        <span class="text-xs text-slate-500 italic">See the systemic effect on the right →</span>
+                    </div>
+                </div>
+
+                <!-- Right: Animated Impact Ripple Visualizer -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 p-6 lg:p-8 rounded-2xl text-white space-y-5 shadow-inner">
+                    <div class="text-center">
+                        <span class="text-xs font-mono font-bold text-emerald-300 uppercase tracking-widest block">The Outward Ripple Effect</span>
+                        <h4 class="text-xl font-bold text-white mt-1">From One Choice to Whole Ecosystems</h4>
+                        <p class="text-xs text-emerald-100/70 mt-1">Tap the rings below to explore each layer of systemic consequence.</p>
+                    </div>
+
+                    <!-- 4 Ripple Rings -->
+                    <div class="space-y-3">
+                        <div onclick="selectRippleStage('me')" id="rippleCard-me" class="ripple-node p-3.5 rounded-xl bg-emerald-800/80 border-2 border-emerald-400 cursor-pointer transition hover:bg-emerald-700/80">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-amber-300 uppercase flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-amber-400"></span> 1. Me (Household)
+                                </span>
+                                <span class="text-[10px] text-emerald-200 font-mono">Immediate</span>
+                            </div>
+                            <p id="rippleText-me" class="text-xs text-emerald-100 mt-1">Directly diverts 700+ single-use packaging items per year from curbside pickup.</p>
+                        </div>
+
+                        <div onclick="selectRippleStage('store')" id="rippleCard-store" class="ripple-node p-3.5 rounded-xl bg-slate-800/50 border border-white/10 cursor-pointer transition hover:bg-emerald-800/50">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-teal-300 uppercase flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-teal-400"></span> 2. Local Store / Sari-Sari
+                                </span>
+                                <span class="text-[10px] text-slate-400 font-mono">Market</span>
+                            </div>
+                            <p id="rippleText-store" class="text-xs text-slate-300 mt-1">Store owners capture higher profit margins through bulk drums with zero packaging waste.</p>
+                        </div>
+
+                        <div onclick="selectRippleStage('community')" id="rippleCard-community" class="ripple-node p-3.5 rounded-xl bg-slate-800/50 border border-white/10 cursor-pointer transition hover:bg-emerald-800/50">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-cyan-300 uppercase flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span> 3. Barangay Community
+                                </span>
+                                <span class="text-[10px] text-slate-400 font-mono">Infrastructure</span>
+                            </div>
+                            <p id="rippleText-community" class="text-xs text-slate-300 mt-1">Storm drainage culverts stay unblocked during typhoons, reducing urban flash flood risks.</p>
+                        </div>
+
+                        <div onclick="selectRippleStage('environment')" id="rippleCard-environment" class="ripple-node p-3.5 rounded-xl bg-slate-800/50 border border-white/10 cursor-pointer transition hover:bg-emerald-800/50">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-emerald-300 uppercase flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 4. Coastal Environment
+                                </span>
+                                <span class="text-[10px] text-slate-400 font-mono">Ecosystem</span>
+                            </div>
+                            <p id="rippleText-environment" class="text-xs text-slate-300 mt-1">Zero microplastic degradation in rivers; juvenile fish and marine turtles feed without ingestion hazards.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sol-innovations" class="py-20 px-4 max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Local Leadership</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display uppercase">GROUNDBREAKING PHILIPPINE INITIATIVES</h2>
-                <p class="text-slate-600 text-sm">Empirical examples of homegrown solutions transforming waste management from Manila to island communities.</p>
+        <!-- 3. CIRCULAR SYSTEMS: “BUILD A BETTER SYSTEM” — CIRCULAR ECONOMY BUILDER -->
+        <section id="sol-system" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&q=80&w=1920" alt="Ocean flow" class="w-full h-full object-cover">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=600" alt="Community Recycling" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                    <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest font-mono">Centerpiece Interactive 02 // Circular Systems</span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white">
+                        BUILD A BETTER PLASTIC SYSTEM
+                    </h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        The linear "take-make-waste" economy leaks millions of tons into Philippine waters. Connect all 6 stages of a circular system to keep materials valuable and prevent waste at the source.
+                    </p>
+                </div>
+
+                <!-- Interactive Assembly Canvas -->
+                <div class="bg-slate-950 p-6 lg:p-10 rounded-3xl border border-emerald-500/30 shadow-2xl space-y-8">
+                    <!-- Progress Bar & Milestone Status -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-white/10 pb-6">
                         <div>
-                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest block mb-1">01 / Community Exchange</span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Trash-to-Rice / Cash Programs</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-4">Local government units and barangays reward residents with rice or grocery vouchers in exchange for cleaned, sorted plastic recyclables.</p>
+                            <span class="text-xs font-mono uppercase text-emerald-400 font-bold block">Interactive System Tracker</span>
+                            <h3 class="text-xl font-bold text-white">Tap Each Stage to Connect the Circular Loop</h3>
                         </div>
-                        <div class="text-[11px] text-emerald-800 bg-emerald-50 p-2.5 rounded-lg border border-emerald-100 font-medium">Location: Quezon City & San Fernando, Pampanga LGU Models.</div>
+                        <div class="flex items-center gap-3">
+                            <span id="circuitCount" class="text-xs font-mono font-bold px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300">
+                                0 of 6 Stages Assembled
+                            </span>
+                            <button onclick="resetCircularBuilder()" class="px-3 py-1.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs transition">
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 6 Connected Stage Buttons (Circular Track) -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-center">
+                        <button onclick="activateCircuitStage(1)" id="stageBtn-1" class="circuit-btn p-3.5 rounded-2xl bg-slate-900 border border-white/10 hover:border-emerald-400 transition text-left flex flex-col justify-between">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-emerald-400 font-bold">STAGE 01</span>
+                                <span id="stageStatus-1" class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                            </div>
+                            <h4 class="font-bold text-white text-sm mt-3">DESIGN</h4>
+                            <span class="text-[11px] text-slate-400 mt-1">Design for less waste</span>
+                        </button>
+
+                        <button onclick="activateCircuitStage(2)" id="stageBtn-2" class="circuit-btn p-3.5 rounded-2xl bg-slate-900 border border-white/10 hover:border-emerald-400 transition text-left flex flex-col justify-between">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-emerald-400 font-bold">STAGE 02</span>
+                                <span id="stageStatus-2" class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                            </div>
+                            <h4 class="font-bold text-white text-sm mt-3">PRODUCE</h4>
+                            <span class="text-[11px] text-slate-400 mt-1">Responsible manufacturing</span>
+                        </button>
+
+                        <button onclick="activateCircuitStage(3)" id="stageBtn-3" class="circuit-btn p-3.5 rounded-2xl bg-slate-900 border border-white/10 hover:border-emerald-400 transition text-left flex flex-col justify-between">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-emerald-400 font-bold">STAGE 03</span>
+                                <span id="stageStatus-3" class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                            </div>
+                            <h4 class="font-bold text-white text-sm mt-3">USE</h4>
+                            <span class="text-[11px] text-slate-400 mt-1">Mindful consumption</span>
+                        </button>
+
+                        <button onclick="activateCircuitStage(4)" id="stageBtn-4" class="circuit-btn p-3.5 rounded-2xl bg-slate-900 border border-white/10 hover:border-emerald-400 transition text-left flex flex-col justify-between">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-emerald-400 font-bold">STAGE 04</span>
+                                <span id="stageStatus-4" class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                            </div>
+                            <h4 class="font-bold text-white text-sm mt-3">REUSE</h4>
+                            <span class="text-[11px] text-slate-400 mt-1">Keep materials circulating</span>
+                        </button>
+
+                        <button onclick="activateCircuitStage(5)" id="stageBtn-5" class="circuit-btn p-3.5 rounded-2xl bg-slate-900 border border-white/10 hover:border-emerald-400 transition text-left flex flex-col justify-between">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-emerald-400 font-bold">STAGE 05</span>
+                                <span id="stageStatus-5" class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                            </div>
+                            <h4 class="font-bold text-white text-sm mt-3">RECOVER</h4>
+                            <span class="text-[11px] text-slate-400 mt-1">Dignified sorting & MRFs</span>
+                        </button>
+
+                        <button onclick="activateCircuitStage(6)" id="stageBtn-6" class="circuit-btn p-3.5 rounded-2xl bg-slate-900 border border-white/10 hover:border-emerald-400 transition text-left flex flex-col justify-between">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[10px] font-mono text-emerald-400 font-bold">STAGE 06</span>
+                                <span id="stageStatus-6" class="w-2.5 h-2.5 rounded-full bg-slate-600"></span>
+                            </div>
+                            <h4 class="font-bold text-white text-sm mt-3">REDESIGN</h4>
+                            <span class="text-[11px] text-slate-400 mt-1">Closing loop into materials</span>
+                        </button>
+                    </div>
+
+                    <!-- Celebratory Banner when All 6 Complete -->
+                    <div id="circuitCelebration" class="hidden p-6 rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white text-center shadow-xl animate-fade-in">
+                        <span class="text-xs uppercase font-mono tracking-widest font-bold block mb-1">🎉 System Loop Fully Connected!</span>
+                        <h4 class="text-2xl sm:text-3xl font-black font-display uppercase tracking-wide">
+                            "The best waste system is one that creates less waste in the first place."
+                        </h4>
+                        <p class="text-xs sm:text-sm text-emerald-100 mt-2 max-w-2xl mx-auto">
+                            When product design, retail refill, community collection, and producer responsibility operate as a complete circle, environmental leakage drops to near zero.
+                        </p>
+                    </div>
+
+                    <!-- Active Stage Deep-Dive Card -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-900 p-6 rounded-2xl border border-white/10 items-center">
+                        <div class="lg:col-span-8 space-y-3">
+                            <div class="flex items-center gap-2">
+                                <span id="stageBadge" class="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                    Active Stage 1: Design
+                                </span>
+                                <span id="stagePhTag" class="text-xs text-slate-400">Philippine Implementation</span>
+                            </div>
+                            <h4 id="stageTitle" class="text-2xl font-bold text-white">Design for Less Waste</h4>
+                            <p id="stageDesc" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                Eliminating non-recyclable multi-material sachets before they are produced. Developing monomaterial recyclable pouches, dry concentrate tablets, and indigenous home-compostable biopolymers derived from Philippine seaweeds.
+                            </p>
+                            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-emerald-500/20 flex flex-col sm:flex-row gap-3 text-xs">
+                                <div>
+                                    <strong class="text-emerald-300 block">Linear Model:</strong>
+                                    <span id="stageLinear" class="text-slate-400">Cheap laminate packaging designed exclusively for 1-time disposal.</span>
+                                </div>
+                                <div class="border-t sm:border-t-0 sm:border-l border-white/10 pt-2 sm:pt-0 sm:pl-3">
+                                    <strong class="text-teal-300 block">Circular Transformation:</strong>
+                                    <span id="stageCircular" class="text-slate-300">Standardized formats designed from day one to be refilled or fully recovered.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-4 rounded-xl overflow-hidden border border-white/10">
+                            <img id="stageImg" src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=600" alt="Sustainable packaging design" class="w-full h-44 object-cover">
+                        </div>
                     </div>
                 </div>
-                <div class="glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=600" alt="Eco Bricks Building Material" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+            </div>
+        </section>
+
+        <!-- 4. INTERVENTION: “BREAK THE CHAIN” — INTERCEPT THE PLASTIC -->
+        <section id="sol-chain" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Journey Stage 03 // Active Interception</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 font-display uppercase">BREAK THE CHAIN: INTERCEPT THE PLASTIC</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    In the Crisis view, we observed how uncollected plastic travels unchecked from households into drainage channels, river basins, and open seas. Now explore how decisive interventions break the conveyor belt at every stage.
+                </p>
+            </div>
+
+            <!-- 5 Checkpoints Selector -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="selectChainStep(1)" id="chainBtn-1" class="chain-step-btn px-4 py-2 rounded-full font-bold text-xs uppercase transition bg-emerald-600 text-white shadow">
+                    1. Product Design
+                </button>
+                <button onclick="selectChainStep(2)" id="chainBtn-2" class="chain-step-btn px-4 py-2 rounded-full font-bold text-xs uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    2. Point of Purchase
+                </button>
+                <button onclick="selectChainStep(3)" id="chainBtn-3" class="chain-step-btn px-4 py-2 rounded-full font-bold text-xs uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    3. Household Disposal
+                </button>
+                <button onclick="selectChainStep(4)" id="chainBtn-4" class="chain-step-btn px-4 py-2 rounded-full font-bold text-xs uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    4. River Transport
+                </button>
+                <button onclick="selectChainStep(5)" id="chainBtn-5" class="chain-step-btn px-4 py-2 rounded-full font-bold text-xs uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    5. Coastal Marine Web
+                </button>
+            </div>
+
+            <!-- Side-by-Side Comparison Container -->
+            <div class="bg-white p-6 lg:p-10 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                    <div>
+                        <span id="chainStepBadge" class="text-xs font-mono font-bold text-emerald-700 uppercase">Checkpoint 01 // Manufacturing Phase</span>
+                        <h3 id="chainStepTitle" class="text-2xl font-bold text-slate-900 mt-0.5">Product Design & Material Choice</h3>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase">Intervention Mode:</span>
+                        <button onclick="toggleChainMode()" id="chainModeBtn" class="px-4 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow">
+                            🛡️ Intervene & Redirect
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+                    <!-- Path A: Without Intervention (Crisis) -->
+                    <div id="chainCardWithout" class="p-6 rounded-2xl bg-rose-50 border-2 border-rose-200 flex flex-col justify-between space-y-4">
                         <div>
-                            <span class="text-xs font-bold text-teal-600 uppercase tracking-widest block mb-1">02 / Upscaling</span>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-rose-700 uppercase tracking-wider flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-rose-500"></span> Unchecked Pathway (Crisis)
+                                </span>
+                                <span class="text-[10px] font-mono text-rose-600 bg-rose-100 px-2 py-0.5 rounded">100% Leakage Risk</span>
+                            </div>
+                            <h4 id="chainWithoutTitle" class="text-lg font-bold text-rose-950">Multi-Layer Plastic-Aluminum Sachets</h4>
+                            <p id="chainWithoutDesc" class="text-xs text-rose-900/80 leading-relaxed mt-2">
+                                FMCG manufacturers flood sari-sari supply chains with micro-portion multi-layer sachets. Because layers cannot be separated, they are discarded into open dumps or road culverts.
+                            </p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/80 border border-rose-200 text-xs text-rose-800">
+                            <strong>Downstream Consequence:</strong> Moves straight into storm sewers and Pasig River drainage channels.
+                        </div>
+                    </div>
+
+                    <!-- Path B: With Intervention (Solution) -->
+                    <div id="chainCardWith" class="p-6 rounded-2xl bg-emerald-50 border-2 border-emerald-400 flex flex-col justify-between space-y-4 shadow-sm">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider flex items-center gap-1.5">
+                                    <svg class="ic text-emerald-600"><use href="#i-shield"/></svg> Targeted Intervention
+                                </span>
+                                <span class="text-[10px] font-mono text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded font-bold">0% Marine Leakage</span>
+                            </div>
+                            <h4 id="chainWithTitle" class="text-lg font-bold text-emerald-950">EPR Redesign & Monomaterial Packaging</h4>
+                            <p id="chainWithDesc" class="text-xs text-emerald-900/80 leading-relaxed mt-2">
+                                Producers standardize packaging to recyclable monomaterials, offer concentrated tablets, or deploy localized bulk dispensers, eliminating sachet waste before it leaves the factory.
+                            </p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/80 border border-emerald-200 text-xs text-emerald-800">
+                            <strong>Philippine Success:</strong> Compliance with RA 11898 forces corporations to fund circular collection systems.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Interception Impact Stat -->
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+                            ✓
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-800 block">Ecosystem Benefit at this Checkpoint:</span>
+                            <span id="chainStatText" class="text-slate-600">Prevents billions of sachet packets from ever entering Philippine municipal solid waste streams.</span>
+                        </div>
+                    </div>
+                    <span id="chainStatNumber" class="text-xl font-black text-emerald-700 font-display whitespace-nowrap">
+                        163M Sachets/Day Targeted
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. RESTORATION: GROUNDBREAKING PHILIPPINE INITIATIVES -->
+        <section id="sol-innovations" class="py-20 px-4 max-w-7xl mx-auto border-t border-slate-200">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Local Leadership // Proof of Concept</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 font-display uppercase">PHILIPPINE INITIATIVES IN ACTION</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    From urban barangays in Metro Manila to isolated marine reserves in the Visayas, Filipino innovators, cooperatives, and local governments are pioneering scalable circular models.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="filterInnovations('all')" id="filter-all" class="inno-filter-btn px-4 py-1.5 rounded-full text-xs font-bold uppercase transition bg-emerald-600 text-white">All (6)</button>
+                <button onclick="filterInnovations('policy')" id="filter-policy" class="inno-filter-btn px-4 py-1.5 rounded-full text-xs font-bold uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Policy & Law</button>
+                <button onclick="filterInnovations('refill')" id="filter-refill" class="inno-filter-btn px-4 py-1.5 rounded-full text-xs font-bold uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Refill & Business</button>
+                <button onclick="filterInnovations('tech')" id="filter-tech" class="inno-filter-btn px-4 py-1.5 rounded-full text-xs font-bold uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Upcycling & Tech</button>
+                <button onclick="filterInnovations('islands')" id="filter-islands" class="inno-filter-btn px-4 py-1.5 rounded-full text-xs font-bold uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">Zero-Waste Islands</button>
+            </div>
+
+            <!-- 6 Initiatives Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. EPR Act -->
+                <div class="inno-card glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="policy">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=600" alt="Sorting and recovery" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-emerald-950/80 text-emerald-300 text-[10px] font-mono font-bold uppercase">Policy & Law</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">EPR Act (Republic Act 11898)</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Mandates large brand owners and enterprises to take financial and operational responsibility for the plastic packaging they produce, legally targeting an 80% recovery footprint by 2028.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-[11px] text-emerald-800">
+                            <strong>Jurisdiction:</strong> DENR National Registry. Enforcing accountability on over 400 major corporations.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Wala Usik Movement -->
+                <div class="inno-card glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="refill">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=600" alt="Zero waste refill bottles" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-teal-950/80 text-teal-300 text-[10px] font-mono font-bold uppercase">Refill & Business</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">The "Wala Usik" Refill Sari-Sari</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Pioneered in Western Visayas and Negros, "Wala Usik" (Zero Waste) retrofits neighborhood sari-sari stores with bulk liquid taps. Residents bring their own jars for small, affordable portions without sachets.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="p-3 bg-teal-50 rounded-xl border border-teal-100 text-[11px] text-teal-800">
+                            <strong>Impact:</strong> Demonstrates that micro-portion retail can thrive without single-use plastic waste.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Eco-Pavers & Plastic Lumber -->
+                <div class="inno-card glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="tech">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=600" alt="Eco structural pavers" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-cyan-950/80 text-cyan-300 text-[10px] font-mono font-bold uppercase">Upcycling & Tech</span>
+                        </div>
+                        <div class="p-6">
                             <h3 class="text-xl font-bold text-slate-900 mb-2">Upcycled Eco-Pavers & Structural Lumber</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-4">Social enterprises grind unrecyclable multi-layer sachets and mix them with cement to create durable building bricks for local public infrastructure.</p>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Philippine social enterprises shred flexible sachet wrappers and mix them with sand, fly ash, and cement to produce heavy-duty sidewalk pavers and hollow blocks for civic schools.
+                            </p>
                         </div>
-                        <div class="text-[11px] text-teal-800 bg-teal-50 p-2.5 rounded-lg border border-teal-100 font-medium">Impact: Diverts thousands of metric tons of low-density polyethylene from landfills.</div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="p-3 bg-cyan-50 rounded-xl border border-cyan-100 text-[11px] text-cyan-800">
+                            <strong>Achievement:</strong> Traps low-density polyethylene inside permanent civil infrastructure.
+                        </div>
                     </div>
                 </div>
-                <div class="glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600" alt="Island Ecosystem Restoration" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-1 flex flex-col justify-between">
-                        <div>
-                            <span class="text-xs font-bold text-cyan-600 uppercase tracking-widest block mb-1">03 / Coastal Protection</span>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Zero-Waste Island Protocols</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mb-4">Island tourism hubs like Apo Island and Siquijor enforce strict single-use plastic bans, paired with decentralized material recovery facilities (MRFs).</p>
+
+                <!-- 4. Waste Worker Formalization -->
+                <div class="inno-card glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="policy">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?auto=format&fit=crop&q=80&w=600" alt="Community cleanup and workers" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-emerald-950/80 text-emerald-300 text-[10px] font-mono font-bold uppercase">Policy & Equity</span>
                         </div>
-                        <div class="text-[11px] text-cyan-800 bg-cyan-50 p-2.5 rounded-lg border border-cyan-100 font-medium">Result: Over 70% reduction in ocean-bound municipal waste on protected reef reserves.</div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Waste Worker Dignity & Co-ops</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Informal waste pickers collect over 60% of recyclable plastic in the Philippines. Co-operatives integrate collectors into municipal logistics with dignified living wages, safety gear, and healthcare.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-[11px] text-emerald-800">
+                            <strong>Equity Pillar:</strong> Turns informal scavenging into recognized green employment.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Apo Island & Siquijor -->
+                <div class="inno-card glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="islands">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600" alt="Island marine sanctuary" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-teal-950/80 text-teal-300 text-[10px] font-mono font-bold uppercase">Zero-Waste Islands</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Apo Island & Siquijor Zero-Waste Models</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Island communities enforce strict single-use plastic prohibitions, decentralized barangay MRFs, and household segregation audits, achieving &gt;70% reduction in ocean-bound municipal waste.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="p-3 bg-teal-50 rounded-xl border border-teal-100 text-[11px] text-teal-800">
+                            <strong>Ecosystem Result:</strong> Coral cover and sea turtle nesting zones protected from plastic contamination.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Philippine Seaweed Bioplastics -->
+                <div class="inno-card glass-solution-card rounded-2xl overflow-hidden flex flex-col justify-between" data-category="tech">
+                    <div>
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=600" alt="Indigenous seaweeds" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-cyan-950/80 text-cyan-300 text-[10px] font-mono font-bold uppercase">Upcycling & Tech</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Seaweed & Cassava Bio-Packaging</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                                Homegrown Philippine labs formulate flexible packaging films from farmed <em>Eucheuma</em> red seaweeds and cassava starch. The material dissolves in hot water and biodegrades safely in marine water within 90 days.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="p-3 bg-cyan-50 rounded-xl border border-cyan-100 text-[11px] text-cyan-800">
+                            <strong>Marine Safe:</strong> Non-toxic even if ingested by marine organisms or fish.
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sol-matrix" class="py-20 bg-slate-100 border-t border-slate-200">
+        <!-- 6. COLLECTIVE ACTION: “WHO MAKES CHANGE POSSIBLE?” — SHARED RESPONSIBILITY -->
+        <section id="sol-roles" class="py-20 bg-slate-100 border-t border-slate-200">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Multi-Stakeholder Roadmap</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display uppercase">WHAT EVERY SECTOR MUST DO</h2>
-                    <p class="text-slate-600 text-sm">Solving the crisis requires coordinated action across every tier of society.</p>
+                    <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Multi-Stakeholder Architecture</span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-slate-900 font-display uppercase">WHO MAKES CHANGE POSSIBLE?</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Plastic pollution is not merely a consumer failure. True ecological recovery requires synchronized action across citizens, corporate producers, local communities, and government regulators.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider block">🙋 As An Individual</span>
-                        <h4 class="font-bold text-slate-900 text-lg">Everyday Refusal & Advocacy</h4>
-                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
-                            <li>Carry a reusable water flask, cutlery kit, and eco-bag daily.</li>
-                            <li>Support local sari-sari stores with refill stations.</li>
-                            <li>Properly segregate household dry recyclables.</li>
-                            <li>Vocalize demand for plastic-free takeout options.</li>
-                        </ul>
+
+                <!-- 4 Interactive Role Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Role 1: Individuals -->
+                    <div onclick="inspectRole('individual')" id="roleCard-individual" class="role-card bg-white p-6 rounded-2xl border-2 border-emerald-500 shadow-md cursor-pointer transition hover:-translate-y-1">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">01</span>
+                            <span class="text-[10px] font-mono font-bold text-emerald-700 uppercase">Consumer Frontline</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <svg class="ic text-emerald-600"><use href="#i-users"/></svg> Individuals
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Choose reusable tumblers and bayong bags; segregate waste into clean dry recyclables; decline single-use cutlery on delivery apps.
+                        </p>
+                        <div class="pt-3 border-t border-slate-100 text-[11px] text-emerald-800 font-semibold">
+                            → Next Step: Start one new swap this week
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                        <span class="text-xs font-bold text-teal-600 uppercase tracking-wider block">🏢 As A Business Owner</span>
-                        <h4 class="font-bold text-slate-900 text-lg">Systemic Packaging Redesign</h4>
-                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
-                            <li>Register under the Philippine EPR Law registry.</li>
-                            <li>Eliminate unnecessary secondary plastic outer wraps.</li>
-                            <li>Implement circular deposit-return container systems.</li>
-                            <li>Invest in bio-based compostable alternatives.</li>
-                        </ul>
+
+                    <!-- Role 2: Businesses -->
+                    <div onclick="inspectRole('business')" id="roleCard-business" class="role-card bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm cursor-pointer transition hover:-translate-y-1 hover:border-teal-400">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm">02</span>
+                            <span class="text-[10px] font-mono font-bold text-teal-700 uppercase">Producer Responsibility</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <svg class="ic text-teal-600"><use href="#i-building"/></svg> Businesses
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Register under the EPR Law; redesign packaging into monomaterials; fund deposit-return container loops; stock bulk refill options.
+                        </p>
+                        <div class="pt-3 border-t border-slate-100 text-[11px] text-teal-800 font-semibold">
+                            → Next Step: Audit and disclose annual packaging footprint
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                        <span class="text-xs font-bold text-cyan-600 uppercase tracking-wider block">🏛️ As A Government Official</span>
-                        <h4 class="font-bold text-slate-900 text-lg">Infrastructure & Enforcement</h4>
-                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
-                            <li>Strictly enforce RA 9003 (Ecological Solid Waste Act).</li>
-                            <li>Establish operational Materials Recovery Facilities in every barangay.</li>
-                            <li>Provide tax incentives for zero-waste packaging startups.</li>
-                            <li>Integrate formal wages for waste collector networks.</li>
-                        </ul>
+
+                    <!-- Role 3: Communities -->
+                    <div onclick="inspectRole('community')" id="roleCard-community" class="role-card bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm cursor-pointer transition hover:-translate-y-1 hover:border-cyan-400">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-sm">03</span>
+                            <span class="text-[10px] font-mono font-bold text-cyan-700 uppercase">Grassroots Infrastructure</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <svg class="ic text-cyan-600"><use href="#i-sprout"/></svg> Communities
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Operate barangay Materials Recovery Facilities (MRFs); reward segregation through trash-to-cash; integrate informal waste pickers.
+                        </p>
+                        <div class="pt-3 border-t border-slate-100 text-[11px] text-cyan-800 font-semibold">
+                            → Next Step: Equip MRF with clean sorting bays
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Government -->
+                    <div onclick="inspectRole('government')" id="roleCard-government" class="role-card bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm cursor-pointer transition hover:-translate-y-1 hover:border-amber-400">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-sm">04</span>
+                            <span class="text-[10px] font-mono font-bold text-amber-700 uppercase">Enforcement & Policy</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                            <svg class="ic text-amber-600"><use href="#i-landmark"/></svg> Government
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Strictly enforce RA 9003 and the EPR Act; fund municipal river interceptors; provide tax incentives for zero-waste packaging startups.
+                        </p>
+                        <div class="pt-3 border-t border-slate-100 text-[11px] text-amber-800 font-semibold">
+                            → Next Step: Implement phased ban on non-essential plastics
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role Detail Focus Box -->
+                <div class="mt-8 bg-white p-6 lg:p-8 rounded-2xl border border-slate-200 shadow-sm" id="roleDetailBox">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span id="roleDetailBadge" class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">Selected Sector: Individuals & Families</span>
+                    </div>
+                    <h4 id="roleDetailTitle" class="text-2xl font-bold text-slate-900 mb-3">What Can Individuals Do Next?</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-600">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <strong class="text-slate-900 block mb-1">Immediate (This Week):</strong>
+                            <p id="roleDetailImmediate">Carry a personal reusable water flask, reusable spoon/fork, and foldable market bag wherever you go.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <strong class="text-slate-900 block mb-1">Household Shift (This Month):</strong>
+                            <p id="roleDetailMonth">Segregate dry recyclables from wet kitchen scraps; explore a nearby zero-waste refill shop for detergents.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <strong class="text-slate-900 block mb-1">Collective Voice (Systemic):</strong>
+                            <p id="roleDetailSystemic">Support barangay cleanup drives, petition favorite food chains to offer plastic-free dine-in, and support waste worker dignity.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 px-4 bg-emerald-950 text-white text-center relative overflow-hidden">
-            <div class="max-w-4xl mx-auto space-y-6 relative z-10">
-                <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">A SHARED RESPONSIBILITY</span>
-                <h2 class="text-3xl sm:text-5xl font-black uppercase font-display leading-tight">THE FUTURE IS NOT PLASTIC-BOUND.<br>IT IS WRITTEN BY OUR CHOICES.</h2>
-                <p class="text-emerald-200 text-sm max-w-2xl mx-auto font-light leading-relaxed">By combining empirical understanding of the crisis with relentless execution of solutions, we can protect Philippine coastal waters for generations to come.</p>
-                <div class="flex flex-wrap justify-center gap-4 pt-4">
-                    <button onclick="switchView('gateway')" class="px-8 py-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-lg transition">⌂ Return to Portal Gateway</button>
-                    <button onclick="switchView('crisis')" class="px-8 py-3.5 rounded-full bg-emerald-900 hover:bg-emerald-800 text-emerald-200 border border-emerald-400/30 font-bold text-xs uppercase tracking-wider transition">← Review Crisis Data</button>
+        <!-- 7. PERSONAL IMPACT: SIMULATOR & PLEDGE -->
+        <section id="sol-simulator" class="py-20 bg-emerald-950 text-white relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                    <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest font-mono">Personal Action // Make It Personal</span>
+                    <h2 class="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight">
+                        YOUR IMPACT SIMULATOR & PLEDGE
+                    </h2>
+                    <p class="text-emerald-100 text-sm leading-relaxed">
+                        Small changes multiply when adopted consistently. Toggle alternative habits to calculate how much single-use plastic waste your household or community can divert annually from Philippine oceans.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-900/90 p-6 lg:p-10 rounded-3xl border border-emerald-500/40 shadow-2xl">
+                    <!-- Left: Interactive Switches -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-slate-800/80 rounded-2xl border border-white/10 hover:border-emerald-400 transition">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl"><svg class="ic text-emerald-400"><use href="#i-bottle"/></svg></span>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Refillable Water Flask / Tumbler</h4>
+                                    <p class="text-xs text-slate-300">Replaces 1 single-use PET bottle per day</p>
+                                </div>
+                            </div>
+                            <input type="checkbox" id="chkWater" onchange="calcSolution()" class="w-6 h-6 accent-emerald-400 cursor-pointer" checked>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-slate-800/80 rounded-2xl border border-white/10 hover:border-emerald-400 transition">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl"><svg class="ic text-emerald-400"><use href="#i-sachet"/></svg></span>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Sachet-Free Hygiene & Refill Taps</h4>
+                                    <p class="text-xs text-slate-300">Replaces 4 daily shampoo, coffee & soap sachets</p>
+                                </div>
+                            </div>
+                            <input type="checkbox" id="chkSachet" onchange="calcSolution()" class="w-6 h-6 accent-emerald-400 cursor-pointer" checked>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-slate-800/80 rounded-2xl border border-white/10 hover:border-emerald-400 transition">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl"><svg class="ic text-emerald-400"><use href="#i-bag"/></svg></span>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Reusable Woven Bayong & Eco-Bags</h4>
+                                    <p class="text-xs text-slate-300">Replaces 2 grocery & palengke sando bags per day</p>
+                                </div>
+                            </div>
+                            <input type="checkbox" id="chkBags" onchange="calcSolution()" class="w-6 h-6 accent-emerald-400 cursor-pointer" checked>
+                        </div>
+
+                        <div class="flex items-center justify-between p-4 bg-slate-800/80 rounded-2xl border border-white/10 hover:border-emerald-400 transition">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl"><svg class="ic text-emerald-400"><use href="#i-utensils"/></svg></span>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">BYO Baon Container & Reusable Cutlery</h4>
+                                    <p class="text-xs text-slate-300">Replaces takeout clamshells and plastic spoons</p>
+                                </div>
+                            </div>
+                            <input type="checkbox" id="chkCutlery" onchange="calcSolution()" class="w-6 h-6 accent-emerald-400 cursor-pointer" checked>
+                        </div>
+
+                        <!-- Scale Slider -->
+                        <div class="p-4 bg-slate-800/80 rounded-2xl border border-white/10 space-y-2">
+                            <div class="flex justify-between items-center text-xs">
+                                <label class="font-bold text-emerald-300 uppercase">Scale to Household / Organization Size:</label>
+                                <span id="scaleLabel" class="font-bold text-amber-300 font-mono">1 Person</span>
+                            </div>
+                            <input type="range" min="1" max="50" value="1" id="scaleRange" oninput="calcSolution()" class="w-full accent-emerald-400 cursor-pointer">
+                            <div class="flex justify-between text-[11px] text-slate-400 font-mono">
+                                <span>1 Individual</span>
+                                <span>Family (5)</span>
+                                <span>Barangay / School Club (50)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Results Card -->
+                    <div class="lg:col-span-5 bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-950 p-8 rounded-2xl border border-emerald-400/40 text-center space-y-6 shadow-xl">
+                        <span class="text-xs font-bold text-emerald-300 uppercase tracking-widest block font-mono">Annual Prevented Environmental Leakage</span>
+                        
+                        <div class="space-y-1">
+                            <span id="solSavedItems" class="text-5xl lg:text-6xl font-black text-amber-300 font-display block">2,920</span>
+                            <span class="text-xs text-emerald-100 uppercase tracking-wider font-semibold">Plastic Items Diverted Every Year</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3 pt-4 border-t border-emerald-700/60">
+                            <div class="p-3 bg-slate-900/70 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-emerald-300 uppercase block font-mono">Saved Weight</span>
+                                <span id="solSavedWeight" class="text-xl font-bold text-white">22.8 kg</span>
+                            </div>
+                            <div class="p-3 bg-slate-900/70 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-emerald-300 uppercase block font-mono">CO₂e Avoided</span>
+                                <span id="solSavedCO2" class="text-xl font-bold text-emerald-300">68.4 kg</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-emerald-950/80 border border-emerald-500/30 text-xs text-emerald-200">
+                            <span class="text-amber-300 font-bold block mb-0.5">Marine Health Impact:</span>
+                            <span id="solMarineStat">Prevents hundreds of fragmented plastic particles from washing down river basins into coastal marine nurseries.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Action Commitment Generator -->
+                <div class="mt-12 bg-slate-900/90 p-6 lg:p-10 rounded-3xl border border-emerald-500/30">
+                    <div class="max-w-2xl mx-auto text-center space-y-3 mb-6">
+                        <span class="text-xs font-mono font-bold text-amber-300 uppercase tracking-widest">Personal Commitment</span>
+                        <h3 class="text-2xl sm:text-3xl font-black uppercase text-white font-display">What is one change you could realistically try this week?</h3>
+                        <p class="text-xs text-slate-300">Pick a commitment or write your own to generate your Philippine Ocean Guardian badge.</p>
+                    </div>
+
+                    <!-- Preset Commitment Chips -->
+                    <div class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto mb-6">
+                        <button onclick="setQuickPledge('Bring my reusable tumbler everywhere I go')" class="pledge-chip px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-emerald-700 border border-white/10 text-xs text-slate-200 font-medium transition">
+                            Bring reusable tumbler
+                        </button>
+                        <button onclick="setQuickPledge('Carry a foldable bayong or tote bag for grocery and market runs')" class="pledge-chip px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-emerald-700 border border-white/10 text-xs text-slate-200 font-medium transition">
+                            Carry a foldable bayong
+                        </button>
+                        <button onclick="setQuickPledge('Try a refill station for dishwashing liquid or shampoo')" class="pledge-chip px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-emerald-700 border border-white/10 text-xs text-slate-200 font-medium transition">
+                            Try a refill station
+                        </button>
+                        <button onclick="setQuickPledge('Segregate wet food waste from clean dry recyclables at home')" class="pledge-chip px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-emerald-700 border border-white/10 text-xs text-slate-200 font-medium transition">
+                            Segregate home waste
+                        </button>
+                        <button onclick="setQuickPledge('Select &quot;No Disposable Cutlery&quot; on every takeout meal order')" class="pledge-chip px-3.5 py-1.5 rounded-full bg-slate-800 hover:bg-emerald-700 border border-white/10 text-xs text-slate-200 font-medium transition">
+                            Skip delivery cutlery
+                        </button>
+                    </div>
+
+                    <!-- Custom Input & Generate Button -->
+                    <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-2 mb-8">
+                        <input type="text" id="pledgeInput" value="I will bring my reusable bottle and bayong to the market this week." placeholder="Write your commitment here..." class="flex-1 bg-slate-950 border border-emerald-500/40 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-400">
+                        <button onclick="generatePledgeCard()" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow-md whitespace-nowrap">
+                            Generate Card
+                        </button>
+                    </div>
+
+                    <!-- Personalized Ocean Guardian Pledge Card -->
+                    <div id="pledgeCard" class="max-w-xl mx-auto bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-950 p-6 sm:p-8 rounded-2xl border-2 border-emerald-400/50 shadow-2xl text-left relative overflow-hidden">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-full bg-emerald-400/20 border border-emerald-400 flex items-center justify-center text-emerald-300 font-bold">
+                                    PH
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-mono text-emerald-300 uppercase tracking-wider font-bold block">Philippine Marine Guardian Pledge</span>
+                                    <h4 class="font-bold text-white text-sm">Action For Earth's Ecosystem</h4>
+                                </div>
+                            </div>
+                            <span class="text-[10px] text-amber-300 font-mono font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-800">Verified Action</span>
+                        </div>
+
+                        <div class="space-y-3 py-2">
+                            <span class="text-xs text-emerald-200 font-mono block">My Next Step:</span>
+                            <blockquote id="pledgeQuote" class="text-lg sm:text-xl font-bold text-white italic leading-snug">
+                                "I will bring my reusable bottle and bayong to the market this week."
+                            </blockquote>
+                            <p class="text-xs text-slate-300 leading-relaxed pt-1">
+                                By starting with this single habit, I am helping turn off the plastic tap at its source and keeping Philippine shorelines and marine life thriving.
+                            </p>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-4 mt-4 border-t border-white/10">
+                            <span class="text-[11px] text-slate-400 font-mono">PlasticEco.ph // 2026</span>
+                            <button onclick="copyPledgeToClipboard()" id="copyPledgeBtn" class="px-3.5 py-1.5 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-950 text-xs font-bold transition flex items-center gap-1.5">
+                                <svg class="ic"><use href="#i-share"/></svg>
+                                <span id="copyBtnText">Copy Commitment</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer class="py-8 bg-slate-900 text-slate-400 text-xs text-center border-t border-slate-800">
-            <div class="max-w-7xl mx-auto px-4 space-y-2">
-                <p>PLASTIC ECO PH — Solution Framework & Environmental Action Portal</p>
-                <p class="text-slate-500 text-[10px]">Academic Presentation | People & Earth's Ecosystem</p>
+        <!-- 8. THE FUTURE: “CHOOSE THE FUTURE” -->
+        <section id="sol-future" class="py-20 px-4 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest font-mono">Final Horizon // Choose The Future</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-slate-900 font-display uppercase">WHICH FUTURE DO WE WORK TOWARD?</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Compare three possible ecological trajectories for the Philippine archipelago. The crisis is urgent, but the path we choose right now determines the fate of our marine heritage.
+                </p>
+            </div>
+
+            <!-- 3 Scenario Clickable Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Scenario A -->
+                <div onclick="selectFutureScenario('linear')" id="scenCard-linear" class="scen-card bg-white p-6 rounded-3xl border-2 border-slate-200 cursor-pointer transition hover:-translate-y-1 hover:border-rose-400 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[10px] font-mono font-bold text-rose-600 uppercase bg-rose-50 px-2.5 py-1 rounded">Scenario 01</span>
+                            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Business As Usual</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Linear production expands unchecked. Tingi sachets and delivery packaging double by 2040 without producer accountability or municipal infrastructure.
+                        </p>
+                    </div>
+                    <div class="space-y-2 pt-4 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-600"><span>Marine Plastic Leakage:</span><strong class="text-rose-600">Critical (+85%)</strong></div>
+                        <div class="flex justify-between text-slate-600"><span>Reef Ecosystem Health:</span><strong class="text-rose-600">Severe Decline</strong></div>
+                    </div>
+                </div>
+
+                <!-- Scenario B -->
+                <div onclick="selectFutureScenario('cleanup')" id="scenCard-cleanup" class="scen-card bg-white p-6 rounded-3xl border-2 border-slate-200 cursor-pointer transition hover:-translate-y-1 hover:border-amber-400 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[10px] font-mono font-bold text-amber-600 uppercase bg-amber-50 px-2.5 py-1 rounded">Scenario 02</span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Cleanup Without Prevention</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Millions spent on continuous beach sweeps while packaging manufacturing increases. Mop the floor while the tap is still running at full pressure.
+                        </p>
+                    </div>
+                    <div class="space-y-2 pt-4 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-600"><span>Public Cleanup Cost:</span><strong class="text-amber-600">Unsustainable</strong></div>
+                        <div class="flex justify-between text-slate-600"><span>Microplastic Trajectory:</span><strong class="text-amber-600">Persistent Leakage</strong></div>
+                    </div>
+                </div>
+
+                <!-- Scenario C -->
+                <div onclick="selectFutureScenario('circular')" id="scenCard-circular" class="scen-card bg-emerald-50/70 p-6 rounded-3xl border-2 border-emerald-500 cursor-pointer transition hover:-translate-y-1 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[10px] font-mono font-bold text-emerald-800 uppercase bg-emerald-100 px-2.5 py-1 rounded">Scenario 03 // Recommended</span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">A Circular, Restored Philippines</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Prevention and recovery work in unison: producers held to 80% EPR recovery, refill sari-sari networks ubiquitous, dignified waste workers, and pristine reef corridors.
+                        </p>
+                    </div>
+                    <div class="space-y-2 pt-4 border-t border-emerald-200 text-xs">
+                        <div class="flex justify-between text-slate-600"><span>Packaging Diverted:</span><strong class="text-emerald-700">Over 90%</strong></div>
+                        <div class="flex justify-between text-slate-600"><span>Marine Sanctuaries:</span><strong class="text-emerald-700">Regenerated</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Detailed Spotlight Box -->
+            <div class="bg-gradient-to-br from-emerald-950 via-teal-950 to-slate-900 p-8 sm:p-10 rounded-3xl text-white border border-emerald-500/30 text-center space-y-6">
+                <span id="futureFocusBadge" class="inline-block px-3.5 py-1 rounded-full bg-emerald-400/20 text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider border border-emerald-400/30">
+                    The Rewritten Path: A Circular Future
+                </span>
+
+                <h3 id="futureFocusTitle" class="text-2xl sm:text-4xl font-black uppercase font-display leading-tight">
+                    Less Unnecessary Plastic Created.<br>Materials Recovered. Communities Empowered.
+                </h3>
+
+                <p id="futureFocusDesc" class="text-xs sm:text-sm text-emerald-100/90 font-light max-w-2xl mx-auto leading-relaxed">
+                    By tackling plastic pollution as an entire system—from corporate product design and sari-sari refill taps to barangay waste sorting and river interceptors—the Philippines can safeguard its marine biodiversity for generations to come.
+                </p>
+
+                <div class="text-lg sm:text-xl font-display font-bold text-amber-300 italic pt-2">
+                    "Every choice shapes the world we leave behind."
+                </div>
+
+                <!-- Navigation Switchers -->
+                <div class="flex flex-wrap justify-center gap-4 pt-4 border-t border-white/10">
+                    <button onclick="switchView('crisis')" class="px-8 py-3.5 rounded-full bg-ocean-800 hover:bg-ocean-700 text-cyan-300 border border-cyan-500/40 font-bold text-xs uppercase tracking-wider transition hover:scale-105 flex items-center gap-2">
+                        <span>← Review Crisis Data</span>
+                    </button>
+                    <button onclick="switchView('gateway')" class="px-8 py-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold text-xs uppercase tracking-wider shadow-lg transition hover:scale-105 flex items-center gap-2">
+                        <span>Return to Home</span>
+                    </button>
+                    <a href="#sol-swaps" class="px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider border border-white/20 transition hover:scale-105">
+                        <span>Restart Solution Journey ↑</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Footer -->
+        <footer class="py-12 bg-slate-900 text-slate-400 text-xs border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 leading-relaxed">
+                    <div>
+                        <h4 class="font-bold text-white uppercase tracking-wider mb-3 text-sm">Key Environmental Policies & Frameworks</h4>
+                        <ul class="space-y-1.5 list-disc list-inside text-slate-300">
+                            <li><strong>Republic Act 11898:</strong> Extended Producer Responsibility (EPR) Act of 2022.</li>
+                            <li><strong>Republic Act 9003:</strong> Ecological Solid Waste Management Act of 2000.</li>
+                            <li><strong>DENR Administrative Order:</strong> Guidelines on Phasing Out Non-Essential Single-Use Plastics.</li>
+                            <li><strong>National Plan of Action on Marine Litter (NPOA-ML):</strong> Philippines Zero Marine Litter 2040.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white uppercase tracking-wider mb-3 text-sm">Empirical Research References</h4>
+                        <ul class="space-y-1.5 list-disc list-inside text-slate-300">
+                            <li>World Bank Group — <em>Market Study for the Philippines Plastics Circularity</em>.</li>
+                            <li>GAIA (Global Alliance for Incinerator Alternatives) — <em>Plastik-onomya & Zero Waste Cities</em>.</li>
+                            <li>DENR-EMB — <em>Solid Waste Management Bureau Annual Assessment</em>.</li>
+                            <li>United Nations Environment Programme (UNEP) — <em>From Pollution to Solution</em>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-slate-800 pt-6 text-center text-slate-400 text-[11px] space-y-1">
+                    <p>PLASTIC ECO PH — The Crisis & The Solution | People and Earth's Ecosystem Academic Platform</p>
+                    <p class="text-slate-300 font-semibold">Created by Alexies Jean Ballesteros</p>
+                </div>
             </div>
         </footer>
     </main>
 
     <!-- INTERACTIVE MODULES LOGIC -->
     <script>
-        const I=t=>String(t).replace(/\[\[(\w+)\]\]/g,(m,n)=>'<svg class="ic" aria-hidden="true"><use href="#i-'+n+'"/></svg>');
+        const I=t=>String(t).replace(/\\[\\[(\\w+)\\]\\]/g,(m,n)=>'<svg class="ic" aria-hidden="true"><use href="#i-'+n+'"/></svg>');
         function ph(img){if(img.classList.contains('opacity-25')){img.style.display='none';return}let b=img.nextElementSibling;if(!b||!b.dataset.ph){b=document.createElement('div');b.dataset.ph=1;b.className=img.className.replace('object-cover','')+' flex flex-col items-center justify-center gap-1 bg-ocean-800/60 border border-dashed border-cyan-500/40 text-slate-400 text-[11px] text-center p-2';img.after(b)}b.innerHTML=I('[[image]]')+'<span>'+img.alt+'</span><span class="font-mono text-[10px] opacity-70">'+img.getAttribute('src')+'</span>';img.style.display='none';b.style.display=''}
         function phOk(img){const b=img.nextElementSibling;if(b&&b.dataset.ph)b.style.display='none';img.style.display=''}
         // Mobile Menu
@@ -1658,11 +2514,14 @@
             }
         }
     
-        // Hero background video: hide button if no video, respect reduced motion, allow pause
+        // Hero background videos: hide button if no video, respect reduced motion, allow pause
         (function(){
+            const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const gv=document.getElementById('gatewayHeroVideo');
+            if(gv&&reduce){gv.removeAttribute('autoplay');gv.pause();}
+
             const v=document.getElementById('heroVideo'),b=document.getElementById('heroVideoBtn');
             if(!v||!b)return;
-            const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             const sync=()=>{b.textContent=v.paused?'Play video':'Pause video';b.setAttribute('aria-label',v.paused?'Play background video':'Pause background video');};
             if(reduce){v.removeAttribute('autoplay');v.pause();}
             const src=v.querySelector('source');
@@ -1687,21 +2546,53 @@
             document.body.style.overflowY = targetView === 'gateway' ? 'hidden' : 'auto';
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
+            const mainNav = document.getElementById('mainNav');
+            const brandTitle = document.getElementById('brandTitle');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const gatewayBtn = document.querySelector('#gatewayNavBtn button');
+            const authorBadge = document.getElementById('authorBadge');
+
             if (targetView === 'gateway') {
-                document.body.className = "bg-ocean-900 text-slate-100 overflow-x-hidden";
+                document.body.className = "bg-[#fbf9f6] text-slate-800 overflow-x-hidden";
+                if (mainNav) mainNav.className = "fixed top-0 left-0 right-0 z-50 bg-[#fbf9f6]/90 backdrop-blur-md px-4 lg:px-8 py-3 border-b border-[#B8C5B9]/40 shadow-xs transition-colors duration-300";
+                if (brandTitle) brandTitle.className = "font-display font-bold text-lg tracking-wider text-slate-900";
+                if (authorBadge) {
+                    authorBadge.classList.remove('hidden');
+                    authorBadge.classList.add('flex');
+                }
+                if (menuBtn) menuBtn.className = "hidden";
             } else if (targetView === 'crisis') {
                 document.body.className = "bg-ocean-900 text-slate-100 overflow-x-hidden";
+                if (mainNav) mainNav.className = "fixed top-0 left-0 right-0 z-50 glass-panel px-4 lg:px-8 py-3 border-b border-white/10 transition-colors duration-300";
+                if (brandTitle) brandTitle.className = "font-display font-bold text-lg tracking-wider text-white";
+                if (authorBadge) {
+                    authorBadge.classList.add('hidden');
+                    authorBadge.classList.remove('flex');
+                }
+                if (menuBtn) menuBtn.className = "lg:hidden text-slate-300 hover:text-white p-2 focus:outline-none";
+                if (gatewayBtn) gatewayBtn.className = "text-xs uppercase tracking-widest text-slate-300 hover:text-white border border-white/20 px-3.5 py-1.5 rounded-full transition";
                 document.getElementById('crisisNavLinks').classList.remove('hidden');
                 document.getElementById('gatewayNavBtn').classList.remove('hidden');
                 const m = document.getElementById('mobileCrisisLinks');
                 m.classList.remove('hidden'); m.classList.add('flex');
             } else if (targetView === 'solution') {
                 document.body.className = "bg-slate-50 text-slate-800 overflow-x-hidden";
+                if (mainNav) mainNav.className = "fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md px-4 lg:px-8 py-3 border-b border-slate-200 shadow-xs transition-colors duration-300";
+                if (brandTitle) brandTitle.className = "font-display font-bold text-lg tracking-wider text-slate-900";
+                if (authorBadge) {
+                    authorBadge.classList.add('hidden');
+                    authorBadge.classList.remove('flex');
+                }
+                if (menuBtn) menuBtn.className = "lg:hidden text-slate-700 hover:text-slate-950 p-2 focus:outline-none";
+                if (gatewayBtn) gatewayBtn.className = "text-xs uppercase tracking-widest text-slate-700 hover:text-slate-950 border border-slate-300 px-3.5 py-1.5 rounded-full transition";
                 document.getElementById('solutionNavLinks').classList.remove('hidden');
                 document.getElementById('gatewayNavBtn').classList.remove('hidden');
                 const m = document.getElementById('mobileSolutionLinks');
                 m.classList.remove('hidden'); m.classList.add('flex');
                 calcSolution();
+                if (typeof activeCircuitStages !== 'undefined' && activeCircuitStages.size === 0) {
+                    activateCircuitStage(1);
+                }
             }
         }
         function closeMobileMenu() {
@@ -1710,24 +2601,544 @@
         }
         document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMobileMenu));
 
-        // SOLUTION VIEW: REDUCTION SIMULATOR
+                // ==========================================
+        // SOLUTION VIEW INTERACTIVE LOGIC
+        // ==========================================
+
+        // 1. Horizon Preview Toggle
+        function setHorizonPreview(mode) {
+            const btnCur = document.getElementById('horizonBtnCurrent');
+            const btnRes = document.getElementById('horizonBtnRestored');
+            const img = document.getElementById('horizonImg');
+            const badge = document.getElementById('horizonBadge');
+            const title = document.getElementById('horizonTitle');
+            const desc = document.getElementById('horizonDesc');
+
+            if (mode === 'current') {
+                btnCur.className = "px-3.5 py-1.5 rounded-lg bg-rose-500 text-white font-bold transition";
+                btnRes.className = "px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white font-semibold transition";
+                img.src = "https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&q=80&w=1200";
+                badge.className = "inline-block px-2.5 py-0.5 rounded-md bg-rose-500/30 border border-rose-400 text-rose-300 text-[10px] font-mono font-bold uppercase mb-1";
+                badge.innerText = "Status: Degraded Urban Shoreline";
+                title.innerText = "Heavy Tidal Accumulation & Microplastic Washup";
+                desc.innerText = "Without intervention, seasonal monsoon runoff deposits millions of single-use sachets, plastic bags, and PET bottles along urban bays.";
+            } else {
+                btnRes.className = "px-3.5 py-1.5 rounded-lg bg-emerald-500 text-slate-950 font-bold transition";
+                btnCur.className = "px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white font-semibold transition";
+                img.src = "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1200";
+                badge.className = "inline-block px-2.5 py-0.5 rounded-md bg-emerald-500/30 border border-emerald-400 text-emerald-300 text-[10px] font-mono font-bold uppercase mb-1";
+                badge.innerText = "Status: Regenerated Sanctuary";
+                title.innerText = "Resilient Mangroves & Healthy Coral Gardens";
+                desc.innerText = "With plastic pollution intercepted upstream, coastal nurseries recover, sea turtles feed safely, and ecotourism sustains local coastal fisherfolk.";
+            }
+        }
+
+        // 2. Everyday Swaps Choice Board
+        const swapData = {
+            sachets: {
+                badge: "Habit: Shampoo, Coffee & Soap Sachets",
+                oldTitle: "Multi-Layer Foil Sachets",
+                oldDesc: "Used once in 3 minutes, laminated aluminum-plastic layers cannot be mechanically recycled in municipal recovery systems and persist for centuries in storm channels.",
+                newTitle: "Bulk Refill Taps & Shampoo Bars",
+                newDesc: "Bring your own reusable bottle to neighborhood refilling stations, or choose concentrated solid bars with simple paper wrapping.",
+                smallChange: "Eliminates 300–700 sachets per person every year from entering household trash.",
+                bigChange: "Signals consumer demand to brands, accelerating bulk dispensing logistics across FMCG supply chains.",
+                ripple: {
+                    me: "Directly diverts 700+ single-use packaging items per year from curbside pickup.",
+                    store: "Store owners capture higher profit margins through bulk drums with zero packaging waste.",
+                    community: "Storm drainage culverts stay unblocked during typhoons, reducing urban flash flood risks.",
+                    environment: "Zero microplastic degradation in rivers; juvenile fish and marine turtles feed without ingestion hazards."
+                }
+            },
+            bottles: {
+                badge: "Habit: Single-Use PET Beverage Bottles",
+                oldTitle: "PET Bottles & Polypropylene Caps",
+                oldDesc: "Consuming bottled water and iced tea generates millions of plastic bottles daily, many escaping collection into urban creeks and coastal shores.",
+                newTitle: "Insulated Flasks & Barangay Refill Stations",
+                newDesc: "Carrying an insulated stainless steel tumbler and refilling at clean mineral water stations common in every Philippine barangay.",
+                smallChange: "Saves ~365 plastic beverage bottles and caps per individual every year.",
+                bigChange: "Reduces commercial petroleum extraction and decreases bottled water logistics transportation carbon.",
+                ripple: {
+                    me: "Prevents ~365 plastic bottles and caps per person annually while saving money on drinks.",
+                    store: "Barangay water refill stations expand community-level hydration networks.",
+                    community: "Reduces volume pressure on municipal hauling trucks and local sanitary landfills.",
+                    environment: "Prevents large bottles from photodegrading into abrasive macro-debris on beaches."
+                }
+            },
+            food: {
+                badge: "Habit: Takeout Clamshells & Sando Bags",
+                oldTitle: "Polystyrene Clamshells & Sando Bags",
+                oldDesc: "Carinderia meals and takeout foods packed in expanded foam boxes and thin carrier bags that tear easily and fly into open drainage grids.",
+                newTitle: "BYO Baon Kit & Woven Bayong Bags",
+                newDesc: "Using traditional Philippine woven bayong bags for wet markets, and bringing reusable stainless steel food containers (baonan) for takeout.",
+                smallChange: "Prevents over 700 plastic sando bags and polystyrene containers each year.",
+                bigChange: "Shifts food retail norms toward deposit-return lunchboxes and washable dine-in dishware.",
+                ripple: {
+                    me: "Replaces ~730 single-use takeout containers and thin film plastic bags annually.",
+                    store: "Local carinderias and restaurants save substantially on disposable packaging overhead.",
+                    community: "Prevents thin film bags from entangling pump station propellers during floods.",
+                    environment: "Protects sea turtles from mistaking translucent floating plastic bags for jellyfish."
+                }
+            },
+            ecommerce: {
+                badge: "Habit: Online Shopping & Parcel Shipping",
+                oldTitle: "Poly-Courier Pouches & Bubble Wrap",
+                oldDesc: "E-commerce orders arrive sealed in layers of non-biodegradable polyethylene mailers, air pillows, and synthetic adhesive tapes.",
+                newTitle: "Corrugated Paper Mailers & Honeycomb Wrap",
+                newDesc: "Choosing eco-shipping options, consolidating multiple items into single shipments, and supporting vendors using shredded paper padding.",
+                smallChange: "Diverts 20–50 large plastic mailers and meters of bubble wrap per household annually.",
+                bigChange: "Drives nationwide courier logistics to transition fleets to compostable or returnable delivery totes.",
+                ripple: {
+                    me: "Keeps bulky plastic courier films and non-recyclable bubble wrap out of home waste.",
+                    store: "Online merchants reduce packaging costs by consolidating protective parcel materials.",
+                    community: "Reduces municipal solid waste volume requiring specialized incineration or landfilling.",
+                    environment: "Dramatically cuts flexible plastic film pollution across terrestrial and aquatic ecosystems."
+                }
+            }
+        };
+
+        let currentSwapCategory = 'sachets';
+
+        function selectSwapCategory(cat) {
+            currentSwapCategory = cat;
+            document.querySelectorAll('.swap-cat-btn').forEach(btn => {
+                btn.className = "swap-cat-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200";
+            });
+            const activeBtn = document.getElementById('swapCat-' + cat);
+            if (activeBtn) {
+                activeBtn.className = "swap-cat-btn px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition bg-emerald-600 text-white shadow-md";
+            }
+
+            const data = swapData[cat];
+            if (!data) return;
+
+            document.getElementById('swapItemBadge').innerText = data.badge;
+            document.getElementById('swapOldTitle').innerText = data.oldTitle;
+            document.getElementById('swapOldDesc').innerText = data.oldDesc;
+            document.getElementById('swapNewTitle').innerText = data.newTitle;
+            document.getElementById('swapNewDesc').innerText = data.newDesc;
+            document.getElementById('swapSmallChange').innerText = data.smallChange;
+            document.getElementById('swapBigChange').innerText = data.bigChange;
+
+            document.getElementById('rippleText-me').innerText = data.ripple.me;
+            document.getElementById('rippleText-store').innerText = data.ripple.store;
+            document.getElementById('rippleText-community').innerText = data.ripple.community;
+            document.getElementById('rippleText-environment').innerText = data.ripple.environment;
+
+            selectRippleStage('me');
+        }
+
+        function selectRippleStage(stage) {
+            ['me', 'store', 'community', 'environment'].forEach(s => {
+                const el = document.getElementById('rippleCard-' + s);
+                if (el) {
+                    if (s === stage) {
+                        el.className = "ripple-node p-3.5 rounded-xl bg-emerald-800/80 border-2 border-emerald-400 cursor-pointer transition";
+                    } else {
+                        el.className = "ripple-node p-3.5 rounded-xl bg-slate-800/50 border border-white/10 cursor-pointer transition hover:bg-emerald-800/40";
+                    }
+                }
+            });
+        }
+
+        function triggerRippleAnimation() {
+            const stages = ['me', 'store', 'community', 'environment'];
+            stages.forEach((s, idx) => {
+                setTimeout(() => {
+                    selectRippleStage(s);
+                }, idx * 400);
+            });
+        }
+
+        // 3. Circular Economy System Builder
+        const circuitData = {
+            1: {
+                badge: "Active Stage 1: Design",
+                title: "Design for Less Waste",
+                desc: "Eliminating non-recyclable multi-material sachets before they are produced. Developing monomaterial recyclable pouches, dry concentrate tablets, and indigenous home-compostable biopolymers derived from Philippine seaweeds.",
+                linear: "Cheap laminate packaging designed exclusively for 1-time disposal.",
+                circular: "Standardized formats designed from day one to be refilled or fully recovered.",
+                img: "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=600"
+            },
+            2: {
+                badge: "Active Stage 2: Produce",
+                title: "Responsible Manufacturing & EPR",
+                desc: "Brand owners comply with the Philippine Extended Producer Responsibility (EPR) Act. Incorporating high percentages of post-consumer recycled (PCR) resin and phasing out toxic chemical additives.",
+                linear: "Virgin fossil-fuel extraction with zero financial stake in end-of-life disposal.",
+                circular: "Producers legally held to fund recovery and shift supply chains to circular inputs.",
+                img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=600"
+            },
+            3: {
+                badge: "Active Stage 3: Use",
+                title: "Mindful Consumption & Refill",
+                desc: "Normalizing refill models across retail sectors. Consumers prioritize reusable tumblers, containers, and bulk dispensers over convenience-driven single portions.",
+                linear: "Unconscious consumption of single-use sachets thrown into curbside trash in minutes.",
+                circular: "Products reused dozens of times, dramatically lowering material consumption per capita.",
+                img: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&q=80&w=600"
+            },
+            4: {
+                badge: "Active Stage 4: Reuse",
+                title: "Keep Materials Circulating",
+                desc: "Revitalizing traditional Philippine deposit-return bottle networks (like classic returnable soft drink glass bottles) and scaling container-washing infrastructure for takeaway food.",
+                linear: "Linear disposal to open sanitary landfills or open incinerators.",
+                circular: "Standardized containers sanitized and refilled up to 30 times without new packaging waste.",
+                img: "https://images.unsplash.com/photo-1597484661643-2f5fef640dd1?auto=format&fit=crop&q=80&w=600"
+            },
+            5: {
+                badge: "Active Stage 5: Recover",
+                title: "Dignified Sorting & Barangay MRFs",
+                desc: "Equipping every Philippine barangay with operational Materials Recovery Facilities (MRFs). Formally recognizing and fairly compensating waste collectors with health benefits and safety equipment.",
+                linear: "Informal, hazardous dumpsite scavenging with extreme health vulnerabilities.",
+                circular: "Formal green jobs, clean segregation at the source, and clean municipal logistics.",
+                img: "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?auto=format&fit=crop&q=80&w=600"
+            },
+            6: {
+                badge: "Active Stage 6: Redesign",
+                title: "Closing the Loop into Materials",
+                desc: "High-value circular mechanical reprocessing. Recovered clean polymers are converted into new containers or long-lasting structural eco-pavers for schools and public walkways.",
+                linear: "Downcycled into fugitive microplastics or washed out to sea by monsoon rains.",
+                circular: "Closed-loop reprocessing preventing new petroleum extraction.",
+                img: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=600"
+            }
+        };
+
+        const activeCircuitStages = new Set();
+
+        function activateCircuitStage(num) {
+            activeCircuitStages.add(num);
+            for (let i = 1; i <= 6; i++) {
+                const btn = document.getElementById('stageBtn-' + i);
+                const statusDot = document.getElementById('stageStatus-' + i);
+                if (activeCircuitStages.has(i)) {
+                    btn.className = "circuit-btn p-3.5 rounded-2xl bg-emerald-950/80 border-2 border-emerald-400 transition text-left flex flex-col justify-between";
+                    statusDot.className = "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse";
+                }
+            }
+
+            const count = activeCircuitStages.size;
+            document.getElementById('circuitCount').innerText = count + " of 6 Stages Connected";
+
+            if (count === 6) {
+                document.getElementById('circuitCelebration').classList.remove('hidden');
+            }
+
+            const data = circuitData[num];
+            if (data) {
+                document.getElementById('stageBadge').innerText = data.badge;
+                document.getElementById('stageTitle').innerText = data.title;
+                document.getElementById('stageDesc').innerText = data.desc;
+                document.getElementById('stageLinear').innerText = data.linear;
+                document.getElementById('stageCircular').innerText = data.circular;
+                document.getElementById('stageImg').src = data.img;
+            }
+        }
+
+        function resetCircularBuilder() {
+            activeCircuitStages.clear();
+            for (let i = 1; i <= 6; i++) {
+                const btn = document.getElementById('stageBtn-' + i);
+                const statusDot = document.getElementById('stageStatus-' + i);
+                btn.className = "circuit-btn p-3.5 rounded-2xl bg-slate-900 border border-white/10 hover:border-emerald-400 transition text-left flex flex-col justify-between";
+                statusDot.className = "w-2.5 h-2.5 rounded-full bg-slate-600";
+            }
+            document.getElementById('circuitCount').innerText = "0 of 6 Stages Assembled";
+            document.getElementById('circuitCelebration').classList.add('hidden');
+            activateCircuitStage(1);
+        }
+
+        // 4. Break the Chain / Intercept the Plastic
+        const chainData = {
+            1: {
+                badge: "Checkpoint 01 // Manufacturing Phase",
+                title: "Product Design & Material Choice",
+                withoutTitle: "Multi-Layer Plastic-Aluminum Sachets",
+                withoutDesc: "FMCG manufacturers flood sari-sari supply chains with micro-portion multi-layer sachets. Because layers cannot be separated, they are discarded into open dumps or road culverts.",
+                withTitle: "EPR Redesign & Monomaterial Packaging",
+                withDesc: "Producers standardize packaging to recyclable monomaterials, offer concentrated tablets, or deploy localized bulk dispensers, eliminating sachet waste before it leaves the factory.",
+                statText: "Prevents billions of sachet packets from ever entering Philippine municipal solid waste streams.",
+                statNumber: "163M Sachets/Day Targeted"
+            },
+            2: {
+                badge: "Checkpoint 02 // Point of Purchase",
+                title: "Retail & Consumer Choices",
+                withoutTitle: "Automatic Sando Bags & Takeout Cutlery",
+                withoutDesc: "Stores routinely distribute single-use thin film sando bags and plastic utensils with every minor purchase, generating thousands of discarded wrappers daily per city.",
+                withTitle: "Bring-Your-Own Bayong & Deposit Jars",
+                withDesc: "Retailers enforce plastic bag fee surcharges or discounts for reusable containers. Neighborhood stores provide bulk refilling for laundry detergent and cooking oil.",
+                statText: "Saves up to 90% of packaging consumption per participating Filipino household.",
+                statNumber: "730+ Bags/Year/Household"
+            },
+            3: {
+                badge: "Checkpoint 03 // Household Disposal",
+                title: "Waste Segregation at the Source",
+                withoutTitle: "Mixed Garbage in Roadside Channels",
+                withoutDesc: "Unsegregated waste thrown on streets easily washes into storm drains and road grates during heavy monsoon rains, causing flash floods.",
+                withTitle: "Clean Dry Segregation & Barangay MRFs",
+                withDesc: "Households separate wet organic food waste for local composting, and route clean plastic recyclables directly to barangay collection co-ops.",
+                statText: "Enforces compliance with Republic Act 9003 to keep urban storm drainage completely unblocked.",
+                statNumber: "80% Collection Rate"
+            },
+            4: {
+                badge: "Checkpoint 04 // River Transport",
+                title: "Inland River & Waterway Interception",
+                withoutTitle: "Pasig River Plastics Conveyor",
+                withoutDesc: "An estimated 356,000 metric tons of plastic waste washes down the Pasig River basin annually, emptying directly into Manila Bay.",
+                withTitle: "Solar River Interceptors & Trash Booms",
+                withDesc: "Automated solar-powered river interceptors and heavy-duty community trash booms trap floating plastics before they reach estuarine bays.",
+                statText: "Prevents thousands of metric tons of macro-plastics from disintegrating into open coastal waters.",
+                statNumber: "356,000 MT River Barrier"
+            },
+            5: {
+                badge: "Checkpoint 05 // Coastal Marine Web",
+                title: "Reef & Mangrove Protection",
+                withoutTitle: "Microplastic Bioaccumulation & Coral Smothering",
+                withoutDesc: "Sunlight and wave action fragment floating plastics into sub-5mm particles that suffocate mangrove pneumatophore roots and enter fish digestive tracts.",
+                withTitle: "Marine Protected Areas & Mangrove Reforestation",
+                withDesc: "Community-led coastal sanctuaries, mangrove greenbelts that trap silt naturally, and regular citizen cleanups keep coastal coral reefs pristine.",
+                statText: "Shields Philippine fish nurseries, sea turtles, and pelagic commercial fisheries from microplastic contamination.",
+                statNumber: "100% Habitat Sanctuary"
+            }
+        };
+
+        let currentChainStep = 1;
+        let chainInterventionActive = true;
+
+        function selectChainStep(step) {
+            currentChainStep = step;
+            for (let i = 1; i <= 5; i++) {
+                const btn = document.getElementById('chainBtn-' + i);
+                if (i === step) {
+                    btn.className = "chain-step-btn px-4 py-2 rounded-full font-bold text-xs uppercase transition bg-emerald-600 text-white shadow";
+                } else {
+                    btn.className = "chain-step-btn px-4 py-2 rounded-full font-bold text-xs uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200";
+                }
+            }
+            renderChainDetails();
+        }
+
+        function toggleChainMode() {
+            chainInterventionActive = !chainInterventionActive;
+            const btn = document.getElementById('chainModeBtn');
+            const cardWith = document.getElementById('chainCardWith');
+            const cardWithout = document.getElementById('chainCardWithout');
+
+            if (chainInterventionActive) {
+                btn.className = "px-4 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow";
+                btn.innerHTML = "🛡️ Intervene & Redirect";
+                cardWith.style.opacity = "1";
+                cardWithout.style.opacity = "0.6";
+            } else {
+                btn.className = "px-4 py-1.5 rounded-full bg-rose-500 hover:bg-rose-400 text-white font-bold text-xs uppercase tracking-wider transition shadow";
+                btn.innerHTML = "⚠️ Unchecked Leakage";
+                cardWith.style.opacity = "0.6";
+                cardWithout.style.opacity = "1";
+            }
+        }
+
+        function renderChainDetails() {
+            const data = chainData[currentChainStep];
+            if (!data) return;
+            document.getElementById('chainStepBadge').innerText = data.badge;
+            document.getElementById('chainStepTitle').innerText = data.title;
+            document.getElementById('chainWithoutTitle').innerText = data.withoutTitle;
+            document.getElementById('chainWithoutDesc').innerText = data.withoutDesc;
+            document.getElementById('chainWithTitle').innerText = data.withTitle;
+            document.getElementById('chainWithDesc').innerText = data.withDesc;
+            document.getElementById('chainStatText').innerText = data.statText;
+            document.getElementById('chainStatNumber').innerText = data.statNumber;
+        }
+
+        // 5. Filter Innovations
+        function filterInnovations(category) {
+            document.querySelectorAll('.inno-filter-btn').forEach(btn => {
+                btn.className = "inno-filter-btn px-4 py-1.5 rounded-full text-xs font-bold uppercase transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200";
+            });
+            const activeBtn = document.getElementById('filter-' + category);
+            if (activeBtn) {
+                activeBtn.className = "inno-filter-btn px-4 py-1.5 rounded-full text-xs font-bold uppercase transition bg-emerald-600 text-white";
+            }
+
+            document.querySelectorAll('.inno-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 6. Shared Roles
+        const roleData = {
+            individual: {
+                badge: "Selected Sector: Individuals & Families",
+                title: "What Can Individuals Do Next?",
+                immediate: "Carry a personal reusable water flask, reusable spoon/fork, and foldable market bag wherever you go.",
+                month: "Segregate dry recyclables from wet kitchen scraps; explore a nearby zero-waste refill shop for detergents.",
+                systemic: "Support barangay cleanup drives, petition favorite food chains to offer plastic-free dine-in, and support waste worker dignity."
+            },
+            business: {
+                badge: "Selected Sector: Businesses & Retailers",
+                title: "What Can Businesses Do Next?",
+                immediate: "Eliminate superfluous plastic packaging wraps and offer paper or bag-free checkout incentives.",
+                month: "Register audit reports under the Philippine EPR Act and trial refillable container programs.",
+                systemic: "Redesign core FMCG products into 100% recyclable monomaterials and invest in closed-loop supply chains."
+            },
+            community: {
+                badge: "Selected Sector: Barangays & Communities",
+                title: "What Can Communities Do Next?",
+                immediate: "Establish weekly segregated waste collection routes and distribute color-coded household bins.",
+                month: "Build or upgrade a functional Materials Recovery Facility (MRF) and initiate trash-to-rice exchange programs.",
+                systemic: "Formalize informal waste pickers into recognized municipal workers with protective gear and stable wages."
+            },
+            government: {
+                badge: "Selected Sector: Government & Regulators",
+                title: "What Can Government Do Next?",
+                immediate: "Strictly enforce compliance audits under RA 9003 and penalize open-air plastic burning.",
+                month: "Provide green municipal grants for localized composting centers and river trash booms.",
+                systemic: "Enforce the 80% corporate recovery mandate under RA 11898 (EPR) and support indigenous bioplastic R&D."
+            }
+        };
+
+        function inspectRole(roleKey) {
+            ['individual', 'business', 'community', 'government'].forEach(r => {
+                const el = document.getElementById('roleCard-' + r);
+                if (el) {
+                    if (r === roleKey) {
+                        el.className = "role-card bg-white p-6 rounded-2xl border-2 border-emerald-500 shadow-md cursor-pointer transition";
+                    } else {
+                        el.className = "role-card bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm cursor-pointer transition hover:border-slate-300";
+                    }
+                }
+            });
+
+            const data = roleData[roleKey];
+            if (!data) return;
+            document.getElementById('roleDetailBadge').innerText = data.badge;
+            document.getElementById('roleDetailTitle').innerText = data.title;
+            document.getElementById('roleDetailImmediate').innerText = data.immediate;
+            document.getElementById('roleDetailMonth').innerText = data.month;
+            document.getElementById('roleDetailSystemic').innerText = data.systemic;
+        }
+
+        // 7. Reduction Simulator & Action Pledge
         function calcSolution() {
-            const waterChecked = document.getElementById('chkWater').checked;
-            const sachetChecked = document.getElementById('chkSachet').checked;
-            const bagsChecked = document.getElementById('chkBags').checked;
-            const scale = parseInt(document.getElementById('scaleRange').value) || 1;
-            document.getElementById('scaleLabel').innerText = scale === 1 ? "1 Household (1 Person)" : scale + " People / Household";
+            const chkWater = document.getElementById('chkWater') ? document.getElementById('chkWater').checked : true;
+            const chkSachet = document.getElementById('chkSachet') ? document.getElementById('chkSachet').checked : true;
+            const chkBags = document.getElementById('chkBags') ? document.getElementById('chkBags').checked : true;
+            const chkCutlery = document.getElementById('chkCutlery') ? document.getElementById('chkCutlery').checked : true;
+            const scale = parseInt(document.getElementById('scaleRange') ? document.getElementById('scaleRange').value : 1) || 1;
 
-            let perPersonSaved = 0;
+            if (document.getElementById('scaleLabel')) {
+                document.getElementById('scaleLabel').innerText = scale === 1 ? "1 Person" : scale + " People";
+            }
+
+            let perPersonItems = 0;
             let perPersonWeightGrams = 0;
-            if (waterChecked) { perPersonSaved += 365; perPersonWeightGrams += 365 * 25; }   // 1 PET bottle/day, ~25 g
-            if (sachetChecked) { perPersonSaved += 1460; perPersonWeightGrams += 1460 * 3; } // 4 sachets/day, ~3 g
-            if (bagsChecked) { perPersonSaved += 730; perPersonWeightGrams += 730 * 8; }     // 2 bags/utensils per day, ~8 g
 
-            const totalWeightRaw = (perPersonWeightGrams * scale) / 1000;
-            document.getElementById('solSavedItems').innerText = (perPersonSaved * scale).toLocaleString();
-            document.getElementById('solSavedWeight').innerText = totalWeightRaw.toFixed(1) + " kg";
-            document.getElementById('solSavedCO2').innerText = (totalWeightRaw * 3.0).toFixed(1) + " kg"; // rough ~3 kg CO2e per kg plastic
+            if (chkWater) {
+                perPersonItems += 365;
+                perPersonWeightGrams += 365 * 25; // ~25g per PET bottle
+            }
+            if (chkSachet) {
+                perPersonItems += 1460;
+                perPersonWeightGrams += 1460 * 3; // ~3g per sachet
+            }
+            if (chkBags) {
+                perPersonItems += 730;
+                perPersonWeightGrams += 730 * 8; // ~8g per sando bag
+            }
+            if (chkCutlery) {
+                perPersonItems += 365;
+                perPersonWeightGrams += 365 * 10; // ~10g takeout box/cutlery
+            }
+
+            const totalItems = perPersonItems * scale;
+            const totalKg = (perPersonWeightGrams * scale) / 1000;
+            const totalCO2 = totalKg * 3.0;
+
+            if (document.getElementById('solSavedItems')) {
+                document.getElementById('solSavedItems').innerText = totalItems.toLocaleString();
+            }
+            if (document.getElementById('solSavedWeight')) {
+                document.getElementById('solSavedWeight').innerText = totalKg.toFixed(1) + " kg";
+            }
+            if (document.getElementById('solSavedCO2')) {
+                document.getElementById('solSavedCO2').innerText = totalCO2.toFixed(1) + " kg";
+            }
+            if (document.getElementById('solMarineStat')) {
+                document.getElementById('solMarineStat').innerText = "Directly prevents ~" + Math.round(totalItems * 0.2).toLocaleString() + " packaging items from leaking into Philippine river basins and coastal reefs.";
+            }
+        }
+
+        function setQuickPledge(text) {
+            const input = document.getElementById('pledgeInput');
+            if (input) {
+                input.value = text;
+            }
+            generatePledgeCard();
+        }
+
+        function generatePledgeCard() {
+            const input = document.getElementById('pledgeInput');
+            const quote = document.getElementById('pledgeQuote');
+            if (input && quote) {
+                quote.innerText = '"' + (input.value || "I will bring my reusable bottle this week.") + '"';
+            }
+        }
+
+        function copyPledgeToClipboard() {
+            const quote = document.getElementById('pledgeQuote');
+            const btnText = document.getElementById('copyBtnText');
+            if (!quote) return;
+            const textToCopy = quote.innerText + " — My action pledge with PlasticEco.ph";
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                if (btnText) {
+                    btnText.innerText = "Copied to Clipboard! ✓";
+                    setTimeout(() => { btnText.innerText = "Copy Commitment"; }, 2500);
+                }
+            }).catch(() => {
+                if (btnText) {
+                    btnText.innerText = "Pledge Ready! ✓";
+                }
+            });
+        }
+
+        // 8. Choose the Future
+        const futureScenarios = {
+            linear: {
+                badge: "The Warning: Business As Usual",
+                title: "Linear Expansion: Plastic Outweighs Fish By 2040",
+                desc: "Continuing current trajectories without system redesign results in irreversible microplastic saturation of Manila Bay and the Verde Island Passage, threatening municipal fisheries and coral reef survival."
+            },
+            cleanup: {
+                badge: "The Trap: Cleanup Without Prevention",
+                title: "Endless Mop: High Cost, Low Long-Term Recovery",
+                desc: "Cleaning coastal beaches while upstream plastic production and sachet distribution accelerates is an unsustainable treadmill. Prevention at the source is indispensable."
+            },
+            circular: {
+                badge: "The Rewritten Path: A Circular Future",
+                title: "Less Unnecessary Plastic Created. Materials Recovered.",
+                desc: "By combining Extended Producer Responsibility (EPR) compliance, neighborhood zero-waste refill networks, dignified recycling workers, and protected marine corridors, we create a thriving plastic-free archipelago."
+            }
+        };
+
+        function selectFutureScenario(key) {
+            ['linear', 'cleanup', 'circular'].forEach(k => {
+                const el = document.getElementById('scenCard-' + k);
+                if (el) {
+                    if (k === key) {
+                        el.className = "scen-card bg-emerald-50/70 p-6 rounded-3xl border-2 border-emerald-500 cursor-pointer transition shadow-lg flex flex-col justify-between";
+                    } else {
+                        el.className = "scen-card bg-white p-6 rounded-3xl border-2 border-slate-200 cursor-pointer transition hover:border-slate-300 shadow-sm flex flex-col justify-between";
+                    }
+                }
+            });
+
+            const data = futureScenarios[key];
+            if (!data) return;
+            document.getElementById('futureFocusBadge').innerText = data.badge;
+            document.getElementById('futureFocusTitle').innerHTML = data.title.replace('. ', '.<br>');
+            document.getElementById('futureFocusDesc').innerText = data.desc;
         }
 
         // Start on the Gateway view
