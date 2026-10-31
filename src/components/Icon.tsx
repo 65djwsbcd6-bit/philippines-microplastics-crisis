@@ -6,6 +6,12 @@ export type IconName =
   | 'box'
   | 'cup'
   | 'utensils'
+  | 'clamshell'
+  | 'delivery-cup'
+  | 'delivery-straw'
+  | 'delivery-cutlery'
+  | 'delivery-bag'
+  | 'delivery-sachet'
   | 'sunrise'
   | 'sun'
   | 'moon'
@@ -53,27 +59,40 @@ export const Icon: React.FC<IconProps> = ({ name, className = 'ic', ...props }) 
         </svg>
       );
     case 'bag':
+    case 'delivery-bag':
       return (
-        <svg className={className} viewBox="0 0 24 24" {...props}>
-          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" />
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+          <rect x="4.5" y="3.5" width="15" height="17" rx="2" />
+          <path d="M9.5 7v1a2.5 2.5 0 0 0 5 0V7" />
         </svg>
       );
     case 'box':
+    case 'clamshell':
       return (
-        <svg className={className} viewBox="0 0 24 24" {...props}>
-          <path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4" />
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+          <rect x="2.5" y="6" width="19" height="3.5" rx="0.5" />
+          <path d="M4.5 9.5v8.5a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-8.5" />
+          <path d="M10 9.5v2.5h4v-2.5" />
         </svg>
       );
     case 'cup':
+    case 'delivery-cup':
       return (
-        <svg className={className} viewBox="0 0 24 24" {...props}>
-          <path d="M6 6h12l-1.5 15h-9zM5 6l1-3h12l1 3M12 3l2-2" />
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+          <rect x="9" y="3.5" width="6" height="2" rx="0.5" />
+          <rect x="5" y="5.5" width="14" height="2" rx="0.5" />
+          <path d="M6.5 7.5L8.5 20a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1l2-12.5" />
         </svg>
       );
     case 'utensils':
+    case 'delivery-cutlery':
       return (
-        <svg className={className} viewBox="0 0 24 24" {...props}>
-          <path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2M6 2v20M20 22V2c-3 0-5 3-5 7s2 5 5 5" />
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+          <path d="M6 3v4a2 2 0 0 0 4 0V3" />
+          <line x1="8" y1="3" x2="8" y2="7" />
+          <line x1="8" y1="9" x2="8" y2="21" />
+          <path d="M13.5 6.5c0-2 1.1-3.5 2.5-3.5s2.5 1.5 2.5 3.5c0 2-1.1 3.5-2.5 3.5s-2.5-1.5-2.5-3.5z" />
+          <line x1="16" y1="10" x2="16" y2="21" />
         </svg>
       );
     case 'sunrise':
@@ -183,9 +202,12 @@ export const Icon: React.FC<IconProps> = ({ name, className = 'ic', ...props }) 
         </svg>
       );
     case 'sachet':
+    case 'delivery-sachet':
       return (
-        <svg className={className} viewBox="0 0 24 24" {...props}>
-          <path d="M5 3h14v3l-1 1v10l1 1v3H5v-3l1-1V7L5 6zM8 12h8" />
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+          <rect x="6" y="3" width="12" height="18" rx="1.5" />
+          <line x1="6" y1="7.5" x2="18" y2="7.5" />
+          <line x1="6" y1="16.5" x2="18" y2="16.5" />
         </svg>
       );
     case 'bottle':
@@ -195,9 +217,10 @@ export const Icon: React.FC<IconProps> = ({ name, className = 'ic', ...props }) 
         </svg>
       );
     case 'straw':
+    case 'delivery-straw':
       return (
-        <svg className={className} viewBox="0 0 24 24" {...props}>
-          <path d="M15 2l-3 9M12 11 8 22M10 2h6" />
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+          <path d="M8.5 21L15 9.5 13 3.5" />
         </svg>
       );
     case 'image':

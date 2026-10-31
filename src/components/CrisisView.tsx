@@ -133,58 +133,60 @@ export const CrisisView: React.FC<CrisisViewProps> = ({ onSwitchView }) => {
   const deliveryData: Record<
     DeliveryKey,
     {
-      tag: string;
       title: string;
-      icon: any;
+      label: string;
+      icon: 'clamshell' | 'delivery-cup' | 'delivery-straw' | 'delivery-cutlery' | 'delivery-bag' | 'delivery-sachet';
       why: string;
       after: string;
     }
   > = {
     container: {
-      tag: 'Clamshell Meal Container',
-      title: 'Polystyrene / Polypropylene Box',
-      icon: 'box',
-      why: 'Provides structural rigidity and thermal insulation during motorbike delivery.',
+      title: 'Clamshell Meal Container',
+      label: 'Meal Container',
+      icon: 'clamshell',
+      why: 'Provides thermal insulation and prevents spillages during transit.',
       after:
-        'Low economic recycling value causes most containers to be landfilled or disposed of in municipal waste streams.',
+        'Commonly made of rigid expanded polystyrene or polypropylene. Low recycling demand means most go directly to landfills or incinerators.',
     },
     cup: {
-      tag: 'Plastic Cup & Sealing Film',
-      title: 'Clear PET Cup & Plastic Sealer',
-      icon: 'cup',
-      why: 'Seals beverages completely to prevent leaks on delivery routes.',
+      title: 'Plastic Cup & Lid',
+      label: 'Plastic Cup & Lid',
+      icon: 'delivery-cup',
+      why: 'Holds cold beverages and sealed with a film lid to prevent liquid spills during transit.',
       after:
-        'Thin sealing film cannot be recycled and breaks easily into small plastic fragments.',
+        'Thin sealing film cannot be recycled and breaks easily into small plastic fragments, while clear PET cups often escape collection.',
     },
     straw: {
-      tag: 'Single-Use Plastic Straw',
-      title: 'Polypropylene Beverage Straw',
-      icon: 'straw',
+      title: 'Plastic Straw',
+      label: 'Plastic Straw',
+      icon: 'delivery-straw',
       why: 'Included automatically for convenient cold beverage consumption.',
       after:
-        'Lightweight size causes it to easily fall through sorting screens, washing into storm drains.',
+        'Lightweight size causes it to easily fall through sorting screens, washing into storm drains and coastal waters.',
     },
     utensils: {
-      tag: 'Disposable Cutlery',
-      title: 'Polystyrene Spoon & Fork',
-      icon: 'utensils',
+      title: 'Spoon & Fork',
+      label: 'Spoon & Fork',
+      icon: 'delivery-cutlery',
       why: 'Bundled into takeout orders to enable eating away from home.',
       after:
-        'Used for 15 minutes, single-use cutlery persists in soil and landfills for decades.',
+        'Used for only 15 minutes, single-use cutlery persists in soil and landfills for decades.',
     },
     bag: {
-      tag: 'Plastic Outer Bag',
-      title: 'Single-Use Carrier Bag',
-      icon: 'bag',
+      title: 'Carrier Bag',
+      label: 'Carrier Bag',
+      icon: 'delivery-bag',
       why: 'Holds all meal containers and cups together during transport.',
-      after: 'Easily carried by wind into drainage waterways if discarded improperly.',
+      after:
+        'Easily carried by wind into drainage waterways if discarded improperly, choking storm pump stations during typhoons.',
     },
     sachet: {
-      tag: 'Sauce & Condiment Sachet',
-      title: 'Multi-layer Foil Packet',
-      icon: 'sachet',
-      why: 'Provides single-serving portions of soy sauce, ketchup, or hot sauce.',
-      after: 'Laminated plastic-metal layers render condiment sachets non-recyclable.',
+      title: 'Sauce Sachet',
+      label: 'Sauce Sachet',
+      icon: 'delivery-sachet',
+      why: 'Provides single-serving portions of soy sauce, calamansi, ketchup, or hot sauce.',
+      after:
+        'Laminated plastic-metal layers render condiment sachets non-recyclable, turning into persistent microplastic debris.',
     },
   };
 
@@ -822,63 +824,81 @@ export const CrisisView: React.FC<CrisisViewProps> = ({ onSwitchView }) => {
         </div>
 
         {/* 4. WHAT'S IN ONE DELIVERY? INTERACTIVE */}
-        <div className="glass-panel p-6 lg:p-10 rounded-2xl border border-cyan-500/30">
-          <div className="max-w-3xl mx-auto text-center mb-8">
-            <span className="text-teal-300 font-bold text-xs uppercase tracking-widest">
-              Interactive Tool 04
+        <div className="rounded-3xl bg-[#061621] p-6 sm:p-10 lg:p-12 border border-[#143444] shadow-2xl">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10">
+            <span className="text-cyan-400 font-bold text-xs sm:text-sm uppercase tracking-wider block mb-2 sm:mb-3">
+              INTERACTIVE TOOL 04
             </span>
-            <h3 className="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display uppercase tracking-tight leading-tight">
               HOW MUCH PLASTIC CAN COME WITH ONE DELIVERY?
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 mt-2">
+            <p className="text-xs sm:text-sm lg:text-base text-slate-300 mt-3 sm:mt-4 max-w-3xl mx-auto leading-relaxed">
               Click any packaging component in a standard takeout meal order to inspect its purpose and post-disposal journey.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-            <div className="md:col-span-6 grid grid-cols-3 gap-2.5">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
+            {/* 3x2 Grid of Delivery Packaging Items */}
+            <div className="lg:col-span-6 grid grid-cols-3 gap-2.5 sm:gap-3.5">
               {(
                 [
-                  { key: 'container', label: 'Meal Container', icon: 'box' },
-                  { key: 'cup', label: 'Plastic Cup & Lid', icon: 'cup' },
-                  { key: 'straw', label: 'Plastic Straw', icon: 'straw' },
-                  { key: 'utensils', label: 'Spoon & Fork', icon: 'utensils' },
-                  { key: 'bag', label: 'Carrier Bag', icon: 'bag' },
-                  { key: 'sachet', label: 'Sauce Sachet', icon: 'sachet' },
+                  { key: 'container', label: 'Meal Container', icon: 'clamshell' },
+                  { key: 'cup', label: 'Plastic Cup & Lid', icon: 'delivery-cup' },
+                  { key: 'straw', label: 'Plastic Straw', icon: 'delivery-straw' },
+                  { key: 'utensils', label: 'Spoon & Fork', icon: 'delivery-cutlery' },
+                  { key: 'bag', label: 'Carrier Bag', icon: 'delivery-bag' },
+                  { key: 'sachet', label: 'Sauce Sachet', icon: 'delivery-sachet' },
                 ] as const
-              ).map(item => (
-                <button
-                  key={item.key}
-                  onClick={() => setSelectedDelivery(item.key)}
-                  className={`p-3 glass-card rounded-xl text-center transition cursor-pointer ${
-                    selectedDelivery === item.key
-                      ? 'bg-cyan-900/50 border-cyan-400'
-                      : 'hover:bg-cyan-900/30'
-                  }`}
-                >
-                  <span className="text-2xl block mb-1">
-                    <Icon name={item.icon} className="mx-auto" />
-                  </span>
-                  <span className="text-[11px] font-bold text-white block">{item.label}</span>
-                </button>
-              ))}
+              ).map(item => {
+                const isSelected = selectedDelivery === item.key;
+                return (
+                  <button
+                    key={item.key}
+                    type="button"
+                    onClick={() => setSelectedDelivery(item.key)}
+                    className={`group rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center transition-all duration-200 cursor-pointer min-h-[110px] sm:min-h-[125px] ${
+                      isSelected
+                        ? 'bg-[#102a37] border-2 border-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.22)] ring-1 ring-cyan-400/40'
+                        : 'bg-[#0c202a] border border-[#173a4b] hover:border-cyan-500/50 hover:bg-[#122b39] hover:shadow-[0_4px_16px_rgba(0,0,0,0.3)]'
+                    }`}
+                  >
+                    <div
+                      className={`mb-2 sm:mb-2.5 transition-transform duration-200 flex items-center justify-center ${
+                        isSelected
+                          ? 'scale-110 text-white'
+                          : 'text-slate-200 group-hover:text-white group-hover:scale-105'
+                      }`}
+                    >
+                      <Icon name={item.icon} className="w-8 h-8 sm:w-9 sm:h-9" />
+                    </div>
+                    <span className="text-xs sm:text-sm font-bold text-white tracking-tight leading-snug">
+                      {item.label}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
 
-            <div className="md:col-span-6 bg-ocean-950 p-6 rounded-xl border border-white/10 space-y-3">
-              <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest flex items-center gap-1.5">
-                <Icon name={deliveryData[selectedDelivery].icon} />
-                <span>{deliveryData[selectedDelivery].tag}</span>
+            {/* Inspector Panel */}
+            <div className="lg:col-span-6 rounded-2xl bg-[#061218] p-6 sm:p-8 border border-[#142833] shadow-2xl flex flex-col justify-center min-h-[250px]">
+              <span className="text-cyan-400 font-bold tracking-wider text-xs uppercase mb-3 sm:mb-4 block">
+                SELECT AN ITEM ABOVE
               </span>
-              <h4 className="text-2xl font-bold text-white">
-                {deliveryData[selectedDelivery].title}
-              </h4>
-              <div className="space-y-2 text-xs text-slate-300">
+              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 text-white flex items-center justify-center shrink-0">
+                  <Icon name={deliveryData[selectedDelivery].icon} className="w-9 h-9 sm:w-10 sm:h-10" />
+                </div>
+                <h4 className="text-2xl sm:text-3xl font-display font-black text-white tracking-tight leading-tight">
+                  {deliveryData[selectedDelivery].title}
+                </h4>
+              </div>
+              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-[15px] leading-relaxed text-slate-300">
                 <p>
-                  <strong className="text-slate-100">Why it's used:</strong>{' '}
+                  <strong className="font-bold text-white">Why it's used: </strong>
                   {deliveryData[selectedDelivery].why}
                 </p>
                 <p>
-                  <strong className="text-slate-100">After Disposal:</strong>{' '}
+                  <strong className="font-bold text-white">After Disposal: </strong>
                   {deliveryData[selectedDelivery].after}
                 </p>
               </div>
@@ -958,32 +978,45 @@ export const CrisisView: React.FC<CrisisViewProps> = ({ onSwitchView }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-center mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-center mb-8">
             {(
               [
-                { key: 'micro', label: 'Microplastics', icon: 'micro' },
-                { key: 'plankton', label: 'Plankton', icon: 'plankton' },
-                { key: 'smallfish', label: 'Small Fish', icon: 'fish' },
-                { key: 'largefish', label: 'Larger Fish', icon: 'fish' },
-                { key: 'marine', label: 'Marine Life', icon: 'turtle' },
-                { key: 'people', label: 'People', icon: 'users' },
+                { key: 'micro', label: 'Microplastics', file: 'images/trophic-microplastics.jpg', isAccent: true },
+                { key: 'plankton', label: 'Plankton', file: 'images/trophic-plankton.jpg', isAccent: false },
+                { key: 'smallfish', label: 'Small Fish', file: 'images/trophic-small-fish.jpg', isAccent: false },
+                { key: 'largefish', label: 'Larger Fish', file: 'images/trophic-larger-fish.jpg', isAccent: false },
+                { key: 'marine', label: 'Marine Life', file: 'images/trophic-marine-life.jpg', isAccent: false },
+                { key: 'people', label: 'People', file: 'images/trophic-people.jpg', isAccent: false },
               ] as const
-            ).map(trophic => (
-              <button
-                key={trophic.key}
-                onClick={() => setSelectedTrophic(trophic.key)}
-                className={`p-2.5 glass-card rounded-lg text-xs transition cursor-pointer ${
-                  selectedTrophic === trophic.key
-                    ? 'border-rose-400 bg-rose-950/40 text-rose-300'
-                    : 'hover:border-rose-400/50 text-slate-200'
-                }`}
-              >
-                <span className="text-xl block">
-                  <Icon name={trophic.icon} className="mx-auto" />
-                </span>
-                <span className="font-bold block mt-1">{trophic.label}</span>
-              </button>
-            ))}
+            ).map(trophic => {
+              const isSelected = selectedTrophic === trophic.key;
+              return (
+                <button
+                  key={trophic.key}
+                  type="button"
+                  onClick={() => setSelectedTrophic(trophic.key)}
+                  className={`group rounded-2xl p-4 sm:p-5 text-center transition-all duration-200 cursor-pointer flex flex-col justify-between ${
+                    isSelected
+                      ? 'border-2 border-rose-400 bg-[#122835] shadow-[0_0_24px_rgba(244,114,182,0.22)]'
+                      : 'border border-[#173847] bg-[#0c1f2a] hover:border-rose-400/50 hover:bg-[#102735]'
+                  }`}
+                >
+                  <ImageWithFallback
+                    src={trophic.file}
+                    alt={trophic.label}
+                    placeholderOnly={true}
+                    className="w-full h-36 sm:h-44 mb-4 object-cover"
+                  />
+                  <span
+                    className={`font-bold text-sm sm:text-base block tracking-tight ${
+                      trophic.isAccent || isSelected ? 'text-rose-400' : 'text-white'
+                    }`}
+                  >
+                    {trophic.label}
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
           <div className="bg-ocean-950 p-6 rounded-xl border border-white/10 space-y-3">
@@ -1166,42 +1199,78 @@ export const CrisisView: React.FC<CrisisViewProps> = ({ onSwitchView }) => {
           </p>
         </div>
 
-        <div className="glass-panel rounded-2xl p-6 lg:p-10 mb-12 border border-cyan-500/20">
-          <h3 className="text-xl font-bold text-cyan-300 text-center mb-8 uppercase tracking-wider">
+        <div className="rounded-3xl p-6 sm:p-10 mb-12 border border-[#143444] bg-[#061621] shadow-2xl">
+          <h3 className="text-xl sm:text-2xl font-black text-cyan-400 text-center mb-8 uppercase tracking-wider font-display">
             The Degradation &amp; Microplastic Pathway
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-center items-center">
-            <div className="p-3 glass-card rounded-xl">
-              <span className="text-2xl mb-1 block">
-                <Icon name="bottle" className="mx-auto" />
-              </span>
-              <span className="text-xs font-bold text-white block">1. Macro Plastic</span>
-              <span className="text-[10px] text-slate-400">Bottles, sachets, cups</span>
-            </div>
-            <div className="text-cyan-400 font-bold text-xl hidden md:block">→</div>
-            <div className="p-3 glass-card rounded-xl">
-              <span className="text-2xl mb-1 block">
-                <Icon name="sun" className="mx-auto" />
-              </span>
-              <span className="text-xs font-bold text-white block">2. Weathering</span>
-              <span className="text-[10px] text-slate-400">UV ray exposure</span>
-            </div>
-            <div className="text-cyan-400 font-bold text-xl hidden md:block">→</div>
-            <div className="p-3 glass-card rounded-xl">
-              <span className="text-2xl mb-1 block">
-                <Icon name="waves" className="mx-auto" />
-              </span>
-              <span className="text-xs font-bold text-white block">3. Fragmentation</span>
-              <span className="text-[10px] text-slate-400">Wave fragmentation</span>
-            </div>
-            <div className="text-cyan-400 font-bold text-xl hidden md:block">→</div>
-            <div className="p-3 glass-card rounded-xl bg-cyan-900/40 border-cyan-400/40">
-              <span className="text-2xl mb-1 block">
-                <Icon name="micro" className="mx-auto" />
-              </span>
-              <span className="text-xs font-bold text-cyan-300 block">4. Microplastics</span>
-              <span className="text-[10px] text-slate-300">Particles &lt; 5mm</span>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-stretch">
+            {(
+              [
+                {
+                  step: '1. Macro Plastic',
+                  desc: 'Bottles, sachets, cups',
+                  file: 'images/pathway-macro-plastic.jpg',
+                  alt: 'Macro Plastic Bottles & Sachets',
+                  isAccent: false,
+                },
+                {
+                  step: '2. Weathering',
+                  desc: 'UV ray exposure',
+                  file: 'images/pathway-weathering.jpg',
+                  alt: 'Solar UV Photodegradation',
+                  isAccent: false,
+                },
+                {
+                  step: '3. Fragmentation',
+                  desc: 'Wave fragmentation',
+                  file: 'images/pathway-fragmentation.jpg',
+                  alt: 'Wave & Hydraulic Shear Breakdown',
+                  isAccent: false,
+                },
+                {
+                  step: '4. Microplastics',
+                  desc: 'Particles < 5mm',
+                  file: 'images/pathway-microplastics.jpg',
+                  alt: 'Secondary Microplastic Particles',
+                  isAccent: true,
+                },
+              ] as const
+            ).map((item, idx) => (
+              <div key={idx} className="relative flex flex-col">
+                <div
+                  className={`flex-1 rounded-2xl p-4 sm:p-5 flex flex-col justify-between text-center ${
+                    item.isAccent
+                      ? 'bg-[#0f2735] border-2 border-cyan-400/80 shadow-[0_0_20px_rgba(34,211,238,0.15)]'
+                      : 'bg-[#0c1f2b] border border-[#173847]'
+                  }`}
+                >
+                  <ImageWithFallback
+                    src={item.file}
+                    alt={item.alt}
+                    placeholderOnly={true}
+                    className="w-full h-36 sm:h-44 mb-4 object-cover"
+                  />
+                  <div>
+                    <span
+                      className={`text-base font-bold block ${
+                        item.isAccent ? 'text-cyan-300' : 'text-white'
+                      }`}
+                    >
+                      {item.step}
+                    </span>
+                    <span className="text-xs text-slate-400 mt-1 block">{item.desc}</span>
+                  </div>
+                </div>
+                {idx < 3 && (
+                  <div
+                    className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-[#081b24] border border-cyan-500/40 text-cyan-400 items-center justify-center font-bold text-sm shadow-md"
+                    aria-hidden="true"
+                  >
+                    →
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 

@@ -1170,48 +1170,48 @@ export const SolutionView: React.FC<SolutionViewProps> = ({ onSwitchView }) => {
                   key: 'individual',
                   num: '01',
                   role: 'Individuals',
-                  icon: 'users',
-                  sub: 'Consumer Frontline',
+                  sub: 'CONSUMER FRONTLINE',
+                  img: 'images/sol-role-consumer-frontline.jpg',
+                  alt: 'Consumer Frontline - Reusables',
                   desc: 'Choose reusable tumblers and bayong bags; segregate waste into clean dry recyclables; decline single-use cutlery on delivery apps.',
                   next: 'Start one new swap this week',
-                  activeBorder: 'border-emerald-500',
-                  iconColor: 'text-emerald-600',
+                  activeBorder: 'border-emerald-500 ring-2 ring-emerald-500/20',
                   bgNum: 'bg-emerald-100 text-emerald-700',
                 },
                 {
                   key: 'business',
                   num: '02',
                   role: 'Businesses',
-                  icon: 'building',
-                  sub: 'Producer Responsibility',
+                  sub: 'PRODUCER RESPONSIBILITY',
+                  img: 'images/sol-role-producer-responsibility.jpg',
+                  alt: 'Producer Responsibility - Packaging',
                   desc: 'Register under the EPR Law; redesign packaging into monomaterials; fund deposit-return container loops; stock bulk refill options.',
                   next: 'Audit and disclose annual packaging footprint',
-                  activeBorder: 'border-teal-500',
-                  iconColor: 'text-teal-600',
+                  activeBorder: 'border-teal-500 ring-2 ring-teal-500/20',
                   bgNum: 'bg-teal-100 text-teal-700',
                 },
                 {
                   key: 'community',
                   num: '03',
                   role: 'Communities',
-                  icon: 'sprout',
-                  sub: 'Grassroots Infrastructure',
+                  sub: 'GRASSROOTS INFRASTRUCTURE',
+                  img: 'images/sol-role-grassroots-infrastructure.jpg',
+                  alt: 'Grassroots Infrastructure - MRF',
                   desc: 'Operate barangay Materials Recovery Facilities (MRFs); reward segregation through trash-to-cash; integrate informal waste pickers.',
                   next: 'Equip MRF with clean sorting bays',
-                  activeBorder: 'border-cyan-500',
-                  iconColor: 'text-cyan-600',
+                  activeBorder: 'border-cyan-500 ring-2 ring-cyan-500/20',
                   bgNum: 'bg-cyan-100 text-cyan-700',
                 },
                 {
                   key: 'government',
                   num: '04',
                   role: 'Government',
-                  icon: 'landmark',
-                  sub: 'Enforcement & Policy',
+                  sub: 'ENFORCEMENT & POLICY',
+                  img: 'images/sol-role-enforcement-policy.jpg',
+                  alt: 'Enforcement & Policy - Compliance',
                   desc: 'Strictly enforce RA 9003 and the EPR Act; fund municipal river interceptors; provide tax incentives for zero-waste packaging startups.',
                   next: 'Implement phased ban on non-essential plastics',
-                  activeBorder: 'border-amber-500',
-                  iconColor: 'text-amber-600',
+                  activeBorder: 'border-amber-500 ring-2 ring-amber-500/20',
                   bgNum: 'bg-amber-100 text-amber-700',
                 },
               ] as const
@@ -1219,27 +1219,37 @@ export const SolutionView: React.FC<SolutionViewProps> = ({ onSwitchView }) => {
               <div
                 key={roleItem.key}
                 onClick={() => setSelectedRole(roleItem.key)}
-                className={`bg-white p-6 rounded-2xl cursor-pointer transition hover:-translate-y-1 ${
+                className={`bg-white p-6 rounded-3xl cursor-pointer transition hover:-translate-y-1 flex flex-col justify-between ${
                   selectedRole === roleItem.key
                     ? `border-2 ${roleItem.activeBorder} shadow-md`
-                    : 'border-2 border-slate-200 shadow-sm hover:border-slate-300'
+                    : 'border-2 border-slate-200/90 shadow-sm hover:border-slate-300'
                 }`}
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span
-                    className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${roleItem.bgNum}`}
-                  >
-                    {roleItem.num}
-                  </span>
-                  <span className="text-[10px] font-mono font-bold text-slate-500 uppercase">
-                    {roleItem.sub}
-                  </span>
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span
+                      className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs ${roleItem.bgNum}`}
+                    >
+                      {roleItem.num}
+                    </span>
+                    <span className="text-[11px] font-mono font-semibold text-slate-600 uppercase tracking-wider">
+                      {roleItem.sub}
+                    </span>
+                  </div>
+
+                  <ImageWithFallback
+                    src={roleItem.img}
+                    alt={roleItem.alt}
+                    placeholderOnly={true}
+                    theme="light"
+                    className="w-full h-44 sm:h-48 my-4 object-cover"
+                  />
+
+                  <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed mb-4">
+                    {roleItem.desc}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
-                  <Icon name={roleItem.icon} className={roleItem.iconColor} />
-                  <span>{roleItem.role}</span>
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed mb-4">{roleItem.desc}</p>
+
                 <div className="pt-3 border-t border-slate-100 text-[11px] font-semibold text-slate-700">
                   → Next Step: {roleItem.next}
                 </div>
