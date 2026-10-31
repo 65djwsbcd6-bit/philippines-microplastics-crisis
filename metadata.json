@@ -1,0 +1,8 @@
+{
+  "name": "PLASTIC ECO PH | The Crisis & The Solution",
+  "description": "Educational platform exploring plastic and microplastic pollution in the Philippines, from systemic crises to circular economy solutions.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

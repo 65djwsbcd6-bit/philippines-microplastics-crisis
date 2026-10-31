@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-950: #030a0e;
+  --color-ocean-900: #061318;
+  --color-ocean-800: #0b222c;
+  --color-ocean-700: #133544;
+  --color-ocean-600: #1b4b60;
+  --color-ocean-500: #266883;
+  --color-ocean-400: #388ea8;
+  --color-ocean-300: #52b5d3;
+
+  --color-emeraldEco-950: #022c22;
+  --color-emeraldEco-900: #064e3b;
+  --color-emeraldEco-800: #065f46;
+  --color-emeraldEco-700: #047857;
+  --color-emeraldEco-600: #059669;
+  --color-emeraldEco-500: #10b981;
+  --color-emeraldEco-400: #34d399;
+  --color-emeraldEco-300: #6ee7b7;
+  --color-emeraldEco-100: #d1fae5;
+  --color-emeraldEco-50: #ecfdf5;
+
+  --color-sand: #e2d5c3;
+  --color-plasticRed: #e63946;
+  --color-coastSand: #CDB499;
+  --color-coastMist: #B8C5B9;
+  --color-coastSage: #8AA494;
+  --color-coastAqua: #78AAA1;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #061318;
+  color: #f1f5f9;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.glass-panel {
+  background: rgba(11, 34, 44, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(19, 53, 68, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(82, 181, 211, 0.4);
+  transform: translateY(-4px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #061318;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b4b60;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #388ea8;
+}
+
+@keyframes mapPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(230, 57, 70, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(230, 57, 70, 0); }
+}
+
+.map-hotspot {
+  animation: mapPulse 2s infinite;
+}
+
+.ic {
+  width: 1.25em;
+  height: 1.25em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: inline-block;
+  vertical-align: -0.22em;
+  flex: none;
+}
+
+.glass-solution {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(5, 150, 105, 0.1);
+}
+
+.glass-solution-card {
+  background: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  transition: all 0.3s ease;
+}
+
+.glass-solution-card:hover {
+  border-color: rgba(5, 150, 105, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(5, 150, 105, 0.15);
+}
+
+.view-section {
+  transition: opacity 0.4s ease-in-out;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
