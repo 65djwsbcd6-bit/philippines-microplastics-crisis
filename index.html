@@ -1084,13 +1084,9 @@
                 "Plastic may become smaller, but the problem does not simply disappear."
             </p>
 
-            <p class="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed font-light mb-10">
+            <p class="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
                 Understanding its pathway through ecosystems is the first step toward recognizing our shared connection to Earth's environmental systems.
             </p>
-
-            <button onclick="switchView('solution')" class="px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm uppercase tracking-wider shadow-xl shadow-emerald-500/20 transition hover:scale-105">
-                Ready to Change the Outcome? Explore Solutions →
-            </button>
         </div>
     </section>
 
@@ -1517,7 +1513,7 @@
         function inspectDelivery(key) {
             const data = deliveryData[key];
             if (!data) return;
-            document.getElementById('deliveryDetail').innerHTML = `
+                                    document.getElementById('deliveryDetail').innerHTML = `
                 <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest block">${I(data.tag)}</span>
                 <h4 class="text-2xl font-bold text-white">${I(data.title)}</h4>
                 <div class="space-y-2 text-xs text-slate-300">
@@ -1661,6 +1657,20 @@
                 prompt.innerText = "Click to reveal details";
             }
         }
+    
+        // Hero background video: hide button if no video, respect reduced motion, allow pause
+        (function(){
+            const v=document.getElementById('heroVideo'),b=document.getElementById('heroVideoBtn');
+            if(!v||!b)return;
+            const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const sync=()=>{b.textContent=v.paused?'Play video':'Pause video';b.setAttribute('aria-label',v.paused?'Play background video':'Pause background video');};
+            if(reduce){v.removeAttribute('autoplay');v.pause();}
+            const src=v.querySelector('source');
+            if(src)src.addEventListener('error',()=>{b.style.display='none';v.style.display='none';});
+            v.addEventListener('play',sync);v.addEventListener('pause',sync);
+            b.addEventListener('click',()=>{v.paused?v.play():v.pause();});
+            sync();
+        })();
 
         // ROUTER: SINGLE PAGE VIEW SWITCHER (Gateway / Crisis / Solution)
         function switchView(targetView) {
